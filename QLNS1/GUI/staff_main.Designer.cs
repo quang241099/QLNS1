@@ -32,13 +32,13 @@ namespace QLNS1.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staff_main));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dangXuat_btn = new Guna.UI.WinForms.GunaButton();
             this.thongTinCaNhan_btn = new Guna.UI.WinForms.GunaButton();
             this.luong_btn = new Guna.UI.WinForms.GunaButton();
             this.danhMuc_btn = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dangXuat_btn = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,6 +67,29 @@ namespace QLNS1.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 668);
             this.panel1.TabIndex = 2;
+            // 
+            // dangXuat_btn
+            // 
+            this.dangXuat_btn.AnimationHoverSpeed = 0.07F;
+            this.dangXuat_btn.AnimationSpeed = 0.03F;
+            this.dangXuat_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dangXuat_btn.BorderColor = System.Drawing.Color.Black;
+            this.dangXuat_btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.dangXuat_btn.FocusedColor = System.Drawing.Color.Empty;
+            this.dangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dangXuat_btn.ForeColor = System.Drawing.Color.White;
+            this.dangXuat_btn.Image = ((System.Drawing.Image)(resources.GetObject("dangXuat_btn.Image")));
+            this.dangXuat_btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.dangXuat_btn.Location = new System.Drawing.Point(41, 470);
+            this.dangXuat_btn.Name = "dangXuat_btn";
+            this.dangXuat_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.dangXuat_btn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.dangXuat_btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.dangXuat_btn.OnHoverImage = null;
+            this.dangXuat_btn.OnPressedColor = System.Drawing.Color.Black;
+            this.dangXuat_btn.Size = new System.Drawing.Size(202, 47);
+            this.dangXuat_btn.TabIndex = 8;
+            this.dangXuat_btn.Text = "Đăng Xuất";
             // 
             // thongTinCaNhan_btn
             // 
@@ -164,29 +187,6 @@ namespace QLNS1.GUI
             this.pictureBox2.Size = new System.Drawing.Size(204, 191);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // dangXuat_btn
-            // 
-            this.dangXuat_btn.AnimationHoverSpeed = 0.07F;
-            this.dangXuat_btn.AnimationSpeed = 0.03F;
-            this.dangXuat_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dangXuat_btn.BorderColor = System.Drawing.Color.Black;
-            this.dangXuat_btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.dangXuat_btn.FocusedColor = System.Drawing.Color.Empty;
-            this.dangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dangXuat_btn.ForeColor = System.Drawing.Color.White;
-            this.dangXuat_btn.Image = ((System.Drawing.Image)(resources.GetObject("dangXuat_btn.Image")));
-            this.dangXuat_btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.dangXuat_btn.Location = new System.Drawing.Point(41, 470);
-            this.dangXuat_btn.Name = "dangXuat_btn";
-            this.dangXuat_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.dangXuat_btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.dangXuat_btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.dangXuat_btn.OnHoverImage = null;
-            this.dangXuat_btn.OnPressedColor = System.Drawing.Color.Black;
-            this.dangXuat_btn.Size = new System.Drawing.Size(202, 47);
-            this.dangXuat_btn.TabIndex = 8;
-            this.dangXuat_btn.Text = "Đăng Xuất";
             // 
             // staff_main
             // 

@@ -32,15 +32,15 @@ namespace QLNS1.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_main));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.danhMuc_btn = new Guna.UI.WinForms.GunaButton();
-            this.luong_btn = new Guna.UI.WinForms.GunaButton();
-            this.nhanVien_btn = new Guna.UI.WinForms.GunaButton();
+            this.dangXuat_btn = new Guna.UI.WinForms.GunaButton();
             this.thongKe_btn = new Guna.UI.WinForms.GunaButton();
+            this.nhanVien_btn = new Guna.UI.WinForms.GunaButton();
+            this.luong_btn = new Guna.UI.WinForms.GunaButton();
+            this.danhMuc_btn = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.dangXuat_btn = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,61 +72,51 @@ namespace QLNS1.GUI
             this.panel1.Size = new System.Drawing.Size(301, 634);
             this.panel1.TabIndex = 1;
             // 
-            // gunaLabel1
+            // dangXuat_btn
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Light", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(62, 207);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(165, 23);
-            this.gunaLabel1.TabIndex = 2;
-            this.gunaLabel1.Text = "236 Hoàng Quốc Việt";
+            this.dangXuat_btn.AnimationHoverSpeed = 0.07F;
+            this.dangXuat_btn.AnimationSpeed = 0.03F;
+            this.dangXuat_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dangXuat_btn.BorderColor = System.Drawing.Color.Black;
+            this.dangXuat_btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.dangXuat_btn.FocusedColor = System.Drawing.Color.Empty;
+            this.dangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dangXuat_btn.ForeColor = System.Drawing.Color.White;
+            this.dangXuat_btn.Image = ((System.Drawing.Image)(resources.GetObject("dangXuat_btn.Image")));
+            this.dangXuat_btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.dangXuat_btn.Location = new System.Drawing.Point(41, 540);
+            this.dangXuat_btn.Name = "dangXuat_btn";
+            this.dangXuat_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.dangXuat_btn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.dangXuat_btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.dangXuat_btn.OnHoverImage = null;
+            this.dangXuat_btn.OnPressedColor = System.Drawing.Color.Black;
+            this.dangXuat_btn.Size = new System.Drawing.Size(202, 47);
+            this.dangXuat_btn.TabIndex = 7;
+            this.dangXuat_btn.Text = "Đăng Xuất";
             // 
-            // danhMuc_btn
+            // thongKe_btn
             // 
-            this.danhMuc_btn.AnimationHoverSpeed = 0.07F;
-            this.danhMuc_btn.AnimationSpeed = 0.03F;
-            this.danhMuc_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.danhMuc_btn.BorderColor = System.Drawing.Color.Black;
-            this.danhMuc_btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.danhMuc_btn.FocusedColor = System.Drawing.Color.Empty;
-            this.danhMuc_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.danhMuc_btn.ForeColor = System.Drawing.Color.White;
-            this.danhMuc_btn.Image = ((System.Drawing.Image)(resources.GetObject("danhMuc_btn.Image")));
-            this.danhMuc_btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.danhMuc_btn.Location = new System.Drawing.Point(42, 272);
-            this.danhMuc_btn.Name = "danhMuc_btn";
-            this.danhMuc_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.danhMuc_btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.danhMuc_btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.danhMuc_btn.OnHoverImage = null;
-            this.danhMuc_btn.OnPressedColor = System.Drawing.Color.Black;
-            this.danhMuc_btn.Size = new System.Drawing.Size(202, 47);
-            this.danhMuc_btn.TabIndex = 3;
-            this.danhMuc_btn.Text = "Quản Lý Danh Mục";
-            // 
-            // luong_btn
-            // 
-            this.luong_btn.AnimationHoverSpeed = 0.07F;
-            this.luong_btn.AnimationSpeed = 0.03F;
-            this.luong_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.luong_btn.BorderColor = System.Drawing.Color.Black;
-            this.luong_btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.luong_btn.FocusedColor = System.Drawing.Color.Empty;
-            this.luong_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.luong_btn.ForeColor = System.Drawing.Color.White;
-            this.luong_btn.Image = ((System.Drawing.Image)(resources.GetObject("luong_btn.Image")));
-            this.luong_btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.luong_btn.Location = new System.Drawing.Point(41, 401);
-            this.luong_btn.Name = "luong_btn";
-            this.luong_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.luong_btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.luong_btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.luong_btn.OnHoverImage = null;
-            this.luong_btn.OnPressedColor = System.Drawing.Color.Black;
-            this.luong_btn.Size = new System.Drawing.Size(202, 47);
-            this.luong_btn.TabIndex = 4;
-            this.luong_btn.Text = "Quản Lý Lương";
+            this.thongKe_btn.AnimationHoverSpeed = 0.07F;
+            this.thongKe_btn.AnimationSpeed = 0.03F;
+            this.thongKe_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.thongKe_btn.BorderColor = System.Drawing.Color.Black;
+            this.thongKe_btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.thongKe_btn.FocusedColor = System.Drawing.Color.Empty;
+            this.thongKe_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.thongKe_btn.ForeColor = System.Drawing.Color.White;
+            this.thongKe_btn.Image = ((System.Drawing.Image)(resources.GetObject("thongKe_btn.Image")));
+            this.thongKe_btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.thongKe_btn.Location = new System.Drawing.Point(41, 466);
+            this.thongKe_btn.Name = "thongKe_btn";
+            this.thongKe_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.thongKe_btn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.thongKe_btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.thongKe_btn.OnHoverImage = null;
+            this.thongKe_btn.OnPressedColor = System.Drawing.Color.Black;
+            this.thongKe_btn.Size = new System.Drawing.Size(202, 47);
+            this.thongKe_btn.TabIndex = 6;
+            this.thongKe_btn.Text = "Thống Kê";
             // 
             // nhanVien_btn
             // 
@@ -151,28 +141,61 @@ namespace QLNS1.GUI
             this.nhanVien_btn.TabIndex = 5;
             this.nhanVien_btn.Text = "Quản Lý Nhân Viên";
             // 
-            // thongKe_btn
+            // luong_btn
             // 
-            this.thongKe_btn.AnimationHoverSpeed = 0.07F;
-            this.thongKe_btn.AnimationSpeed = 0.03F;
-            this.thongKe_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.thongKe_btn.BorderColor = System.Drawing.Color.Black;
-            this.thongKe_btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.thongKe_btn.FocusedColor = System.Drawing.Color.Empty;
-            this.thongKe_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.thongKe_btn.ForeColor = System.Drawing.Color.White;
-            this.thongKe_btn.Image = ((System.Drawing.Image)(resources.GetObject("thongKe_btn.Image")));
-            this.thongKe_btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.thongKe_btn.Location = new System.Drawing.Point(41, 466);
-            this.thongKe_btn.Name = "thongKe_btn";
-            this.thongKe_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.thongKe_btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.thongKe_btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.thongKe_btn.OnHoverImage = null;
-            this.thongKe_btn.OnPressedColor = System.Drawing.Color.Black;
-            this.thongKe_btn.Size = new System.Drawing.Size(202, 47);
-            this.thongKe_btn.TabIndex = 6;
-            this.thongKe_btn.Text = "Thống Kê";
+            this.luong_btn.AnimationHoverSpeed = 0.07F;
+            this.luong_btn.AnimationSpeed = 0.03F;
+            this.luong_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.luong_btn.BorderColor = System.Drawing.Color.Black;
+            this.luong_btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.luong_btn.FocusedColor = System.Drawing.Color.Empty;
+            this.luong_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.luong_btn.ForeColor = System.Drawing.Color.White;
+            this.luong_btn.Image = ((System.Drawing.Image)(resources.GetObject("luong_btn.Image")));
+            this.luong_btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.luong_btn.Location = new System.Drawing.Point(41, 401);
+            this.luong_btn.Name = "luong_btn";
+            this.luong_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.luong_btn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.luong_btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.luong_btn.OnHoverImage = null;
+            this.luong_btn.OnPressedColor = System.Drawing.Color.Black;
+            this.luong_btn.Size = new System.Drawing.Size(202, 47);
+            this.luong_btn.TabIndex = 4;
+            this.luong_btn.Text = "Quản Lý Lương";
+            // 
+            // danhMuc_btn
+            // 
+            this.danhMuc_btn.AnimationHoverSpeed = 0.07F;
+            this.danhMuc_btn.AnimationSpeed = 0.03F;
+            this.danhMuc_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.danhMuc_btn.BorderColor = System.Drawing.Color.Black;
+            this.danhMuc_btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.danhMuc_btn.FocusedColor = System.Drawing.Color.Empty;
+            this.danhMuc_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.danhMuc_btn.ForeColor = System.Drawing.Color.White;
+            this.danhMuc_btn.Image = ((System.Drawing.Image)(resources.GetObject("danhMuc_btn.Image")));
+            this.danhMuc_btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.danhMuc_btn.Location = new System.Drawing.Point(42, 272);
+            this.danhMuc_btn.Name = "danhMuc_btn";
+            this.danhMuc_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.danhMuc_btn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.danhMuc_btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.danhMuc_btn.OnHoverImage = null;
+            this.danhMuc_btn.OnPressedColor = System.Drawing.Color.Black;
+            this.danhMuc_btn.Size = new System.Drawing.Size(202, 47);
+            this.danhMuc_btn.TabIndex = 3;
+            this.danhMuc_btn.Text = "Quản Lý Danh Mục";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Light", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(62, 207);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(165, 23);
+            this.gunaLabel1.TabIndex = 2;
+            this.gunaLabel1.Text = "236 Hoàng Quốc Việt";
             // 
             // panel2
             // 
@@ -200,29 +223,6 @@ namespace QLNS1.GUI
             this.pictureBox3.Size = new System.Drawing.Size(204, 191);
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // dangXuat_btn
-            // 
-            this.dangXuat_btn.AnimationHoverSpeed = 0.07F;
-            this.dangXuat_btn.AnimationSpeed = 0.03F;
-            this.dangXuat_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dangXuat_btn.BorderColor = System.Drawing.Color.Black;
-            this.dangXuat_btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.dangXuat_btn.FocusedColor = System.Drawing.Color.Empty;
-            this.dangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dangXuat_btn.ForeColor = System.Drawing.Color.White;
-            this.dangXuat_btn.Image = ((System.Drawing.Image)(resources.GetObject("dangXuat_btn.Image")));
-            this.dangXuat_btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.dangXuat_btn.Location = new System.Drawing.Point(41, 540);
-            this.dangXuat_btn.Name = "dangXuat_btn";
-            this.dangXuat_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.dangXuat_btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.dangXuat_btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.dangXuat_btn.OnHoverImage = null;
-            this.dangXuat_btn.OnPressedColor = System.Drawing.Color.Black;
-            this.dangXuat_btn.Size = new System.Drawing.Size(202, 47);
-            this.dangXuat_btn.TabIndex = 7;
-            this.dangXuat_btn.Text = "Đăng Xuất";
             // 
             // admin_main
             // 
