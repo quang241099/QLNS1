@@ -1,0 +1,1 @@
+﻿vừa chạy script.sql mới thì Guna bị lỗi, không mở được form
