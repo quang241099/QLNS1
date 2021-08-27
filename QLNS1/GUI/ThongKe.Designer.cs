@@ -37,11 +37,11 @@ namespace QLNS1.GUI
                this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
                this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
                this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-               this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
                this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
+               this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+               this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
                this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
                this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-               this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
                this.btnTK = new DevExpress.XtraEditors.SimpleButton();
                this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
                ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
@@ -50,11 +50,11 @@ namespace QLNS1.GUI
                ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
                this.layoutControl1.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-               ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
                this.SuspendLayout();
                // 
                // comboBoxEdit1
@@ -104,6 +104,24 @@ namespace QLNS1.GUI
                this.layoutControl1.TabIndex = 4;
                this.layoutControl1.Text = "layoutControl1";
                // 
+               // searchLookUpEdit1
+               // 
+               this.searchLookUpEdit1.Location = new System.Drawing.Point(123, 12);
+               this.searchLookUpEdit1.Name = "searchLookUpEdit1";
+               this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+               this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
+               this.searchLookUpEdit1.Size = new System.Drawing.Size(429, 22);
+               this.searchLookUpEdit1.StyleController = this.layoutControl1;
+               this.searchLookUpEdit1.TabIndex = 4;
+               // 
+               // searchLookUpEdit1View
+               // 
+               this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+               this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+               this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+               this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+               // 
                // Root
                // 
                this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -114,17 +132,6 @@ namespace QLNS1.GUI
                this.Root.Name = "Root";
                this.Root.Size = new System.Drawing.Size(564, 89);
                this.Root.TextVisible = false;
-               // 
-               // searchLookUpEdit1
-               // 
-               this.searchLookUpEdit1.Location = new System.Drawing.Point(132, 12);
-               this.searchLookUpEdit1.Name = "searchLookUpEdit1";
-               this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-               this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
-               this.searchLookUpEdit1.Size = new System.Drawing.Size(420, 22);
-               this.searchLookUpEdit1.StyleController = this.layoutControl1;
-               this.searchLookUpEdit1.TabIndex = 4;
                // 
                // layoutControlItem1
                // 
@@ -142,16 +149,9 @@ namespace QLNS1.GUI
                this.emptySpaceItem1.Size = new System.Drawing.Size(544, 43);
                this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
                // 
-               // searchLookUpEdit1View
-               // 
-               this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-               this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-               this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-               this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-               // 
                // btnTK
                // 
-               this.btnTK.Location = new System.Drawing.Point(368, 22);
+               this.btnTK.Location = new System.Drawing.Point(355, 22);
                this.btnTK.Name = "btnTK";
                this.btnTK.Size = new System.Drawing.Size(94, 29);
                this.btnTK.TabIndex = 5;
@@ -186,11 +186,11 @@ namespace QLNS1.GUI
                ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
                this.layoutControl1.ResumeLayout(false);
-               ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-               ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();
 
