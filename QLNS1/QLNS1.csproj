@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>QLNS1</RootNamespace>
     <AssemblyName>QLNS1</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,6 +58,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>linq.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\admin_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,11 +76,15 @@
     <Compile Include="GUI\staff_main.Designer.cs">
       <DependentUpon>staff_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guna\UI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="DATA\linq.dbml.layout">
       <DependentUpon>linq.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\admin_main.resx">
       <DependentUpon>admin_main.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DATA\linq.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
