@@ -151,7 +151,7 @@ namespace QLNS1.GUI
                // 
                // btnTK
                // 
-               this.btnTK.Location = new System.Drawing.Point(355, 22);
+               this.btnTK.Location = new System.Drawing.Point(345, 22);
                this.btnTK.Name = "btnTK";
                this.btnTK.Size = new System.Drawing.Size(94, 29);
                this.btnTK.TabIndex = 5;
