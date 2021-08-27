@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace QLNS1.GUI
 {
-    public partial class FormMain_Admin : RibbonForm, IActionControlsSite, IContextMenuHolder, IWindowTemplate, IBarManagerHolder, ISupportViewChanged, ISupportUpdate, IViewSiteTemplate, ISupportStoreSettings, IViewHolder
+    public partial class Main_NV : RibbonForm, IActionControlsSite, IContextMenuHolder, IWindowTemplate, IBarManagerHolder, ISupportViewChanged, ISupportUpdate, IViewSiteTemplate, ISupportStoreSettings, IViewHolder
     {
         private static readonly object viewChanged = new object();
         private static readonly object settingsReloaded = new object();
@@ -41,7 +41,7 @@ namespace QLNS1.GUI
         {
             get { return FormShowMode.AfterInitialization; }
         }
-        public FormMain_Admin()
+        public Main_NV()
         {
             InitializeComponent();
             ribbonControl.Manager.ForceLinkCreate();

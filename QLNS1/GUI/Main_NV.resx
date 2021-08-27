@@ -248,7 +248,7 @@
 </value>
   </data>
   <data name="barButtonItem3.Caption" xml:space="preserve">
-    <value>Thông Tin Lương</value>
+    <value>Lương</value>
   </data>
   <data name="barButtonItem3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -754,66 +754,6 @@
   <data name="&gt;&gt;contextMenu.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.PopupMenu, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;ribbonGroupFullTextSearch.Name" xml:space="preserve">
-    <value>ribbonGroupFullTextSearch</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupFullTextSearch.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupSearch.Name" xml:space="preserve">
-    <value>ribbonGroupSearch</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupSearch.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupClose.Name" xml:space="preserve">
-    <value>ribbonGroupClose</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupClose.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupFilters.Name" xml:space="preserve">
-    <value>ribbonGroupFilters</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupFilters.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupRecordsNavigation.Name" xml:space="preserve">
-    <value>ribbonGroupRecordsNavigation</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupRecordsNavigation.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupView.Name" xml:space="preserve">
-    <value>ribbonGroupView</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupView.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupWorkflow.Name" xml:space="preserve">
-    <value>ribbonGroupWorkflow</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupWorkflow.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupOpenObject.Name" xml:space="preserve">
-    <value>ribbonGroupOpenObject</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupOpenObject.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupRecordEdit.Name" xml:space="preserve">
-    <value>ribbonGroupRecordEdit</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupRecordEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupEdit.Name" xml:space="preserve">
-    <value>ribbonGroupEdit</value>
-  </data>
-  <data name="&gt;&gt;ribbonGroupEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
     <value>ribbonPageGroup1</value>
   </data>
@@ -863,7 +803,7 @@
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DetailRibbonForm1</value>
+    <value>DetailRibbonForm2</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -871,34 +811,4 @@
   <metadata name="contextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>737, 17</value>
   </metadata>
-  <data name="ribbonGroupFullTextSearch.Text" xml:space="preserve">
-    <value>Full Text Search</value>
-  </data>
-  <data name="ribbonGroupSearch.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="ribbonGroupClose.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="ribbonGroupFilters.Text" xml:space="preserve">
-    <value>Filters</value>
-  </data>
-  <data name="ribbonGroupRecordsNavigation.Text" xml:space="preserve">
-    <value>Records Navigation</value>
-  </data>
-  <data name="ribbonGroupView.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="ribbonGroupWorkflow.Text" xml:space="preserve">
-    <value>Workflow</value>
-  </data>
-  <data name="ribbonGroupOpenObject.Text" xml:space="preserve">
-    <value>Open Related Record</value>
-  </data>
-  <data name="ribbonGroupRecordEdit.Text" xml:space="preserve">
-    <value>Record Edit</value>
-  </data>
-  <data name="ribbonGroupEdit.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
 </root>

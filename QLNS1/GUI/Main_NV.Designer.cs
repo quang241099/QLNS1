@@ -1,7 +1,7 @@
 ﻿
 namespace QLNS1.GUI
 {
-    partial class FormMain_NV
+    partial class Main_NV
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace QLNS1.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain_NV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_NV));
             this.ribbonControl = new DevExpress.ExpressApp.Win.Templates.Ribbon.XafRibbonControlV2();
             this.barActionContainerObjectsCreation = new DevExpress.ExpressApp.Win.Templates.Bars.ActionControls.BarLinkActionControlContainer();
             this.barContainerObjectsCreation = new DevExpress.XtraBars.BarLinkContainerExItem();
@@ -91,16 +91,6 @@ namespace QLNS1.GUI
             this.modelSynchronizationManager = new DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager(this.components);
             this.formStateModelSynchronizer = new DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer(this.components);
             this.contextMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.ribbonGroupFullTextSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupClose = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupFilters = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupRecordsNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupView = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupWorkflow = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupOpenObject = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupRecordEdit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonGroupEdit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -170,7 +160,6 @@ namespace QLNS1.GUI
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
             this.barContainerFile,
             this.barContainerObjectsCreation,
             this.barContainerClose,
@@ -191,6 +180,7 @@ namespace QLNS1.GUI
             this.barContainerMenu,
             this.barContainerNotifications,
             this.barContainerStatusMessages,
+            this.ribbonControl.SearchEditItem,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -596,88 +586,6 @@ namespace QLNS1.GUI
             this.contextMenu.Name = "contextMenu";
             this.contextMenu.Ribbon = this.ribbonControl;
             // 
-            // ribbonGroupFullTextSearch
-            // 
-            this.ribbonGroupFullTextSearch.AllowTextClipping = false;
-            this.ribbonGroupFullTextSearch.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupFullTextSearch.ItemLinks.Add(this.barContainerFullTextSearch);
-            this.ribbonGroupFullTextSearch.Name = "ribbonGroupFullTextSearch";
-            resources.ApplyResources(this.ribbonGroupFullTextSearch, "ribbonGroupFullTextSearch");
-            // 
-            // ribbonGroupSearch
-            // 
-            this.ribbonGroupSearch.AllowTextClipping = false;
-            this.ribbonGroupSearch.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupSearch.ItemLinks.Add(this.barContainerSearch);
-            this.ribbonGroupSearch.Name = "ribbonGroupSearch";
-            resources.ApplyResources(this.ribbonGroupSearch, "ribbonGroupSearch");
-            // 
-            // ribbonGroupClose
-            // 
-            this.ribbonGroupClose.AllowTextClipping = false;
-            this.ribbonGroupClose.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupClose.ItemLinks.Add(this.barContainerClose);
-            this.ribbonGroupClose.Name = "ribbonGroupClose";
-            resources.ApplyResources(this.ribbonGroupClose, "ribbonGroupClose");
-            // 
-            // ribbonGroupFilters
-            // 
-            this.ribbonGroupFilters.AllowTextClipping = false;
-            this.ribbonGroupFilters.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupFilters.ItemLinks.Add(this.barContainerFilters);
-            this.ribbonGroupFilters.Name = "ribbonGroupFilters";
-            resources.ApplyResources(this.ribbonGroupFilters, "ribbonGroupFilters");
-            // 
-            // ribbonGroupRecordsNavigation
-            // 
-            this.ribbonGroupRecordsNavigation.AllowTextClipping = false;
-            this.ribbonGroupRecordsNavigation.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupRecordsNavigation.ItemLinks.Add(this.barContainerRecordsNavigation);
-            this.ribbonGroupRecordsNavigation.Name = "ribbonGroupRecordsNavigation";
-            resources.ApplyResources(this.ribbonGroupRecordsNavigation, "ribbonGroupRecordsNavigation");
-            // 
-            // ribbonGroupView
-            // 
-            this.ribbonGroupView.AllowTextClipping = false;
-            this.ribbonGroupView.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupView.ItemLinks.Add(this.barContainerView);
-            this.ribbonGroupView.ItemLinks.Add(this.barContainerReports);
-            this.ribbonGroupView.Name = "ribbonGroupView";
-            resources.ApplyResources(this.ribbonGroupView, "ribbonGroupView");
-            // 
-            // ribbonGroupWorkflow
-            // 
-            this.ribbonGroupWorkflow.AllowTextClipping = false;
-            this.ribbonGroupWorkflow.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupWorkflow.ItemLinks.Add(this.barContainerWorkflow);
-            this.ribbonGroupWorkflow.Name = "ribbonGroupWorkflow";
-            resources.ApplyResources(this.ribbonGroupWorkflow, "ribbonGroupWorkflow");
-            // 
-            // ribbonGroupOpenObject
-            // 
-            this.ribbonGroupOpenObject.AllowTextClipping = false;
-            this.ribbonGroupOpenObject.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupOpenObject.ItemLinks.Add(this.barContainerOpenObject);
-            this.ribbonGroupOpenObject.Name = "ribbonGroupOpenObject";
-            resources.ApplyResources(this.ribbonGroupOpenObject, "ribbonGroupOpenObject");
-            // 
-            // ribbonGroupRecordEdit
-            // 
-            this.ribbonGroupRecordEdit.AllowTextClipping = false;
-            this.ribbonGroupRecordEdit.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupRecordEdit.ItemLinks.Add(this.barContainerRecordEdit);
-            this.ribbonGroupRecordEdit.Name = "ribbonGroupRecordEdit";
-            resources.ApplyResources(this.ribbonGroupRecordEdit, "ribbonGroupRecordEdit");
-            // 
-            // ribbonGroupEdit
-            // 
-            this.ribbonGroupEdit.AllowTextClipping = false;
-            this.ribbonGroupEdit.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonGroupEdit.ItemLinks.Add(this.barContainerEdit);
-            this.ribbonGroupEdit.ItemLinks.Add(this.barContainerUndoRedo);
-            this.ribbonGroupEdit.Name = "ribbonGroupEdit";
-            resources.ApplyResources(this.ribbonGroupEdit, "ribbonGroupEdit");
-            // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
@@ -730,14 +638,14 @@ namespace QLNS1.GUI
             this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
             this.barButtonItem4.Name = "barButtonItem4";
             // 
-            // DetailRibbonForm1
+            // DetailRibbonForm2
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.viewSitePanel);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.Name = "DetailRibbonForm1";
+            this.Name = "DetailRibbonForm2";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -841,15 +749,5 @@ namespace QLNS1.GUI
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupFullTextSearch;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupSearch;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupClose;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupFilters;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupRecordsNavigation;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupView;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupWorkflow;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupOpenObject;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupRecordEdit;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupEdit;
     }
 }
