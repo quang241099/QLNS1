@@ -4,11 +4,12 @@
     {
         internal class WinForms
         {
-            internal class GunaButton
-            {
-            }
+               internal class GunaButton
+               {
+                    public float AnimationHoverSpeed { get; internal set; }
+               }
 
-            internal class GunaLabel
+               internal class GunaLabel
             {
             }
         }
