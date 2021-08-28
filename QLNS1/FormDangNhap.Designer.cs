@@ -101,18 +101,22 @@ namespace QLNS1
             this.btnLogin.TabIndex = 24;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.checkBox2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBox2.Location = new System.Drawing.Point(80, 224);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(92, 17);
+            this.checkBox2.Size = new System.Drawing.Size(108, 18);
             this.checkBox2.TabIndex = 23;
             this.checkBox2.Text = "Hiện mật khẩu";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // panel4
             // 
@@ -187,14 +191,13 @@ namespace QLNS1
             this.txtMK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.ForeColor = System.Drawing.Color.White;
             this.txtMK.Location = new System.Drawing.Point(120, 182);
-            this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
             this.txtMK.PreventEnterBeep = true;
-            this.txtMK.Size = new System.Drawing.Size(214, 29);
+            this.txtMK.Size = new System.Drawing.Size(214, 32);
             this.txtMK.TabIndex = 31;
+            this.txtMK.UseSystemPasswordChar = true;
             this.txtMK.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.WatermarkText = "Password";
-            this.txtMK.TextChanged += new System.EventHandler(this.txtMK_TextChanged);
             // 
             // FormDangNhap
             // 
@@ -221,7 +224,6 @@ namespace QLNS1
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);

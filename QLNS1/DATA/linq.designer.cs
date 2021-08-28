@@ -76,8 +76,13 @@ namespace QLNS1.DATA
 		{
 			OnCreated();
 		}
-		
-		public linqDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+
+        internal void SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public linqDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

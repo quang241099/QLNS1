@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS1.DATA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace QLNS1
 {
     public partial class FormDangNhap : Form
     {
+        linqDataContext db = new linqDataContext();
         public FormDangNhap()
         {
             InitializeComponent();
@@ -22,14 +26,40 @@ namespace QLNS1
             this.Close();
         }
 
-        private void FormDangNhap_Load(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox2.Checked)
+            {
+                txtMK.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMK.UseSystemPasswordChar = true;
+            }
         }
 
-        private void txtMK_TextChanged(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            txtMK.UseSystemPasswordChar = true;
+            try
+            {
+                //string tk = txtTK.Text;
+                //string mk = txtMK.Text;
+                //string sql = "select  * from TAIKHOAN Where Ten = '"+tk+"' and MK = '"+mk+"'";
+                if (txtTK.Text == "admin" && txtMK.Text == "12345")
+                {
+                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
