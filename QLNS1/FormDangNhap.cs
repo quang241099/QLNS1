@@ -19,7 +19,17 @@ namespace QLNS1
 
         private void label3_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMK_TextChanged(object sender, EventArgs e)
+        {
+            txtMK.UseSystemPasswordChar = true;
         }
     }
 }

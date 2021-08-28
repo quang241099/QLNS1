@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyNhanSu" Class="linqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-DN7MI1FU\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KPC8BMG\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DanhMucChucVu" Member="DanhMucChucVus">
+    <Type Name="DanhMucChucVu">
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PhuCap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien" Member="DanhMucNhanViens" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucNhanVien" />
+    </Type>
+  </Table>
   <Table Name="dbo.BaoHiemNhanVien" Member="BaoHiemNhanViens">
     <Type Name="BaoHiemNhanVien">
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -17,14 +25,6 @@
       <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="TiLeBH" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="BaoHiemNhanViens" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DanhMucChucVu" Member="DanhMucChucVus">
-    <Type Name="DanhMucChucVu">
-      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="PhuCap" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DanhMucChucVu_DanhMucNhanVien" Member="DanhMucNhanViens" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucNhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.DANHMUCHINHTHUCTUYENDUNG" Member="DANHMUCHINHTHUCTUYENDUNGs">
@@ -91,20 +91,20 @@
       <Association Name="DanhMucNhanVien_LuongNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.QuyDinhKTKL" Member="QuyDinhKTKLs">
-    <Type Name="QuyDinhKTKL">
-      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="DanhSachKTKL" />
-    </Type>
-  </Table>
   <Table Name="dbo.PhongBan" Member="PhongBans">
     <Type Name="PhongBan">
       <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Association Name="PhongBan_DanhMucNhanVien" Member="DanhMucNhanViens" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="DanhMucNhanVien" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuyDinhKTKL" Member="QuyDinhKTKLs">
+    <Type Name="QuyDinhKTKL">
+      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="DanhSachKTKL" />
     </Type>
   </Table>
   <Table Name="dbo.TaiKhoan" Member="TaiKhoans">

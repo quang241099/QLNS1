@@ -41,6 +41,8 @@ namespace QLNS1
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtTK = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMK = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -49,11 +51,12 @@ namespace QLNS1
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(403, 9);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.ForeColor = System.Drawing.Color.Firebrick;
+            this.label3.Location = new System.Drawing.Point(389, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(11, 12);
+            this.label3.Size = new System.Drawing.Size(22, 24);
             this.label3.TabIndex = 29;
             this.label3.Text = "X";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -66,8 +69,8 @@ namespace QLNS1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(153, 53);
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(140, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 33);
@@ -79,7 +82,7 @@ namespace QLNS1
             this.lblstatus.AutoSize = true;
             this.lblstatus.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstatus.ForeColor = System.Drawing.Color.Red;
-            this.lblstatus.Location = new System.Drawing.Point(193, 256);
+            this.lblstatus.Location = new System.Drawing.Point(179, 224);
             this.lblstatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblstatus.Name = "lblstatus";
             this.lblstatus.Size = new System.Drawing.Size(0, 21);
@@ -91,7 +94,7 @@ namespace QLNS1
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(94, 288);
+            this.btnLogin.Location = new System.Drawing.Point(80, 256);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(254, 36);
@@ -103,7 +106,7 @@ namespace QLNS1
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBox2.Location = new System.Drawing.Point(94, 256);
+            this.checkBox2.Location = new System.Drawing.Point(80, 224);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(92, 17);
@@ -114,7 +117,7 @@ namespace QLNS1
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(94, 245);
+            this.panel4.Location = new System.Drawing.Point(80, 213);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(254, 1);
@@ -123,7 +126,7 @@ namespace QLNS1
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(94, 191);
+            this.panel3.Location = new System.Drawing.Point(80, 159);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(254, 1);
@@ -132,7 +135,7 @@ namespace QLNS1
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(94, 211);
+            this.pictureBox4.Location = new System.Drawing.Point(80, 179);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 30);
@@ -143,7 +146,7 @@ namespace QLNS1
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(94, 157);
+            this.pictureBox3.Location = new System.Drawing.Point(80, 125);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 30);
@@ -151,12 +154,56 @@ namespace QLNS1
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
             // 
+            // txtTK
+            // 
+            this.txtTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            // 
+            // 
+            // 
+            this.txtTK.Border.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtTK.Border.Class = "TextBoxBorder";
+            this.txtTK.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTK.Border.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtTK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.ForeColor = System.Drawing.Color.White;
+            this.txtTK.Location = new System.Drawing.Point(120, 128);
+            this.txtTK.Multiline = true;
+            this.txtTK.Name = "txtTK";
+            this.txtTK.PreventEnterBeep = true;
+            this.txtTK.Size = new System.Drawing.Size(214, 29);
+            this.txtTK.TabIndex = 16;
+            this.txtTK.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.WatermarkText = "Username";
+            // 
+            // txtMK
+            // 
+            this.txtMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            // 
+            // 
+            // 
+            this.txtMK.Border.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtMK.Border.Class = "TextBoxBorder";
+            this.txtMK.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.ForeColor = System.Drawing.Color.White;
+            this.txtMK.Location = new System.Drawing.Point(120, 182);
+            this.txtMK.Multiline = true;
+            this.txtMK.Name = "txtMK";
+            this.txtMK.PreventEnterBeep = true;
+            this.txtMK.Size = new System.Drawing.Size(214, 29);
+            this.txtMK.TabIndex = 31;
+            this.txtMK.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.WatermarkText = "Password";
+            this.txtMK.TextChanged += new System.EventHandler(this.txtMK_TextChanged);
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(425, 394);
+            this.ClientSize = new System.Drawing.Size(409, 388);
+            this.Controls.Add(this.txtMK);
+            this.Controls.Add(this.txtTK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblstatus);
@@ -166,12 +213,15 @@ namespace QLNS1
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
+            this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -191,5 +241,7 @@ namespace QLNS1
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTK;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMK;
     }
 }
