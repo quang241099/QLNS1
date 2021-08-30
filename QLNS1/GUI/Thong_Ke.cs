@@ -61,7 +61,6 @@ namespace QLNS1.GUI
                     Series series1 = new Series("1", ViewType.Pie);
                     var dt = from p in linq.TiLeBaoHiem() select p;
                     List<NhanVien> list = new List<NhanVien>();
-
                     foreach (var item in dt)
                     {
                          NhanVien nv = new NhanVien
@@ -71,17 +70,14 @@ namespace QLNS1.GUI
                          };
                          list.Add(nv);
                     }
-
                     chartTK.Series.Clear();
                     chartTK.DataSource = list;
-
                     chartTK.Series.Add(series1);
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
                     chartTK.PaletteName = "Metro";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
-                    //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
                     chartTK.Titles.Clear();
                     title.Text = "Thống kê bảo hiểm";
@@ -118,7 +114,6 @@ namespace QLNS1.GUI
                     Series series1 = new Series("1", ViewType.Pie);
                     var dt = from p in linq.TiLeChucVu() select p;
                     List<NhanVien> list = new List<NhanVien>();
-
                     foreach (var item in dt)
                     {
                          NhanVien nv = new NhanVien
@@ -128,17 +123,13 @@ namespace QLNS1.GUI
                          };
                          list.Add(nv);
                     }
-
-
                     chartTK.DataSource = list;
-
                     chartTK.Series.Add(series1);
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
                     chartTK.PaletteName = "Red Violet";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
-                    //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
                     chartTK.Titles.Clear();
                     title.Text = "Thống kê chức vụ";
@@ -169,11 +160,11 @@ namespace QLNS1.GUI
                                  Tên_phòng_ban = p.ten
                             }).ToList();
                     dgvTK.DataSource = dsnv;
+
                     chartTK.Series.Clear();
                     Series series1 = new Series("1", ViewType.Pie);
                     var dt = from p in linq.TiLePhongBan() select p;
                     List<NhanVien> list = new List<NhanVien>();
-
                     foreach (var item in dt)
                     {
                          NhanVien nv = new NhanVien
@@ -183,16 +174,13 @@ namespace QLNS1.GUI
                          };
                          list.Add(nv);
                     }
-
                     chartTK.DataSource = list;
-
                     chartTK.Series.Add(series1);
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
                     chartTK.PaletteName = "Flow";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
-                    //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
                     chartTK.Titles.Clear();
                     title.Text = "Thống kê phòng ban";
@@ -222,11 +210,11 @@ namespace QLNS1.GUI
                                  Nơi_sinh = p.NoiSinh
                             }).ToList();
                     dgvTK.DataSource = dsnv;
+
                     chartTK.Series.Clear();
                     Series series1 = new Series("1", ViewType.Pie);
                     var dt = from p in linq.TiLeTrinhDoNV() select p;
                     List<NhanVien> list = new List<NhanVien>();
-
                     foreach (var item in dt)
                     {
                          NhanVien nv = new NhanVien
@@ -236,16 +224,13 @@ namespace QLNS1.GUI
                          };
                          list.Add(nv);
                     }
-
                     chartTK.DataSource = list;
-
                     chartTK.Series.Add(series1);
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
                     chartTK.PaletteName = "Module";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
-                    //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
                     chartTK.Titles.Clear();
                     title.Text = "Thống kê trình độ";
@@ -281,7 +266,6 @@ namespace QLNS1.GUI
                     Series series1 = new Series("1", ViewType.Pie);
                     var dt = from p in linq.TyLeKTKL() select p;
                     List<NhanVien> list = new List<NhanVien>();
-
                     foreach (var item in dt)
                     {
                          NhanVien nv = new NhanVien
@@ -291,23 +275,18 @@ namespace QLNS1.GUI
                          };
                          list.Add(nv);
                     }
-
                     chartTK.DataSource = list;
-
                     chartTK.Series.Add(series1);
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
                     chartTK.PaletteName = "Blue II";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
-                    //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
                     chartTK.Titles.Clear();
                     title.Text = "Thống kê khen thưởng kỷ luật";
                     chartTK.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] { title });
-
                }
-
           }
           public class NhanVien
           {
