@@ -54,6 +54,7 @@ namespace QLNS1.GUI
                this.chartTK.Legend.Name = "Default Legend";
                this.chartTK.Location = new System.Drawing.Point(590, 93);
                this.chartTK.Name = "chartTK";
+               this.chartTK.PaletteName = "Apex";
                this.chartTK.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
                this.chartTK.Size = new System.Drawing.Size(590, 494);
                this.chartTK.TabIndex = 1;

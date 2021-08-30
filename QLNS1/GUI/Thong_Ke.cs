@@ -136,7 +136,7 @@ namespace QLNS1.GUI
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
-                    chartTK.PaletteName = "Metro";
+                    chartTK.PaletteName = "Red Violet";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
                     //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
@@ -190,7 +190,7 @@ namespace QLNS1.GUI
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
-                    chartTK.PaletteName = "Metro";
+                    chartTK.PaletteName = "Flow";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
                     //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
@@ -243,7 +243,7 @@ namespace QLNS1.GUI
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
-                    chartTK.PaletteName = "Metro";
+                    chartTK.PaletteName = "Module";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
                     //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
@@ -298,7 +298,7 @@ namespace QLNS1.GUI
                     series1.ArgumentDataMember = "ThuocTinh";
                     series1.ValueDataMembers.AddRange("GiaTri");
                     series1.Label.TextPattern = "{A}: {VP:P}";
-                    chartTK.PaletteName = "Metro";
+                    chartTK.PaletteName = "Blue II";
                     chartTK.AppearanceNameSerializable = "Nature Colors";
                     //chartTK.Size = new System.Drawing.Size(1167, 304);
                     DevExpress.XtraCharts.ChartTitle title = new DevExpress.XtraCharts.ChartTitle();
