@@ -8,22 +8,9 @@
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SoTienDongMotThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="DANHMUCBAOHIEM" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien2" Member="DANHMUCBAOHIEM1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
+      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien1" Member="DANHMUCBAOHIEM1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
       <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien2" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.BaoHiemNhanVien" Member="BaoHiemNhanVien1s">
-    <Type Name="BaoHiemNhanVien1">
-      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaBaoHiem" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="NgayBatDau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="SoTienDongMotThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien1" Member="DANHMUCBAOHIEM" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien11" Member="DANHMUCBAOHIEM1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien1" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien11" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DanhMucNhanVien_BaoHiemNhanVien1" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANHMUCBAOHIEM" Member="DANHMUCBAOHIEMs">
@@ -32,9 +19,7 @@
       <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="TiLeBH" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="BaoHiemNhanViens" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien1" Member="BaoHiemNhanVien1s" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien1" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien2" Member="BaoHiemNhanViens1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien11" Member="BaoHiemNhanVien1s1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien1" />
+      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien1" Member="BaoHiemNhanViens1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.DanhMucChucVu" Member="DanhMucChucVus">
@@ -76,9 +61,7 @@
       <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="BaoHiemNhanViens" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien1" Member="BaoHiemNhanVien1s" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien1" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien2" Member="BaoHiemNhanViens1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien11" Member="BaoHiemNhanVien1s1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien1" />
+      <Association Name="DanhMucNhanVien_BaoHiemNhanVien1" Member="BaoHiemNhanViens1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien" />
       <Association Name="DanhMucNhanVien_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhSachKTKL" />
       <Association Name="DanhMucNhanVien_DanhSachKTKL1" Member="DanhSachKTKLs1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhSachKTKL" />
       <Association Name="DanhMucNhanVien_LuongNhanVien" Member="LuongNhanViens" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="LuongNhanVien" />

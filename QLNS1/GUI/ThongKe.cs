@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraCharts;
 
 namespace QLNS1.GUI
 {
@@ -30,7 +31,7 @@ namespace QLNS1.GUI
                {
                     int i = 0;
                     var dsnv = linq.TKBaoHiem().ToList()
-                            .Select (p=> new
+                            .Select(p => new
                             {
                                  STT = ++i,
                                  Mã_nhân_viên = p.MaNhanVien,
@@ -51,6 +52,31 @@ namespace QLNS1.GUI
                                  Tên_bảo_hiểm = p.ten
                             }).ToList();
                     dgvTK.DataSource = dsnv;
+
+                    //Series series1 = new Series("1", ViewType.Pie);
+                    //var dt = from p in linq.TiLeBaoHiem() select p;
+                    //List<NhanVien> list = new List<NhanVien>();
+                    /*var dt = linq.TiLeBaoHiem().ToList()
+                         .Select(p => new
+                         {
+                              thuoctinh = p.ten,
+                              giatri = p.Column1
+                         }).ToList();
+                    foreach(var item in dt)
+                    {
+                         
+                         series1.Points.Add(new SeriesPoint(item.thuoctinh, item.giatri));
+                    }
+                    
+                    
+                    chartTK.Series.Add(series1);*/
+                    //chartTK.DataSource = list;
+                    //series1.ArgumentDataMember = "ten";
+                    //series1.ValueDataMembers.AddRange("Tile");
+                    //chartTK.DataSource = tilenv;
+                    //ChartDesigner designer = new ChartDesigner(chartTK);
+                    //designer.ShowDialog();
+                    
                }
                if (cbxTK.Text == "Chức vụ")
                {
@@ -77,6 +103,7 @@ namespace QLNS1.GUI
                                  Tên_chức_vụ = p.ten
                             }).ToList();
                     dgvTK.DataSource = dsnv;
+                    chartTK.DataSource = dsnv;
                }
                if (cbxTK.Text == "Phòng ban")
                {
@@ -103,6 +130,7 @@ namespace QLNS1.GUI
                                  Tên_phòng_ban = p.ten
                             }).ToList();
                     dgvTK.DataSource = dsnv;
+                    chartTK.DataSource = dsnv;
                }
                if (cbxTK.Text == "Trình độ")
                {
@@ -128,6 +156,7 @@ namespace QLNS1.GUI
                                  Nơi_sinh = p.NoiSinh
                             }).ToList();
                     dgvTK.DataSource = dsnv;
+                    chartTK.DataSource = dsnv;
                }
                if (cbxTK.Text == "Khen thưởng kỉ luật")
                {
@@ -154,11 +183,16 @@ namespace QLNS1.GUI
                                  Hình_thức_KTKL = p.ten
                             }).ToList();
                     dgvTK.DataSource = dsnv;
-               }
+                    chartTK.DataSource = dsnv;
 
+               }
+               
+          }
+          public class NhanVien
+          {
+               public string ThuocTinh { set; get; }
+               public float GiaTri { set; get; }
           }
 
      }
-          
-     
 }
