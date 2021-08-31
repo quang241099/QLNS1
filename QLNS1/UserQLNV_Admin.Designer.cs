@@ -85,6 +85,8 @@ namespace QLNS1
             this.LuongHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTim = new DevComponents.DotNetBar.ButtonX();
+            this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
@@ -636,10 +638,39 @@ namespace QLNS1
             this.NgayKT.ReadOnly = true;
             this.NgayKT.Width = 180;
             // 
+            // btnTim
+            // 
+            this.btnTim.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTim.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTim.Location = new System.Drawing.Point(1131, 507);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(51, 34);
+            this.btnTim.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTim.Symbol = "";
+            this.btnTim.SymbolSize = 12F;
+            this.btnTim.TabIndex = 203;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.Border.Class = "TextBoxBorder";
+            this.txtSearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSearch.Location = new System.Drawing.Point(722, 519);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PreventEnterBeep = true;
+            this.txtSearch.Size = new System.Drawing.Size(402, 22);
+            this.txtSearch.TabIndex = 204;
+            // 
             // UserQLNV_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
@@ -744,5 +775,7 @@ namespace QLNS1
         private System.Windows.Forms.DataGridViewTextBoxColumn LuongHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayBD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayKT;
+        private DevComponents.DotNetBar.ButtonX btnTim;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSearch;
     }
 }

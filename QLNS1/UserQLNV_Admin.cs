@@ -21,6 +21,7 @@ namespace QLNS1
         }
 
         private static UserQLNV_Admin _instance;
+
         public static UserQLNV_Admin Instance
         {
             get
@@ -57,6 +58,7 @@ namespace QLNS1
 
         private void dataGridViewNV_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
             int i = e.RowIndex;
             int a = dataGridViewNV.RowCount;
             DanhMucNhanVien nv = new DanhMucNhanVien();
@@ -65,21 +67,21 @@ namespace QLNS1
             if (i >= 0)
             {
                 DataGridViewRow row = dataGridViewNV.Rows[i];
-                textMaNV1.Text = row.Cells[0].Value.ToString();
-                textMaCV1.Text = row.Cells[1].Value.ToString();
-                textMaPB1.Text = row.Cells[4].Value.ToString();
-                textHoTen.Text = row.Cells[3].Value.ToString();
-                dtNgaySinh.Value = Convert.ToDateTime(row.Cells[6].Value.ToString());
-                textGioiTinh1.Text = row.Cells[11].Value.ToString();
-                textQueQuan1.Text = row.Cells[9].Value.ToString();
-                textNoiLamViec.Text = row.Cells[10].Value.ToString();
-                textTrinhDo1.Text = row.Cells[13].Value.ToString();
-                textSDT1.Text = row.Cells[8].Value.ToString();
-                textEmail.Text = row.Cells[2].Value.ToString();
-                textCMND.Text = row.Cells[5].Value.ToString();
-                textNoiO.Text = row.Cells[12].Value.ToString();
-                textNoiSinh.Text = row.Cells[14].Value.ToString();
-                textMaTD1.Text = row.Cells[7].Value.ToString();
+                textMaNV1.Text = row.Cells["MaNhanVien"].Value.ToString();
+                textMaCV1.Text = row.Cells["MaChucVu"].Value.ToString();
+                textMaPB1.Text = row.Cells["MaPB"].Value.ToString();
+                textHoTen.Text = row.Cells["HoTen"].Value.ToString();
+                dtNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value.ToString());
+                textGioiTinh1.Text = row.Cells["GioiTinh"].Value.ToString();
+                textQueQuan1.Text = row.Cells["QueQuan"].Value.ToString();
+                textNoiLamViec.Text = row.Cells["NoiLamViec"].Value.ToString();
+                textTrinhDo1.Text = row.Cells["TrinhDo"].Value.ToString();
+                textSDT1.Text = row.Cells["SDT"].Value.ToString();
+                textEmail.Text = row.Cells["Email"].Value.ToString();
+                textCMND.Text = row.Cells["CMND"].Value.ToString();
+                textNoiO.Text = row.Cells["NoiO"].Value.ToString();
+                textNoiSinh.Text = row.Cells["NoiSinh"].Value.ToString();
+                textMaTD1.Text = row.Cells["MaTD"].Value.ToString();
 
 
 
@@ -205,6 +207,19 @@ namespace QLNS1
         private void label21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập dữ kiện tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSearch.Focus();
+            }
+            else
+            {
+                dataGridViewNV.DataSource = db.TIMNHANVIEN_ADMIN(txtSearch.Text);
+            }
         }
     }
 
