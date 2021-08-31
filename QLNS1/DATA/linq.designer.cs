@@ -76,13 +76,8 @@ namespace QLNS1.DATA
 		{
 			OnCreated();
 		}
-
-        internal void SaveChanges()
-        {
-            throw new NotImplementedException();
-        }
-
-        public linqDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		
+		public linqDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -180,6 +175,19 @@ namespace QLNS1.DATA
 			{
 				return this.GetTable<TaiKhoan>();
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dangnhap", IsComposable=true)]
+		public string dangnhap([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(10)")] string manv)
+		{
+			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), manv).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dangnhap1")]
+		public ISingleResult<dangnhap1Result> dangnhap1()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<dangnhap1Result>)(result.ReturnValue));
 		}
 	}
 	
@@ -2209,6 +2217,50 @@ namespace QLNS1.DATA
 				if ((this._MK != value))
 				{
 					this._MK = value;
+				}
+			}
+		}
+	}
+	
+	public partial class dangnhap1Result
+	{
+		
+		private string _MaNhanVien;
+		
+		private string _sdt;
+		
+		public dangnhap1Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sdt", DbType="VarChar(40)")]
+		public string sdt
+		{
+			get
+			{
+				return this._sdt;
+			}
+			set
+			{
+				if ((this._sdt != value))
+				{
+					this._sdt = value;
 				}
 			}
 		}

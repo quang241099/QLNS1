@@ -113,4 +113,14 @@
       <Column Name="MK" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.dangnhap" Method="dangnhap" IsComposable="true">
+    <Parameter Name="manv" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.dangnhap1" Method="dangnhap1">
+    <ElementType Name="dangnhap1Result">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
