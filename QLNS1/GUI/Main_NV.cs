@@ -20,6 +20,7 @@ namespace QLNS1.GUI
         private static readonly object viewChanged = new object();
         private static readonly object settingsReloaded = new object();
         private StatusMessagesHelper statusMessagesHelper;
+        public static string manv;
 
         protected virtual void RaiseViewChanged(DevExpress.ExpressApp.View view)
         {
@@ -193,5 +194,22 @@ namespace QLNS1.GUI
             get { return viewSiteManager.View; }
         }
         #endregion
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!viewSitePanel.Controls.Contains(LUONG_NHANVIEN.Instance))
+            {
+                viewSitePanel.Controls.Add(LUONG_NHANVIEN.Instance);
+                LUONG_NHANVIEN.Instance.Dock = DockStyle.Fill;
+                LUONG_NHANVIEN.Instance.BringToFront();
+            }
+            else
+            {
+                LUONG_NHANVIEN.Instance.BringToFront();
+                LUONG_NHANVIEN.Instance.Dock = DockStyle.Fill;
+
+            }
+
+        }
     }
 }

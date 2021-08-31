@@ -41,6 +41,8 @@ namespace QLNS1
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.txtMK = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +100,7 @@ namespace QLNS1
             this.btnLogin.TabIndex = 24;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // checkBox2
             // 
@@ -151,12 +154,30 @@ namespace QLNS1
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
             // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(172, 157);
+            this.txtTK.Multiline = true;
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(160, 28);
+            this.txtTK.TabIndex = 30;
+            // 
+            // txtMK
+            // 
+            this.txtMK.Location = new System.Drawing.Point(175, 208);
+            this.txtMK.Multiline = true;
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(157, 32);
+            this.txtMK.TabIndex = 31;
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(425, 394);
+            this.Controls.Add(this.txtMK);
+            this.Controls.Add(this.txtTK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblstatus);
@@ -191,5 +212,7 @@ namespace QLNS1
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txtTK;
+        private System.Windows.Forms.TextBox txtMK;
     }
 }
