@@ -166,14 +166,14 @@
         <classShapeMoniker Id="0dfd7133-a8c2-4efe-b628-582ebb157606" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 7.80198705588942); (6.09375 : 8.39573705588942); (6.09375 : 9.51044840494792); (6.25 : 9.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 7.80198705588942); (5.87857443490112 : 8.18056149079054 : JumpStart); (5.99642556509888 : 8.2984126209883 : JumpEnd); (6.09375 : 8.39573705588942); (6.09375 : 9.51044840494792); (6.25 : 9.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/DanhMucNhanVien/DanhMucNhanVien_HopDong" />
       <nodes>
         <classShapeMoniker Id="19b8becd-bdd1-4d18-b254-5067e163b23c" />
         <classShapeMoniker Id="1952bd8a-1b65-4a37-ab74-eab6346409bf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 7.76352551742789); (6.1875 : 8.45102551742789); (6.1875 : 9.51044840494792); (6.25 : 9.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 7.76352551742789); (5.87857443490112 : 8.14209995232901 : JumpStart); (6.02767556509888 : 8.29120108252677 : JumpEnd); (6.1875 : 8.45102551742789); (6.1875 : 9.51044840494792); (6.25 : 9.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/DanhMucNhanVien/DanhMucNhanVien_HopDong1" />
       <nodes>
         <classShapeMoniker Id="19b8becd-bdd1-4d18-b254-5067e163b23c" />

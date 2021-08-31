@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -287,6 +288,7 @@ namespace QLNS1.GUI
                     title.Text = "Thống kê khen thưởng kỷ luật";
                     chartTK.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] { title });
                }
+               
           }
           public class NhanVien
           {
