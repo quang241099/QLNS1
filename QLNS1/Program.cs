@@ -16,8 +16,7 @@ namespace QLNS1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLNS1.GUI.Main_Admin());
-            
+            Application.Run(new FormDangNhap());   
         }
     }
 }

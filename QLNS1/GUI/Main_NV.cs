@@ -21,6 +21,7 @@ namespace QLNS1.GUI
         private static readonly object settingsReloaded = new object();
         private StatusMessagesHelper statusMessagesHelper;
 
+        public static string manv;
         protected virtual void RaiseViewChanged(DevExpress.ExpressApp.View view)
         {
             EventHandler<TemplateViewChangedEventArgs> handler = (EventHandler<TemplateViewChangedEventArgs>)Events[viewChanged];
@@ -193,5 +194,20 @@ namespace QLNS1.GUI
             get { return viewSiteManager.View; }
         }
         #endregion
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DanhMuc_NhanVien dm_nhanvien = new DanhMuc_NhanVien();
+            if (!viewSitePanel.Controls.Contains(dm_nhanvien))
+            {
+                viewSitePanel.Controls.Add(dm_nhanvien);
+                dm_nhanvien.Dock = DockStyle.Fill;
+                dm_nhanvien.BringToFront();
+            }
+            else
+            {
+                dm_nhanvien.BringToFront();
+            }
+        }
     }
 }

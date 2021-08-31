@@ -41,6 +41,8 @@ namespace QLNS1
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.txtMK = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +72,7 @@ namespace QLNS1
             this.label1.Location = new System.Drawing.Point(153, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 33);
+            this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 26;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -82,7 +84,7 @@ namespace QLNS1
             this.lblstatus.Location = new System.Drawing.Point(193, 256);
             this.lblstatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(0, 21);
+            this.lblstatus.Size = new System.Drawing.Size(0, 16);
             this.lblstatus.TabIndex = 25;
             // 
             // btnLogin
@@ -98,6 +100,7 @@ namespace QLNS1
             this.btnLogin.TabIndex = 24;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // checkBox2
             // 
@@ -106,10 +109,11 @@ namespace QLNS1
             this.checkBox2.Location = new System.Drawing.Point(94, 256);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(92, 17);
+            this.checkBox2.Size = new System.Drawing.Size(89, 16);
             this.checkBox2.TabIndex = 23;
             this.checkBox2.Text = "Hiện mật khẩu";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // panel4
             // 
@@ -151,12 +155,28 @@ namespace QLNS1
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
             // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(147, 166);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(201, 19);
+            this.txtTK.TabIndex = 30;
+            // 
+            // txtMK
+            // 
+            this.txtMK.Location = new System.Drawing.Point(147, 224);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(201, 19);
+            this.txtMK.TabIndex = 31;
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(425, 394);
+            this.ClientSize = new System.Drawing.Size(633, 366);
+            this.Controls.Add(this.txtMK);
+            this.Controls.Add(this.txtTK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblstatus);
@@ -191,5 +211,7 @@ namespace QLNS1
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txtTK;
+        private System.Windows.Forms.TextBox txtMK;
     }
 }
