@@ -193,7 +193,20 @@ namespace QLNS1.GUI
             get { return viewSiteManager.View; }
         }
         #endregion
-
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DanhMuc_AD dm_admin = new DanhMuc_AD();
+            if (!viewSitePanel.Controls.Contains(dm_admin))
+            {
+                viewSitePanel.Controls.Add(dm_admin);
+                dm_admin.Dock = DockStyle.Fill;
+                dm_admin.BringToFront();
+            }
+            else
+            {
+                dm_admin.BringToFront();
+            }
+        }
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
         {
             viewSitePanel.Controls.Clear();

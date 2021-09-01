@@ -544,6 +544,7 @@ namespace QLNS1.GUI
             this.barButtonItem6.Id = 9;
             this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
             this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -552,6 +553,7 @@ namespace QLNS1.GUI
             this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+
             // 
             // barButtonItem8
             // 
@@ -573,7 +575,7 @@ namespace QLNS1.GUI
             this.barButtonItem10.Id = 13;
             this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
             this.barButtonItem10.Name = "barButtonItem10";
-            // 
+
             // defaultPage
             // 
             this.defaultPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
