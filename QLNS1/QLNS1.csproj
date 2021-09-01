@@ -91,6 +91,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoKTKL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCaoKTKL.Designer.cs" />
+    <Compile Include="BaoCaoNhanSu2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCaoNhanSu2.Designer.cs" />
     <Compile Include="DanhMuc_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +178,8 @@
     <Compile Include="UserQLNV_NV.Designer.cs">
       <DependentUpon>UserQLNV_NV.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCaoKTKL.resx" />
+    <EmbeddedResource Include="BaoCaoNhanSu2.resx" />
     <EmbeddedResource Include="GUI\Thong_Ke.resx">
       <DependentUpon>Thong_Ke.cs</DependentUpon>
     </EmbeddedResource>
