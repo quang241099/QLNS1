@@ -335,7 +335,7 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ribbonControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="defaultPage.Text" xml:space="preserve">
     <value>Home</value>
@@ -350,7 +350,7 @@
     <value>0, 778</value>
   </data>
   <data name="ribbonStatusBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>1290, 30</value>
@@ -395,7 +395,7 @@
     <value>0, 193</value>
   </data>
   <data name="viewSitePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="viewSitePanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1290, 585</value>

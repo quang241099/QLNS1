@@ -545,6 +545,7 @@ namespace QLNS1.GUI
             this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+
             // 
             // barButtonItem7
             // 
@@ -561,6 +562,7 @@ namespace QLNS1.GUI
             this.barButtonItem8.Id = 11;
             this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
             this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
@@ -575,7 +577,7 @@ namespace QLNS1.GUI
             this.barButtonItem10.Id = 13;
             this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
             this.barButtonItem10.Name = "barButtonItem10";
-
+            // 
             // defaultPage
             // 
             this.defaultPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -693,7 +695,42 @@ namespace QLNS1.GUI
             this.contextMenu.Name = "contextMenu";
             this.contextMenu.Ribbon = this.ribbonControl;
             // 
-            // Main_Admin
+            // barButtonItem6
+            // 
+            resources.ApplyResources(this.barButtonItem6, "barButtonItem6");
+            this.barButtonItem6.Id = 9;
+            this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
+            this.barButtonItem6.Name = "barButtonItem6";
+            // 
+            // barButtonItem7
+            // 
+            resources.ApplyResources(this.barButtonItem7, "barButtonItem7");
+            this.barButtonItem7.Id = 10;
+            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barButtonItem8
+            // 
+            resources.ApplyResources(this.barButtonItem8, "barButtonItem8");
+            this.barButtonItem8.Id = 11;
+            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // barButtonItem9
+            // 
+            resources.ApplyResources(this.barButtonItem9, "barButtonItem9");
+            this.barButtonItem9.Id = 12;
+            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
+            this.barButtonItem9.Name = "barButtonItem9";
+            // 
+            // barButtonItem10
+            // 
+            resources.ApplyResources(this.barButtonItem10, "barButtonItem10");
+            this.barButtonItem10.Id = 13;
+            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.barButtonItem10.Name = "barButtonItem10";
+            // 
+            // DetailRibbonForm1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

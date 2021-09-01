@@ -296,6 +296,10 @@
   <data name="ribbonControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ribbonControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="ribbonPageGroup1.Text" xml:space="preserve">
     <value>ribbonPageGroup1</value>
   </data>
@@ -324,13 +328,16 @@
     <value>Tools</value>
   </data>
   <data name="ribbonControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 158</value>
+    <value>931, 193</value>
   </data>
   <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 579</value>
+    <value>0, 712</value>
+  </data>
+  <data name="ribbonStatusBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 24</value>
+    <value>931, 30</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
     <value>ribbonStatusBar</value>
@@ -356,15 +363,17 @@
   <data name="&gt;&gt;ribbonControl.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="viewSitePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="viewSitePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 158</value>
+    <value>0, 193</value>
+  </data>
+  <data name="viewSitePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="viewSitePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 421</value>
+    <value>931, 519</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="viewSitePanel.TabIndex" type="System.Int32, mscorlib">
@@ -395,10 +404,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>798, 603</value>
+    <value>931, 742</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="&gt;&gt;barActionContainerObjectsCreation.Name" xml:space="preserve">
     <value>barActionContainerObjectsCreation</value>
