@@ -14,7 +14,7 @@
         <elementListCompartment Id="5ddad3f3-d848-46aa-b173-cd294548a2d0" absoluteBounds="2.515, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.781251 : 2.5112939453125); (3.781251 : 3.26877680989583); (5.25 : 3.26877680989583); (5.25 : 3.14589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.781251 : 2.5112939453125); (3.781251 : 3.26877680989583); (5.25 : 3.26877680989583); (5.25 : 3.14589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/DANHMUCBAOHIEM/DANHMUCBAOHIEM_BaoHiemNhanVien" />
       <nodes>
         <classShapeMoniker Id="7a9cdcd9-ff10-4522-bbdd-401e01b4cd6c" />
@@ -39,7 +39,7 @@
         <elementListCompartment Id="c380fbe1-8c2a-409f-b397-ce873c20819f" absoluteBounds="1.3900000000000001, 2.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 2.85984537760417); (3.69791766666667 : 2.85984537760417 : JumpStart); (3.86458433333333 : 2.85984537760417 : JumpEnd); (4.25 : 2.85984537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.375 : 2.85984537760417); (4.25 : 2.85984537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/DanhMucNhanVien/DanhMucNhanVien_BaoHiemNhanVien" />
       <nodes>
         <classShapeMoniker Id="dd3a852a-07e6-4019-97f3-bf582f2824dc" />
@@ -53,7 +53,7 @@
         <classShapeMoniker Id="dd3a852a-07e6-4019-97f3-bf582f2824dc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.25 : 4.94639322916667); (3.375 : 4.94639322916667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.25 : 4.94639322916667); (3.375 : 4.94639322916667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/DANHMUCHINHTHUCTUYENDUNG/DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien" />
       <nodes>
         <classShapeMoniker Id="856ce313-556f-4b4d-a2c0-e8d4532c3be6" />
@@ -79,7 +79,7 @@
         <elementListCompartment Id="df0a64ba-3cd0-4b73-acb7-b741017a76f3" absoluteBounds="4.89, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 5.47520182291667); (6.59375 : 5.47520182291667); (6.59375 : 2.39589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.375 : 5.47520182291667); (6.59375 : 5.47520182291667); (6.59375 : 2.39589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/DanhMucNhanVien/DanhMucNhanVien_HopDong" />
       <nodes>
         <classShapeMoniker Id="dd3a852a-07e6-4019-97f3-bf582f2824dc" />
@@ -105,7 +105,7 @@
         <elementListCompartment Id="6d3ff595-7c79-4953-af84-cc9d02a4dbc2" absoluteBounds="1.0150000000000001, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1 : 1.44314697265625); (0.808 : 1.44314697265625); (0.808 : 3.79409912109375); (1.375 : 3.79409912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1 : 1.44314697265625); (0.808 : 1.44314697265625); (0.808 : 3.79409912109375); (1.375 : 3.79409912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/linqDataContext/PhongBan/PhongBan_DanhMucNhanVien" />
       <nodes>
         <classShapeMoniker Id="aad74637-fb37-4a6a-a8b8-57ea9095d489" />

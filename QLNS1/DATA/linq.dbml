@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyNhanSu" Class="linqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-B74R34B\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3PM2V18\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BaoHiemNhanVien" Member="BaoHiemNhanViens">
     <Type Name="BaoHiemNhanVien">
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -115,8 +115,37 @@
   </Table>
   <Function Name="dbo.dangnhap1" Method="dangnhap1">
     <ElementType Name="dangnhap1Result">
-      <Column Name="manhanvien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="SDT" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.XEMLUONG_ADMIN" Method="XEMLUONG_ADMIN">
+    <ElementType Name="XEMLUONG_ADMINResult">
+      <Column Name="MaLuong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LuongHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.XOALUONG_ADMIN" Method="XOALUONG_ADMIN">
+    <Parameter Name="MALUONG" Parameter="mALUONG" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BaoCaoLuong" Method="BaoCaoLuong">
+    <ElementType Name="BaoCaoLuongResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TenPhongBan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MaLuong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LuongHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.SUALUONG_ADMIN" Method="SUALUONG_ADMIN">
@@ -181,16 +210,6 @@
       <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.XEMLUONG_ADMIN" Method="XEMLUONG_ADMIN">
-    <ElementType Name="XEMLUONG_ADMINResult">
-      <Column Name="MaLuong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="LuongHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.XEMLUONG_NV" Method="XEMLUONG_NV">
     <Parameter Name="Manhanvien" Parameter="manhanvien" Type="System.String" DbType="VarChar(20)" />
     <ElementType Name="XEMLUONG_NVResult">
@@ -202,9 +221,5 @@
       <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.XOALUONG_ADMIN" Method="XOALUONG_ADMIN">
-    <Parameter Name="MALUONG" Parameter="mALUONG" Type="System.String" DbType="VarChar(20)" />
-    <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -167,5 +168,13 @@ namespace QLNS1.GUI
             }
 
         }
-    }
+
+          private void btnBaoCao_Click(object sender, EventArgs e)
+          {
+               var dt = linq.BaoCaoLuong().ToList();
+               BaoCaoLuong reportLuong = new BaoCaoLuong();
+               reportLuong.DataSource = dt;
+               reportLuong.ShowPreviewDialog();
+          }
+     }
 }
