@@ -23,7 +23,7 @@ namespace QLNS1
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+               this.Close();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
