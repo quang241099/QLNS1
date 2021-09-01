@@ -192,7 +192,6 @@ namespace QLNS1.GUI
         {
             get { return viewSiteManager.View; }
         }
-        #endregion
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!viewSitePanel.Controls.Contains(LUONG_ADMIN.Instance))
@@ -231,7 +230,9 @@ namespace QLNS1.GUI
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            viewSitePanel.Controls.Clear();
+            viewSitePanel.Controls.Add(Thong_Ke.Instance);
         }
+        #endregion
     }
 }
