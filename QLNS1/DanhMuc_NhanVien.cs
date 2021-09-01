@@ -18,6 +18,7 @@ namespace QLNS1
         }
 
         string MaNhanVien = "";
+        
 
         DATA.linqDataContext linq = new DATA.linqDataContext();
 
