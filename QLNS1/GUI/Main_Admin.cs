@@ -228,5 +228,10 @@ namespace QLNS1.GUI
             viewSitePanel.Controls.Clear();
             viewSitePanel.Controls.Add(UserQLNV_Admin.Instance);
         }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

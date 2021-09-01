@@ -340,6 +340,15 @@
   <data name="defaultPage.Text" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="ribbonGroupTools.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="ribbonGroupOptions.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="ribbonGroupDiagnostic.Text" xml:space="preserve">
+    <value>Diagnostic</value>
+  </data>
   <data name="toolsPage.Text" xml:space="preserve">
     <value>Tools</value>
   </data>
@@ -378,15 +387,6 @@
   </data>
   <data name="&gt;&gt;ribbonControl.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="ribbonGroupTools.Text" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="ribbonGroupOptions.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="ribbonGroupDiagnostic.Text" xml:space="preserve">
-    <value>Diagnostic</value>
   </data>
   <data name="viewSitePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

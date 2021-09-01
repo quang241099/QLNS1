@@ -22,6 +22,8 @@ namespace QLNS1.GUI
         private static readonly object settingsReloaded = new object();
         private StatusMessagesHelper statusMessagesHelper;
 
+        public static string manv;
+
         protected virtual void RaiseViewChanged(DevExpress.ExpressApp.View view)
         {
             EventHandler<TemplateViewChangedEventArgs> handler = (EventHandler<TemplateViewChangedEventArgs>)Events[viewChanged];
@@ -229,6 +231,11 @@ namespace QLNS1.GUI
         {
             viewSitePanel.Controls.Clear();
             viewSitePanel.Controls.Add(UserQLNV_NV.Instance);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }
