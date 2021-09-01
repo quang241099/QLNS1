@@ -15,12 +15,15 @@ using System.Windows.Forms;
 
 namespace QLNS1.GUI
 {
+
     public partial class Main_NV : RibbonForm, IActionControlsSite, IContextMenuHolder, IWindowTemplate, IBarManagerHolder, ISupportViewChanged, ISupportUpdate, IViewSiteTemplate, ISupportStoreSettings, IViewHolder
     {
         private static readonly object viewChanged = new object();
         private static readonly object settingsReloaded = new object();
         private StatusMessagesHelper statusMessagesHelper;
 
+
+        public static string manv;
         protected virtual void RaiseViewChanged(DevExpress.ExpressApp.View view)
         {
             EventHandler<TemplateViewChangedEventArgs> handler = (EventHandler<TemplateViewChangedEventArgs>)Events[viewChanged];
@@ -47,6 +50,7 @@ namespace QLNS1.GUI
             ribbonControl.Manager.ForceLinkCreate();
             statusMessagesHelper = new StatusMessagesHelper(barContainerStatusMessages);
         }
+
 
         #region IActionControlsSite Members
         IEnumerable<IActionControlContainer> IActionControlsSite.ActionContainers
@@ -193,5 +197,11 @@ namespace QLNS1.GUI
             get { return viewSiteManager.View; }
         }
         #endregion
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            viewSitePanel.Controls.Clear();
+            viewSitePanel.Controls.Add(UserQLNV_NV.Instance);
+        }
     }
 }

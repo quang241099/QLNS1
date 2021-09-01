@@ -193,5 +193,11 @@ namespace QLNS1.GUI
             get { return viewSiteManager.View; }
         }
         #endregion
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            viewSitePanel.Controls.Clear();
+            viewSitePanel.Controls.Add(UserQLNV_Admin.Instance);
+        }
     }
 }
