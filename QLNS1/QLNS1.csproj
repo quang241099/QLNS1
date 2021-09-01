@@ -180,6 +180,9 @@
     </Compile>
     <EmbeddedResource Include="BaoCaoKTKL.resx" />
     <EmbeddedResource Include="BaoCaoNhanSu2.resx" />
+    <None Include="DATA\linq.dbml.layout">
+      <DependentUpon>linq.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="GUI\Thong_Ke.resx">
       <DependentUpon>Thong_Ke.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +195,6 @@
     <EmbeddedResource Include="UserQLNV_NV.resx">
       <DependentUpon>UserQLNV_NV.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DATA\linq.dbml.layout">
-      <DependentUpon>linq.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="DanhMuc_AD.resx">
       <DependentUpon>DanhMuc_AD.cs</DependentUpon>
     </EmbeddedResource>

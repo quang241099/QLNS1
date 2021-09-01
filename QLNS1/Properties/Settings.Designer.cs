@@ -23,27 +23,8 @@ namespace QLNS1.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KPC8BMG\\Nguyen Tuan Anh;Initial Catalog=QuanLyNhanSu;Integrat" +
-            "ed Security=True")]
-        public string QuanLyNhanSuConnectionString {
-            get {
-                return ((string)(this["QuanLyNhanSuConnectionString"]));
-            }
-        }
+      
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-DN7MI1FU\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=T" +
-            "rue")]
-        public string QuanLyNhanSuConnectionString1 {
-            get {
-                return ((string)(this["QuanLyNhanSuConnectionString1"]));
-            }
-        }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -52,7 +33,7 @@ namespace QLNS1.Properties {
             "curity=True")]
         public string QuanLyNhanSuConnectionString2 {
             get {
-                return ((string)(this["QuanLyNhanSuConnectionString2"]));
+                  return ((string)(this["QuanLyNhanSuConnectionString2"]));
             }
         }
     }
