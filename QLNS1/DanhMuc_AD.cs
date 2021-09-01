@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using QLNS1.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -411,6 +413,21 @@ namespace QLNS1
             DanhMuc_AD_Load(sender, e);
             txtMaKTKL.Enabled = false;
         }
-      
-    }
+
+          private void btnBC_Click(object sender, EventArgs e)
+          {
+               var dt = linq.BaoCaoNhanSu().ToList();
+               BaoCaoNhanSu2 reportNS = new BaoCaoNhanSu2();
+               reportNS.DataSource = dt;
+               reportNS.ShowPreviewDialog();
+          }
+
+          private void btnBCKTKL_Click(object sender, EventArgs e)
+          {
+               var dt = linq.BaoCaoKTKL().ToList();
+               BaoCaoKTKL reportKTKL = new BaoCaoKTKL();
+               reportKTKL.DataSource = dt;
+               reportKTKL.ShowPreviewDialog();
+          }
+     }
 }
