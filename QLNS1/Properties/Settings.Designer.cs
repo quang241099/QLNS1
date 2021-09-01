@@ -37,8 +37,8 @@ namespace QLNS1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KPC8BMG\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Se" +
-            "curity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-DN7MI1FU\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=T" +
+            "rue")]
         public string QuanLyNhanSuConnectionString1 {
             get {
                 return ((string)(this["QuanLyNhanSuConnectionString1"]));
