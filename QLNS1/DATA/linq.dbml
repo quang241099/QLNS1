@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyNhanSu" Class="linqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-DN7MI1FU\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3PM2V18\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BaoHiemNhanVien" Member="BaoHiemNhanViens">
     <Type Name="BaoHiemNhanVien">
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -8,7 +8,9 @@
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SoTienDongMotThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="DANHMUCBAOHIEM" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
+      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien1" Member="DANHMUCBAOHIEM1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
       <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DanhMucNhanVien_BaoHiemNhanVien1" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANHMUCBAOHIEM" Member="DANHMUCBAOHIEMs">
@@ -17,6 +19,7 @@
       <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="TiLeBH" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="BaoHiemNhanViens" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien" />
+      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien1" Member="BaoHiemNhanViens1" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="BaoHiemNhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.DanhMucChucVu" Member="DanhMucChucVus">
@@ -25,6 +28,9 @@
       <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="PhuCap" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DanhMucChucVu_DanhMucNhanVien" Member="DanhMucNhanViens" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucNhanVien" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien1" Member="DanhMucNhanViens1" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucNhanVien" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien2" Member="DanhMucNhanViens2" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucNhanVien" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien3" Member="DanhMucNhanViens3" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucNhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.DANHMUCHINHTHUCTUYENDUNG" Member="DANHMUCHINHTHUCTUYENDUNGs">
@@ -32,6 +38,9 @@
       <Column Name="MaHinhThucTuyenDung" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
       <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien" Member="DanhMucNhanViens" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DanhMucNhanVien" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien1" Member="DanhMucNhanViens1" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DanhMucNhanVien" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien2" Member="DanhMucNhanViens2" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DanhMucNhanVien" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien3" Member="DanhMucNhanViens3" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DanhMucNhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.DanhMucNhanVien" Member="DanhMucNhanViens">
@@ -52,12 +61,25 @@
       <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="BaoHiemNhanViens" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien" />
+      <Association Name="DanhMucNhanVien_BaoHiemNhanVien1" Member="BaoHiemNhanViens1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien" />
       <Association Name="DanhMucNhanVien_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhSachKTKL" />
+      <Association Name="DanhMucNhanVien_DanhSachKTKL1" Member="DanhSachKTKLs1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhSachKTKL" />
       <Association Name="DanhMucNhanVien_HopDong" Member="HopDongs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="HopDong" />
+      <Association Name="DanhMucNhanVien_HopDong1" Member="HopDongs1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="HopDong" />
       <Association Name="DanhMucNhanVien_LuongNhanVien" Member="LuongNhanViens" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="LuongNhanVien" />
+      <Association Name="DanhMucNhanVien_LuongNhanVien1" Member="LuongNhanViens1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="LuongNhanVien" />
       <Association Name="DanhMucChucVu_DanhMucNhanVien" Member="DanhMucChucVu" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucChucVu" IsForeignKey="true" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien1" Member="DanhMucChucVu1" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucChucVu" IsForeignKey="true" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien2" Member="DanhMucChucVu2" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucChucVu" IsForeignKey="true" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien3" Member="DanhMucChucVu3" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucChucVu" IsForeignKey="true" />
       <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien" Member="DANHMUCHINHTHUCTUYENDUNG" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DANHMUCHINHTHUCTUYENDUNG" IsForeignKey="true" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien1" Member="DANHMUCHINHTHUCTUYENDUNG1" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DANHMUCHINHTHUCTUYENDUNG" IsForeignKey="true" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien2" Member="DANHMUCHINHTHUCTUYENDUNG2" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DANHMUCHINHTHUCTUYENDUNG" IsForeignKey="true" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien3" Member="DANHMUCHINHTHUCTUYENDUNG3" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DANHMUCHINHTHUCTUYENDUNG" IsForeignKey="true" />
       <Association Name="PhongBan_DanhMucNhanVien" Member="PhongBan" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" />
+      <Association Name="PhongBan_DanhMucNhanVien1" Member="PhongBan1" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" />
+      <Association Name="PhongBan_DanhMucNhanVien2" Member="PhongBan2" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" />
+      <Association Name="PhongBan_DanhMucNhanVien3" Member="PhongBan3" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DanhSachKTKL" Member="DanhSachKTKLs">
@@ -67,7 +89,9 @@
       <Column Name="Ngay" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="DanhMucNhanVien_DanhSachKTKL" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DanhMucNhanVien_DanhSachKTKL1" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
       <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="QuyDinhKTKL" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="QuyDinhKTKL" IsForeignKey="true" />
+      <Association Name="QuyDinhKTKL_DanhSachKTKL1" Member="QuyDinhKTKL1" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="QuyDinhKTKL" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.HopDong" Member="HopDongs">
@@ -78,6 +102,7 @@
       <Column Name="NgayBatDau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NgayKetThuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="DanhMucNhanVien_HopDong" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DanhMucNhanVien_HopDong1" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LuongNhanVien" Member="LuongNhanViens">
@@ -89,14 +114,7 @@
       <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DanhMucNhanVien_LuongNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.QuyDinhKTKL" Member="QuyDinhKTKLs">
-    <Type Name="QuyDinhKTKL">
-      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="DanhSachKTKL" />
+      <Association Name="DanhMucNhanVien_LuongNhanVien1" Member="DanhMucNhanVien1" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PhongBan" Member="PhongBans">
@@ -105,6 +123,9 @@
       <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Association Name="PhongBan_DanhMucNhanVien" Member="DanhMucNhanViens" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="DanhMucNhanVien" />
+      <Association Name="PhongBan_DanhMucNhanVien1" Member="DanhMucNhanViens1" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="DanhMucNhanVien" />
+      <Association Name="PhongBan_DanhMucNhanVien2" Member="DanhMucNhanViens2" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="DanhMucNhanVien" />
+      <Association Name="PhongBan_DanhMucNhanVien3" Member="DanhMucNhanViens3" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="DanhMucNhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
@@ -113,4 +134,177 @@
       <Column Name="MK" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.QuyDinhKTKL" Member="QuyDinhKTKLs">
+    <Type Name="QuyDinhKTKL">
+      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="DanhSachKTKL" />
+      <Association Name="QuyDinhKTKL_DanhSachKTKL1" Member="DanhSachKTKLs1" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="DanhSachKTKL" />
+    </Type>
+  </Table>
+  <Function Name="dbo.TiLeBaoHiem" Method="TiLeBaoHiem">
+    <ElementType Name="TiLeBaoHiemResult">
+      <Column Name="ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TiLe" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TyLeKTKL" Method="TyLeKTKL">
+    <ElementType Name="TyLeKTKLResult">
+      <Column Name="ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TiLe" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TiLePhongBan" Method="TiLePhongBan">
+    <ElementType Name="TiLePhongBanResult">
+      <Column Name="ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TiLe" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TiLeChucVu" Method="TiLeChucVu">
+    <ElementType Name="TiLeChucVuResult">
+      <Column Name="ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TiLe" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TiLeTrinhDoNV" Method="TiLeTrinhDoNV">
+    <ElementType Name="TiLeTrinhDoNVResult">
+      <Column Name="trinhdo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TiLe" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKBaoHiem" Method="TKBaoHiem">
+    <ElementType Name="TKBaoHiemResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHinhThucTuyenDung" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NoiLamViec" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="SoCMND" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MaBaoHiem" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKKTKL" Method="TKKTKL">
+    <ElementType Name="TKKTKLResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHinhThucTuyenDung" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NoiLamViec" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="SoCMND" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKPhongBan" Method="TKPhongBan">
+    <ElementType Name="TKPhongBanResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHinhThucTuyenDung" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NoiLamViec" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="SoCMND" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKTrinhDo" Method="TKTrinhDo">
+    <ElementType Name="TKTrinhDoResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHinhThucTuyenDung" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NoiLamViec" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="SoCMND" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKChucVu" Method="TKChucVu">
+    <ElementType Name="TKChucVuResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHinhThucTuyenDung" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NoiLamViec" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="SoCMND" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="TrinhDo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BaoCaoKTKL" Method="BaoCaoKTKL">
+    <ElementType Name="BaoCaoKTKLResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TenPhongBan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="SoHinhThucKTKL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BaoCaoLuong" Method="BaoCaoLuong">
+    <ElementType Name="BaoCaoLuongResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TenPhongBan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaChucVu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MaLuong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LuongHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BaoCaoNhanSu" Method="BaoCaoNhanSu">
+    <ElementType Name="BaoCaoNhanSuResult">
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenPhongBan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

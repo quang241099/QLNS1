@@ -1,0 +1,200 @@
+USE [QuanLyNhanSu]
+GO
+/****** Object:  StoredProcedure [dbo].[BaoCaoKTKL]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[BaoCaoKTKL] 
+as
+begin
+	select DanhMucNhanVien.MaNhanVien, HoTen, NgaySinh, 
+	DanhMucNhanVien.MaPhongBan, PhongBan.Ten 'TenPhongBan', DanhMucNhanVien.MaChucVu, DanhMucChucVu.Ten 'ChucVu', 
+	count (danhsachktkl.MaKTKL) 'SoHinhThucKTKL'
+	from DanhMucNhanVien join DanhMucChucVu on DanhMucNhanVien.MaChucVu = DanhMucChucVu.MaChucVu join PhongBan on DanhMucNhanVien.MaPhongBan = PhongBan.MaPhongBan
+	join DanhSachKTKL on DanhMucNhanVien.MaNhanVien = DanhSachKTKL.MaNhanVien
+	join QuyDinhKTKL on DanhSachKTKL.MaKTKL = QuyDinhKTKL.MaKTKL
+	group by DanhMucNhanVien.MaNhanVien, HoTen, NgaySinh, 
+	DanhMucNhanVien.MaPhongBan, PhongBan.Ten, DanhMucNhanVien.MaChucVu, DanhMucChucVu.Ten
+end
+GO
+/****** Object:  StoredProcedure [dbo].[BaoCaoLuong]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[BaoCaoLuong]
+as
+begin
+	select DanhMucNhanVien.MaNhanVien, HoTen, NgaySinh, 
+	DanhMucNhanVien.MaPhongBan, PhongBan.Ten 'TenPhongBan', DanhMucNhanVien.MaChucVu, DanhMucChucVu.Ten 'ChucVu', 
+	LuongNhanVien.MaLuong, LuongHD, SoNgayCong, ThangNam
+	from DanhMucNhanVien join DanhMucChucVu on DanhMucNhanVien.MaChucVu = DanhMucChucVu.MaChucVu join PhongBan on DanhMucNhanVien.MaPhongBan = PhongBan.MaPhongBan
+	join LuongNhanVien on DanhMucNhanVien.MaNhanVien = LuongNhanVien.MaNhanVien
+end
+GO
+/****** Object:  StoredProcedure [dbo].[BaoCaoNhanSu]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[BaoCaoNhanSu] 
+as
+begin
+	select PhongBan.MaPhongBan, PhongBan.Ten 'TenPhongBan',count(danhmucnhanvien.MaNhanVien) 'SoNhanVien'
+	from DanhMucNhanVien join PhongBan on DanhMucNhanVien.MaPhongBan = PhongBan.MaPhongBan
+	group by phongban.MaPhongBan, PhongBan.Ten
+end
+GO
+/****** Object:  StoredProcedure [dbo].[TiLeBaoHiem]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TiLeBaoHiem]
+as
+begin
+	declare @Tong float
+	select @Tong = convert(float, count(manhanvien))
+	from BaoHiemNhanVien
+	select ten, round(count(BaoHiemNhanVien.manhanvien)/@Tong*100,2) as TiLe
+	from danhmucnhanvien inner join BaoHiemNhanVien on DanhMucNhanVien.MaNhanVien = BaoHiemNhanVien.MaNhanVien
+	join DANHMUCBAOHIEM on BaoHiemNhanVien.MaBaoHiem = DANHMUCBAOHIEM.MaBaoHiem
+	group by ten
+	order by round(count(BaoHiemNhanVien.manhanvien)/@Tong*100,2) desc
+	end
+GO
+/****** Object:  StoredProcedure [dbo].[TiLeChucVu]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TiLeChucVu]
+as
+begin
+	declare @Tong float
+	select @Tong = convert(float, count(manhanvien))
+	from DanhMucNhanVien
+	select ten, round(count(DanhMucNhanVien.manhanvien)/@Tong*100,2) as TiLe
+	from danhmucnhanvien inner join DanhMucChucVu on DanhMucNhanVien.MaChucVu = DanhMucChucVu.MaChucVu
+	group by ten
+	order by round(count(DanhMucNhanVien.manhanvien)/@Tong*100,2) desc
+	end
+GO
+/****** Object:  StoredProcedure [dbo].[TiLePhongBan]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TiLePhongBan]
+as
+begin
+	declare @Tong float
+	select @Tong = convert(float, count(manhanvien))
+	from DanhMucNhanVien
+	select ten, round(count(DanhMucNhanVien.manhanvien)/@Tong*100,2) as TiLe
+	from danhmucnhanvien inner join PhongBan on DanhMucNhanVien.MaPhongBan = PhongBan.MaPhongBan
+	group by ten
+	order by round(count(DanhMucNhanVien.manhanvien)/@Tong*100,2) desc
+	end
+GO
+/****** Object:  StoredProcedure [dbo].[TiLeTrinhDoNV]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TiLeTrinhDoNV]
+as
+begin
+	declare @Tong float
+	select @Tong = convert(float, count(manhanvien))
+	from danhmucnhanvien
+	select trinhdo, round(count(manhanvien)/@Tong*100,2) as TiLe
+	from danhmucnhanvien
+	group by trinhdo
+	order by round(count(manhanvien)/@Tong*100,2) desc
+	end
+GO
+/****** Object:  StoredProcedure [dbo].[TKBaoHiem]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TKBaoHiem]
+as
+begin
+	select DanhMucNhanVien.MaNhanVien, MaHinhThucTuyenDung, MaChucVu, MaPhongBan, NoiLamViec, HoTen, NgaySinh, QueQuan, GioiTinh, SoCMND, TrinhDo, sdt, Email, NoiO, NoiSinh, BaoHiemNhanVien.MaBaoHiem, ten 
+	from danhmucnhanvien inner join BaoHiemNhanVien on DanhMucNhanVien.MaNhanVien = BaoHiemNhanVien.MaNhanVien
+	join DANHMUCBAOHIEM on BaoHiemNhanVien.MaBaoHiem = DANHMUCBAOHIEM.MaBaoHiem
+	order by ten
+end
+GO
+/****** Object:  StoredProcedure [dbo].[TKChucVu]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TKChucVu]
+as
+begin
+	select DanhMucNhanVien.MaNhanVien, MaHinhThucTuyenDung, danhmucnhanvien.MaChucVu, MaPhongBan, NoiLamViec, HoTen, NgaySinh, QueQuan, GioiTinh, SoCMND, TrinhDo, sdt, Email, NoiO, NoiSinh, ten
+	from danhmucnhanvien inner join DanhMucChucVu on DanhMucNhanVien.MaChucVu = DanhMucChucVu.MaChucVu
+	order by ten
+end
+GO
+/****** Object:  StoredProcedure [dbo].[TKKTKL]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TKKTKL]
+as
+begin
+	select DanhSachKTKL.MaNhanVien, MaHinhThucTuyenDung, danhmucnhanvien.MaChucVu, danhmucnhanvien.MaPhongBan, NoiLamViec, HoTen, NgaySinh, QueQuan, GioiTinh, SoCMND, TrinhDo, sdt, Email, NoiO, NoiSinh, ten
+	from danhmucnhanvien inner join DanhSachKTKL on DanhMucNhanVien.MaNhanVien = DanhSachKTKL.MaNhanVien join QuyDinhKTKL on DanhSachKTKL.MaKTKL = QuyDinhKTKL.MaKTKL
+	order by ten
+end
+GO
+/****** Object:  StoredProcedure [dbo].[TKPhongBan]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TKPhongBan]
+as
+begin
+	select DanhMucNhanVien.MaNhanVien, MaHinhThucTuyenDung, danhmucnhanvien.MaChucVu, danhmucnhanvien.MaPhongBan, NoiLamViec, HoTen, NgaySinh, QueQuan, GioiTinh, SoCMND, TrinhDo, sdt, Email, NoiO, NoiSinh, ten
+	from danhmucnhanvien inner join PhongBan on DanhMucNhanVien.MaPhongBan = PhongBan.MaPhongBan
+	order by Ten 
+end
+GO
+/****** Object:  StoredProcedure [dbo].[TKTrinhDo]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TKTrinhDo]
+as
+begin
+	select * from danhmucnhanvien
+	order by TrinhDo
+end
+GO
+/****** Object:  StoredProcedure [dbo].[TyLeKTKL]    Script Date: 8/31/2021 10:08:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[TyLeKTKL]
+as
+begin
+	declare @Tong float
+	select @Tong = convert(float, count(manhanvien))
+	from DanhSachKTKL
+	select ten, round(count(DanhSachKTKL.manhanvien)/@Tong*100,2) as TiLe
+	from danhmucnhanvien inner join danhsachktkl on danhmucnhanvien.manhanvien = danhsachktkl.manhanvien 
+	inner join quydinhktkl on danhsachktkl.maktkl = quydinhktkl.maktkl
+	group by ten
+	order by round(count(DanhSachKTKL.manhanvien)/@Tong*100,2) desc
+	end
+GO
