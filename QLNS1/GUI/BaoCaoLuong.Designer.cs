@@ -37,68 +37,68 @@ namespace QLNS1.GUI
                this.GroupFooterBackground3 = new DevExpress.XtraReports.UI.XRControlStyle();
                this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
                this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+               this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+               this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+               this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+               this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
                this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-               this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-               this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader4 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader5 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader6 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader7 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader8 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.GroupHeader9 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-               this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-               this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
                this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
                this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
+               this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
                this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+               this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table1 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table2 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table3 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader4 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table4 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader5 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table5 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader6 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table6 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader7 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table7 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader8 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table8 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.GroupHeader9 = new DevExpress.XtraReports.UI.GroupHeaderBand();
                this.table9 = new DevExpress.XtraReports.UI.XRTable();
                this.tableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
                this.tableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
                this.tableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
+               this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+               this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
                this.label2 = new DevExpress.XtraReports.UI.XRLabel();
                this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-               this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-               this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-               this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-               this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
                ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.table3)).BeginInit();
@@ -174,133 +174,56 @@ namespace QLNS1.GUI
                this.TopMargin.HeightF = 130F;
                this.TopMargin.Name = "TopMargin";
                // 
+               // xrLabel4
+               // 
+               this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(5F, 79.00002F);
+               this.xrLabel4.Multiline = true;
+               this.xrLabel4.Name = "xrLabel4";
+               this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+               this.xrLabel4.SizeF = new System.Drawing.SizeF(635F, 23F);
+               this.xrLabel4.StylePriority.UseFont = false;
+               this.xrLabel4.Text = "Điện thoại: 0253686868";
+               // 
+               // xrLabel3
+               // 
+               this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(4.125773F, 56.00001F);
+               this.xrLabel3.Multiline = true;
+               this.xrLabel3.Name = "xrLabel3";
+               this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+               this.xrLabel3.SizeF = new System.Drawing.SizeF(635.8742F, 23F);
+               this.xrLabel3.StylePriority.UseFont = false;
+               this.xrLabel3.Text = "Địa chỉ:  236 Hoàng Quốc Việt, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội";
+               // 
+               // xrLabel2
+               // 
+               this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(4.125773F, 33F);
+               this.xrLabel2.Multiline = true;
+               this.xrLabel2.Name = "xrLabel2";
+               this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+               this.xrLabel2.SizeF = new System.Drawing.SizeF(635.8742F, 23F);
+               this.xrLabel2.StylePriority.UseFont = false;
+               this.xrLabel2.Text = "Tên doanh nghiệp: Công ty TNHH QHTTA Việt Nam";
+               // 
+               // xrLabel1
+               // 
+               this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(5F, 10F);
+               this.xrLabel1.Multiline = true;
+               this.xrLabel1.Name = "xrLabel1";
+               this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+               this.xrLabel1.SizeF = new System.Drawing.SizeF(635F, 23F);
+               this.xrLabel1.StylePriority.UseFont = false;
+               this.xrLabel1.Text = "Mã doanh nghiệp: TNHH012";
+               // 
                // BottomMargin
                // 
                this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.pageInfo1,
             this.pageInfo2});
                this.BottomMargin.Name = "BottomMargin";
-               // 
-               // ReportHeader
-               // 
-               this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.label1});
-               this.ReportHeader.HeightF = 60F;
-               this.ReportHeader.Name = "ReportHeader";
-               // 
-               // GroupHeader1
-               // 
-               this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table1});
-               this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("ThangNam", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader1.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader1.HeightF = 27F;
-               this.GroupHeader1.Level = 1;
-               this.GroupHeader1.Name = "GroupHeader1";
-               // 
-               // GroupHeader2
-               // 
-               this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table2});
-               this.GroupHeader2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("SoNgayCong", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader2.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader2.HeightF = 27F;
-               this.GroupHeader2.Level = 2;
-               this.GroupHeader2.Name = "GroupHeader2";
-               // 
-               // GroupHeader3
-               // 
-               this.GroupHeader3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table3});
-               this.GroupHeader3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("LuongHD", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader3.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader3.HeightF = 27F;
-               this.GroupHeader3.Level = 3;
-               this.GroupHeader3.Name = "GroupHeader3";
-               // 
-               // GroupHeader4
-               // 
-               this.GroupHeader4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table4});
-               this.GroupHeader4.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("MaLuong", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader4.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader4.HeightF = 27F;
-               this.GroupHeader4.Level = 4;
-               this.GroupHeader4.Name = "GroupHeader4";
-               // 
-               // GroupHeader5
-               // 
-               this.GroupHeader5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table5});
-               this.GroupHeader5.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("ChucVu", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
-            new DevExpress.XtraReports.UI.GroupField("MaChucVu", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader5.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader5.HeightF = 27F;
-               this.GroupHeader5.Level = 5;
-               this.GroupHeader5.Name = "GroupHeader5";
-               // 
-               // GroupHeader6
-               // 
-               this.GroupHeader6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table6});
-               this.GroupHeader6.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("TenPhongBan", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
-            new DevExpress.XtraReports.UI.GroupField("MaPhongBan", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader6.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader6.HeightF = 27F;
-               this.GroupHeader6.Level = 6;
-               this.GroupHeader6.Name = "GroupHeader6";
-               // 
-               // GroupHeader7
-               // 
-               this.GroupHeader7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table7});
-               this.GroupHeader7.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("NgaySinh", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader7.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader7.HeightF = 27F;
-               this.GroupHeader7.Level = 7;
-               this.GroupHeader7.Name = "GroupHeader7";
-               // 
-               // GroupHeader8
-               // 
-               this.GroupHeader8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table8});
-               this.GroupHeader8.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("HoTen", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader8.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader8.HeightF = 27F;
-               this.GroupHeader8.Level = 8;
-               this.GroupHeader8.Name = "GroupHeader8";
-               // 
-               // GroupHeader9
-               // 
-               this.GroupHeader9.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.table9});
-               this.GroupHeader9.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("MaNhanVien", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-               this.GroupHeader9.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-               this.GroupHeader9.HeightF = 27F;
-               this.GroupHeader9.Level = 9;
-               this.GroupHeader9.Name = "GroupHeader9";
-               // 
-               // Detail
-               // 
-               this.Detail.HeightF = 0F;
-               this.Detail.Name = "Detail";
-               // 
-               // GroupFooter1
-               // 
-               this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.label2});
-               this.GroupFooter1.GroupUnion = DevExpress.XtraReports.UI.GroupFooterUnion.WithLastDetail;
-               this.GroupFooter1.HeightF = 6F;
-               this.GroupFooter1.Name = "GroupFooter1";
                // 
                // pageInfo1
                // 
@@ -325,6 +248,13 @@ namespace QLNS1.GUI
                this.pageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
                this.pageInfo2.TextFormatString = "Page {0} of {1}";
                // 
+               // ReportHeader
+               // 
+               this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.label1});
+               this.ReportHeader.HeightF = 60F;
+               this.ReportHeader.Name = "ReportHeader";
+               // 
                // label1
                // 
                this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,6 +264,17 @@ namespace QLNS1.GUI
                this.label1.StyleName = "Title";
                this.label1.StylePriority.UseFont = false;
                this.label1.Text = "BÁO CÁO THANH TOÁN TIỀN LƯƠNG";
+               // 
+               // GroupHeader1
+               // 
+               this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table1});
+               this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("ThangNam", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader1.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader1.HeightF = 27F;
+               this.GroupHeader1.Level = 1;
+               this.GroupHeader1.Name = "GroupHeader1";
                // 
                // table1
                // 
@@ -374,6 +315,17 @@ namespace QLNS1.GUI
                this.tableCell2.StylePriority.UseForeColor = false;
                this.tableCell2.Weight = 0.7811071496173243D;
                // 
+               // GroupHeader2
+               // 
+               this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table2});
+               this.GroupHeader2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("SoNgayCong", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader2.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader2.HeightF = 27F;
+               this.GroupHeader2.Level = 2;
+               this.GroupHeader2.Name = "GroupHeader2";
+               // 
                // table2
                // 
                this.table2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
@@ -412,6 +364,17 @@ namespace QLNS1.GUI
                this.tableCell4.StylePriority.UseFont = false;
                this.tableCell4.StylePriority.UseForeColor = false;
                this.tableCell4.Weight = 0.7811070963640051D;
+               // 
+               // GroupHeader3
+               // 
+               this.GroupHeader3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table3});
+               this.GroupHeader3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("LuongHD", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader3.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader3.HeightF = 27F;
+               this.GroupHeader3.Level = 3;
+               this.GroupHeader3.Name = "GroupHeader3";
                // 
                // table3
                // 
@@ -452,6 +415,17 @@ namespace QLNS1.GUI
                this.tableCell6.StylePriority.UseForeColor = false;
                this.tableCell6.Weight = 0.78110712946291594D;
                // 
+               // GroupHeader4
+               // 
+               this.GroupHeader4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table4});
+               this.GroupHeader4.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("MaLuong", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader4.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader4.HeightF = 27F;
+               this.GroupHeader4.Level = 4;
+               this.GroupHeader4.Name = "GroupHeader4";
+               // 
                // table4
                // 
                this.table4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
@@ -490,6 +464,18 @@ namespace QLNS1.GUI
                this.tableCell8.StylePriority.UseFont = false;
                this.tableCell8.StylePriority.UseForeColor = false;
                this.tableCell8.Weight = 0.7811070655526946D;
+               // 
+               // GroupHeader5
+               // 
+               this.GroupHeader5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table5});
+               this.GroupHeader5.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("ChucVu", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
+            new DevExpress.XtraReports.UI.GroupField("MaChucVu", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader5.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader5.HeightF = 27F;
+               this.GroupHeader5.Level = 5;
+               this.GroupHeader5.Name = "GroupHeader5";
                // 
                // table5
                // 
@@ -555,6 +541,18 @@ namespace QLNS1.GUI
                this.tableCell12.StylePriority.UseForeColor = false;
                this.tableCell12.Weight = 0.35907059501331962D;
                // 
+               // GroupHeader6
+               // 
+               this.GroupHeader6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table6});
+               this.GroupHeader6.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("TenPhongBan", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
+            new DevExpress.XtraReports.UI.GroupField("MaPhongBan", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader6.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader6.HeightF = 27F;
+               this.GroupHeader6.Level = 6;
+               this.GroupHeader6.Name = "GroupHeader6";
+               // 
                // table6
                // 
                this.table6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
@@ -619,6 +617,17 @@ namespace QLNS1.GUI
                this.tableCell16.StylePriority.UseForeColor = false;
                this.tableCell16.Weight = 0.3590706145815411D;
                // 
+               // GroupHeader7
+               // 
+               this.GroupHeader7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table7});
+               this.GroupHeader7.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("NgaySinh", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader7.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader7.HeightF = 27F;
+               this.GroupHeader7.Level = 7;
+               this.GroupHeader7.Name = "GroupHeader7";
+               // 
                // table7
                // 
                this.table7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
@@ -649,7 +658,7 @@ namespace QLNS1.GUI
                // tableCell18
                // 
                this.tableCell18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NgaySinh]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "GetDay([NgaySinh])+\'/\'+GetMonth([NgaySinh])+\'/\'+GetYear([NgaySinh])")});
                this.tableCell18.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.tableCell18.ForeColor = System.Drawing.Color.Black;
                this.tableCell18.Name = "tableCell18";
@@ -657,6 +666,17 @@ namespace QLNS1.GUI
                this.tableCell18.StylePriority.UseFont = false;
                this.tableCell18.StylePriority.UseForeColor = false;
                this.tableCell18.Weight = 0.78110709684683255D;
+               // 
+               // GroupHeader8
+               // 
+               this.GroupHeader8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table8});
+               this.GroupHeader8.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("HoTen", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader8.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader8.HeightF = 27F;
+               this.GroupHeader8.Level = 8;
+               this.GroupHeader8.Name = "GroupHeader8";
                // 
                // table8
                // 
@@ -697,6 +717,17 @@ namespace QLNS1.GUI
                this.tableCell20.StylePriority.UseForeColor = false;
                this.tableCell20.Weight = 0.781107108130756D;
                // 
+               // GroupHeader9
+               // 
+               this.GroupHeader9.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table9});
+               this.GroupHeader9.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("MaNhanVien", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+               this.GroupHeader9.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+               this.GroupHeader9.HeightF = 27F;
+               this.GroupHeader9.Level = 9;
+               this.GroupHeader9.Name = "GroupHeader9";
+               // 
                // table9
                // 
                this.table9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
@@ -736,6 +767,19 @@ namespace QLNS1.GUI
                this.tableCell22.StylePriority.UseForeColor = false;
                this.tableCell22.Weight = 0.78110708746379287D;
                // 
+               // Detail
+               // 
+               this.Detail.HeightF = 0F;
+               this.Detail.Name = "Detail";
+               // 
+               // GroupFooter1
+               // 
+               this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.label2});
+               this.GroupFooter1.GroupUnion = DevExpress.XtraReports.UI.GroupFooterUnion.WithLastDetail;
+               this.GroupFooter1.HeightF = 6F;
+               this.GroupFooter1.Name = "GroupFooter1";
+               // 
                // label2
                // 
                this.label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -750,50 +794,6 @@ namespace QLNS1.GUI
                this.objectDataSource1.Constructor = objectConstructorInfo1;
                this.objectDataSource1.DataSource = typeof(QLNS1.DATA.BaoCaoLuongResult);
                this.objectDataSource1.Name = "objectDataSource1";
-               // 
-               // xrLabel1
-               // 
-               this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(5F, 10F);
-               this.xrLabel1.Multiline = true;
-               this.xrLabel1.Name = "xrLabel1";
-               this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-               this.xrLabel1.SizeF = new System.Drawing.SizeF(635F, 23F);
-               this.xrLabel1.StylePriority.UseFont = false;
-               this.xrLabel1.Text = "Mã doanh nghiệp: TNHH012";
-               // 
-               // xrLabel2
-               // 
-               this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(4.125773F, 33F);
-               this.xrLabel2.Multiline = true;
-               this.xrLabel2.Name = "xrLabel2";
-               this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-               this.xrLabel2.SizeF = new System.Drawing.SizeF(635.8742F, 23F);
-               this.xrLabel2.StylePriority.UseFont = false;
-               this.xrLabel2.Text = "Tên doanh nghiệp: Công ty TNHH QHTTA Việt Nam";
-               // 
-               // xrLabel3
-               // 
-               this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(4.125773F, 56.00001F);
-               this.xrLabel3.Multiline = true;
-               this.xrLabel3.Name = "xrLabel3";
-               this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-               this.xrLabel3.SizeF = new System.Drawing.SizeF(635.8742F, 23F);
-               this.xrLabel3.StylePriority.UseFont = false;
-               this.xrLabel3.Text = "Địa chỉ:  236 Hoàng Quốc Việt, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội";
-               // 
-               // xrLabel4
-               // 
-               this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(5F, 79.00002F);
-               this.xrLabel4.Multiline = true;
-               this.xrLabel4.Name = "xrLabel4";
-               this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-               this.xrLabel4.SizeF = new System.Drawing.SizeF(635F, 23F);
-               this.xrLabel4.StylePriority.UseFont = false;
-               this.xrLabel4.Text = "Điện thoại: 0253686868";
                // 
                // BaoCaoLuong
                // 
