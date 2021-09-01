@@ -234,5 +234,12 @@ namespace QLNS1.GUI
             viewSitePanel.Controls.Add(Thong_Ke.Instance);
         }
         #endregion
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
+            FormDangNhap frm = new FormDangNhap();
+            frm.ShowDialog();
+        }
     }
 }
