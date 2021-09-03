@@ -295,6 +295,7 @@ namespace QLNS1.GUI
                public string ThuocTinh { set; get; }
                public double GiaTri { set; get; }
           }
+
      }
      
 }

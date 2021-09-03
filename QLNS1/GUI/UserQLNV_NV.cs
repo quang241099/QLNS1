@@ -70,14 +70,6 @@ namespace QLNS1
 
         }
       
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textNoiO_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+     }
 }

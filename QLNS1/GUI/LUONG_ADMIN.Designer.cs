@@ -32,6 +32,7 @@ namespace QLNS1.GUI
                this.btnTimKiem = new System.Windows.Forms.Button();
                this.txtTimKiem = new System.Windows.Forms.TextBox();
                this.groupBox1 = new System.Windows.Forms.GroupBox();
+               this.btnBaoCao = new System.Windows.Forms.Button();
                this.btnLuu = new System.Windows.Forms.Button();
                this.btnXoa = new System.Windows.Forms.Button();
                this.btnSua = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@ namespace QLNS1.GUI
                this.SoNgayCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.ThangNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.TienBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.btnBaoCao = new System.Windows.Forms.Button();
                this.groupBox1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).BeginInit();
                this.SuspendLayout();
@@ -97,18 +97,28 @@ namespace QLNS1.GUI
                this.groupBox1.Controls.Add(this.label3);
                this.groupBox1.Controls.Add(this.label2);
                this.groupBox1.Controls.Add(this.label1);
-               this.groupBox1.Location = new System.Drawing.Point(1032, 85);
+               this.groupBox1.Location = new System.Drawing.Point(1182, 86);
                this.groupBox1.Name = "groupBox1";
-               this.groupBox1.Size = new System.Drawing.Size(364, 484);
+               this.groupBox1.Size = new System.Drawing.Size(364, 561);
                this.groupBox1.TabIndex = 22;
                this.groupBox1.TabStop = false;
                this.groupBox1.Text = "Thông tin lương nhân viên";
                // 
+               // btnBaoCao
+               // 
+               this.btnBaoCao.Location = new System.Drawing.Point(124, 507);
+               this.btnBaoCao.Name = "btnBaoCao";
+               this.btnBaoCao.Size = new System.Drawing.Size(119, 35);
+               this.btnBaoCao.TabIndex = 17;
+               this.btnBaoCao.Text = "Báo cáo";
+               this.btnBaoCao.UseVisualStyleBackColor = true;
+               this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+               // 
                // btnLuu
                // 
-               this.btnLuu.Location = new System.Drawing.Point(166, 409);
+               this.btnLuu.Location = new System.Drawing.Point(146, 445);
                this.btnLuu.Name = "btnLuu";
-               this.btnLuu.Size = new System.Drawing.Size(75, 28);
+               this.btnLuu.Size = new System.Drawing.Size(75, 31);
                this.btnLuu.TabIndex = 16;
                this.btnLuu.Text = "Lưu";
                this.btnLuu.UseVisualStyleBackColor = true;
@@ -116,7 +126,7 @@ namespace QLNS1.GUI
                // 
                // btnXoa
                // 
-               this.btnXoa.Location = new System.Drawing.Point(274, 372);
+               this.btnXoa.Location = new System.Drawing.Point(271, 387);
                this.btnXoa.Name = "btnXoa";
                this.btnXoa.Size = new System.Drawing.Size(75, 31);
                this.btnXoa.TabIndex = 15;
@@ -126,7 +136,7 @@ namespace QLNS1.GUI
                // 
                // btnSua
                // 
-               this.btnSua.Location = new System.Drawing.Point(166, 372);
+               this.btnSua.Location = new System.Drawing.Point(146, 387);
                this.btnSua.Name = "btnSua";
                this.btnSua.Size = new System.Drawing.Size(75, 31);
                this.btnSua.TabIndex = 14;
@@ -136,7 +146,7 @@ namespace QLNS1.GUI
                // 
                // btnThem
                // 
-               this.btnThem.Location = new System.Drawing.Point(42, 372);
+               this.btnThem.Location = new System.Drawing.Point(22, 387);
                this.btnThem.Name = "btnThem";
                this.btnThem.Size = new System.Drawing.Size(75, 31);
                this.btnThem.TabIndex = 13;
@@ -250,11 +260,11 @@ namespace QLNS1.GUI
             this.SoNgayCong,
             this.ThangNam,
             this.TienBH});
-               this.dataGridViewLuong.Location = new System.Drawing.Point(81, 85);
+               this.dataGridViewLuong.Location = new System.Drawing.Point(94, 85);
                this.dataGridViewLuong.Name = "dataGridViewLuong";
                this.dataGridViewLuong.RowHeadersWidth = 51;
                this.dataGridViewLuong.RowTemplate.Height = 24;
-               this.dataGridViewLuong.Size = new System.Drawing.Size(902, 485);
+               this.dataGridViewLuong.Size = new System.Drawing.Size(1082, 562);
                this.dataGridViewLuong.TabIndex = 21;
                this.dataGridViewLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLuong_CellClick);
                // 
@@ -306,16 +316,6 @@ namespace QLNS1.GUI
                this.TienBH.Name = "TienBH";
                this.TienBH.Width = 125;
                // 
-               // btnBaoCao
-               // 
-               this.btnBaoCao.Location = new System.Drawing.Point(146, 443);
-               this.btnBaoCao.Name = "btnBaoCao";
-               this.btnBaoCao.Size = new System.Drawing.Size(119, 35);
-               this.btnBaoCao.TabIndex = 17;
-               this.btnBaoCao.Text = "Báo cáo";
-               this.btnBaoCao.UseVisualStyleBackColor = true;
-               this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
-               // 
                // LUONG_ADMIN
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,7 +325,7 @@ namespace QLNS1.GUI
                this.Controls.Add(this.groupBox1);
                this.Controls.Add(this.dataGridViewLuong);
                this.Name = "LUONG_ADMIN";
-               this.Size = new System.Drawing.Size(1476, 590);
+               this.Size = new System.Drawing.Size(1549, 681);
                this.Load += new System.EventHandler(this.LUONG_ADMIN_Load);
                this.groupBox1.ResumeLayout(false);
                this.groupBox1.PerformLayout();

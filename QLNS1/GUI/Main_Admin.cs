@@ -12,6 +12,7 @@ using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using DevExpress.XtraBars.Helpers;
 
 namespace QLNS1.GUI
 {
@@ -43,10 +44,12 @@ namespace QLNS1.GUI
         }
         public Main_Admin()
         {
-            InitializeComponent();
-            ribbonControl.Manager.ForceLinkCreate();
-            statusMessagesHelper = new StatusMessagesHelper(barContainerStatusMessages);
-        }
+               InitializeComponent();
+               ribbonControl.Manager.ForceLinkCreate();
+               DevExpress.UserSkins.BonusSkins.Register();
+               DevExpress.Skins.SkinManager.EnableFormSkins();
+               DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(skinRibbon, true, true);
+          }
 
         #region IActionControlsSite Members
         IEnumerable<IActionControlContainer> IActionControlsSite.ActionContainers
@@ -241,5 +244,10 @@ namespace QLNS1.GUI
             FormDangNhap frm = new FormDangNhap();
             frm.ShowDialog();
         }
-    }
+
+          private void viewSitePanel_Paint(object sender, PaintEventArgs e)
+          {
+
+          }
+     }
 }

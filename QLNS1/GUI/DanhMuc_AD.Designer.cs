@@ -77,6 +77,7 @@ namespace QLNS1
                this.label8 = new System.Windows.Forms.Label();
                this.label7 = new System.Windows.Forms.Label();
                this.tabKTKL = new System.Windows.Forms.TabPage();
+               this.btnBCKTKL = new System.Windows.Forms.Button();
                this.dataGridViewKTKL = new System.Windows.Forms.DataGridView();
                this.MaKTKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.TenQD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,7 +92,6 @@ namespace QLNS1
                this.label12 = new System.Windows.Forms.Label();
                this.label11 = new System.Windows.Forms.Label();
                this.label10 = new System.Windows.Forms.Label();
-               this.btnBCKTKL = new System.Windows.Forms.Button();
                this.tabControl1.SuspendLayout();
                this.txtThem_CV.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChucVu)).BeginInit();
@@ -109,11 +109,11 @@ namespace QLNS1
                this.tabControl1.Controls.Add(this.tabPhongBan);
                this.tabControl1.Controls.Add(this.tabBaoHiem);
                this.tabControl1.Controls.Add(this.tabKTKL);
-               this.tabControl1.Location = new System.Drawing.Point(5, 26);
+               this.tabControl1.Location = new System.Drawing.Point(0, 0);
                this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
                this.tabControl1.Name = "tabControl1";
                this.tabControl1.SelectedIndex = 0;
-               this.tabControl1.Size = new System.Drawing.Size(1113, 476);
+               this.tabControl1.Size = new System.Drawing.Size(1549, 681);
                this.tabControl1.TabIndex = 0;
                // 
                // txtThem_CV
@@ -133,11 +133,10 @@ namespace QLNS1
                this.txtThem_CV.Margin = new System.Windows.Forms.Padding(4);
                this.txtThem_CV.Name = "txtThem_CV";
                this.txtThem_CV.Padding = new System.Windows.Forms.Padding(4);
-               this.txtThem_CV.Size = new System.Drawing.Size(1105, 447);
+               this.txtThem_CV.Size = new System.Drawing.Size(1541, 652);
                this.txtThem_CV.TabIndex = 0;
                this.txtThem_CV.Text = "Chức vụ";
                this.txtThem_CV.UseVisualStyleBackColor = true;
-               this.txtThem_CV.Click += new System.EventHandler(this.txtThem_CV_Click);
                // 
                // dataGridViewChucVu
                // 
@@ -146,11 +145,11 @@ namespace QLNS1
             this.MaChucVu,
             this.TenCV,
             this.PhuCap});
-               this.dataGridViewChucVu.Location = new System.Drawing.Point(495, 70);
+               this.dataGridViewChucVu.Location = new System.Drawing.Point(770, 34);
                this.dataGridViewChucVu.Margin = new System.Windows.Forms.Padding(4);
                this.dataGridViewChucVu.Name = "dataGridViewChucVu";
                this.dataGridViewChucVu.RowHeadersWidth = 51;
-               this.dataGridViewChucVu.Size = new System.Drawing.Size(409, 185);
+               this.dataGridViewChucVu.Size = new System.Drawing.Size(575, 568);
                this.dataGridViewChucVu.TabIndex = 10;
                this.dataGridViewChucVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChucVu_CellClick);
                // 
@@ -180,10 +179,10 @@ namespace QLNS1
                // 
                // btnLuuCV
                // 
-               this.btnLuuCV.Location = new System.Drawing.Point(229, 373);
+               this.btnLuuCV.Location = new System.Drawing.Point(313, 376);
                this.btnLuuCV.Margin = new System.Windows.Forms.Padding(4);
                this.btnLuuCV.Name = "btnLuuCV";
-               this.btnLuuCV.Size = new System.Drawing.Size(100, 42);
+               this.btnLuuCV.Size = new System.Drawing.Size(100, 29);
                this.btnLuuCV.TabIndex = 9;
                this.btnLuuCV.Text = "Lưu";
                this.btnLuuCV.UseVisualStyleBackColor = true;
@@ -191,7 +190,7 @@ namespace QLNS1
                // 
                // btnXoaCV
                // 
-               this.btnXoaCV.Location = new System.Drawing.Point(379, 266);
+               this.btnXoaCV.Location = new System.Drawing.Point(502, 297);
                this.btnXoaCV.Margin = new System.Windows.Forms.Padding(4);
                this.btnXoaCV.Name = "btnXoaCV";
                this.btnXoaCV.Size = new System.Drawing.Size(100, 28);
@@ -202,7 +201,7 @@ namespace QLNS1
                // 
                // btnSuaCV
                // 
-               this.btnSuaCV.Location = new System.Drawing.Point(229, 266);
+               this.btnSuaCV.Location = new System.Drawing.Point(313, 297);
                this.btnSuaCV.Margin = new System.Windows.Forms.Padding(4);
                this.btnSuaCV.Name = "btnSuaCV";
                this.btnSuaCV.Size = new System.Drawing.Size(100, 28);
@@ -213,7 +212,7 @@ namespace QLNS1
                // 
                // btnThem_CV
                // 
-               this.btnThem_CV.Location = new System.Drawing.Point(83, 266);
+               this.btnThem_CV.Location = new System.Drawing.Point(129, 297);
                this.btnThem_CV.Margin = new System.Windows.Forms.Padding(4);
                this.btnThem_CV.Name = "btnThem_CV";
                this.btnThem_CV.Size = new System.Drawing.Size(100, 28);
@@ -224,7 +223,7 @@ namespace QLNS1
                // 
                // txtPhuCap
                // 
-               this.txtPhuCap.Location = new System.Drawing.Point(179, 213);
+               this.txtPhuCap.Location = new System.Drawing.Point(269, 200);
                this.txtPhuCap.Margin = new System.Windows.Forms.Padding(4);
                this.txtPhuCap.Name = "txtPhuCap";
                this.txtPhuCap.Size = new System.Drawing.Size(275, 22);
@@ -232,7 +231,7 @@ namespace QLNS1
                // 
                // txtTenCV
                // 
-               this.txtTenCV.Location = new System.Drawing.Point(179, 130);
+               this.txtTenCV.Location = new System.Drawing.Point(269, 136);
                this.txtTenCV.Margin = new System.Windows.Forms.Padding(4);
                this.txtTenCV.Name = "txtTenCV";
                this.txtTenCV.Size = new System.Drawing.Size(275, 22);
@@ -240,7 +239,7 @@ namespace QLNS1
                // 
                // txtMaCV
                // 
-               this.txtMaCV.Location = new System.Drawing.Point(179, 70);
+               this.txtMaCV.Location = new System.Drawing.Point(269, 70);
                this.txtMaCV.Margin = new System.Windows.Forms.Padding(4);
                this.txtMaCV.Name = "txtMaCV";
                this.txtMaCV.Size = new System.Drawing.Size(275, 22);
@@ -249,7 +248,7 @@ namespace QLNS1
                // label3
                // 
                this.label3.AutoSize = true;
-               this.label3.Location = new System.Drawing.Point(65, 222);
+               this.label3.Location = new System.Drawing.Point(103, 200);
                this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label3.Name = "label3";
                this.label3.Size = new System.Drawing.Size(60, 17);
@@ -259,7 +258,7 @@ namespace QLNS1
                // label2
                // 
                this.label2.AutoSize = true;
-               this.label2.Location = new System.Drawing.Point(65, 139);
+               this.label2.Location = new System.Drawing.Point(103, 136);
                this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label2.Name = "label2";
                this.label2.Size = new System.Drawing.Size(86, 17);
@@ -269,7 +268,7 @@ namespace QLNS1
                // label1
                // 
                this.label1.AutoSize = true;
-               this.label1.Location = new System.Drawing.Point(65, 70);
+               this.label1.Location = new System.Drawing.Point(103, 70);
                this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label1.Name = "label1";
                this.label1.Size = new System.Drawing.Size(80, 17);
@@ -294,14 +293,14 @@ namespace QLNS1
                this.tabPhongBan.Margin = new System.Windows.Forms.Padding(4);
                this.tabPhongBan.Name = "tabPhongBan";
                this.tabPhongBan.Padding = new System.Windows.Forms.Padding(4);
-               this.tabPhongBan.Size = new System.Drawing.Size(1105, 447);
+               this.tabPhongBan.Size = new System.Drawing.Size(1541, 652);
                this.tabPhongBan.TabIndex = 1;
                this.tabPhongBan.Text = "Phòng ban";
                this.tabPhongBan.UseVisualStyleBackColor = true;
                // 
                // btnBC
                // 
-               this.btnBC.Location = new System.Drawing.Point(147, 371);
+               this.btnBC.Location = new System.Drawing.Point(454, 472);
                this.btnBC.Name = "btnBC";
                this.btnBC.Size = new System.Drawing.Size(156, 31);
                this.btnBC.TabIndex = 11;
@@ -316,11 +315,11 @@ namespace QLNS1
             this.MaPhongBan,
             this.TenPhongBan,
             this.DienThoai});
-               this.dataGridViewPhongBan.Location = new System.Drawing.Point(467, 82);
+               this.dataGridViewPhongBan.Location = new System.Drawing.Point(803, 82);
                this.dataGridViewPhongBan.Margin = new System.Windows.Forms.Padding(4);
                this.dataGridViewPhongBan.Name = "dataGridViewPhongBan";
                this.dataGridViewPhongBan.RowHeadersWidth = 51;
-               this.dataGridViewPhongBan.Size = new System.Drawing.Size(437, 185);
+               this.dataGridViewPhongBan.Size = new System.Drawing.Size(571, 547);
                this.dataGridViewPhongBan.TabIndex = 10;
                this.dataGridViewPhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhongBan_CellClick);
                // 
@@ -350,7 +349,7 @@ namespace QLNS1
                // 
                // btnLuuPB
                // 
-               this.btnLuuPB.Location = new System.Drawing.Point(177, 317);
+               this.btnLuuPB.Location = new System.Drawing.Point(481, 404);
                this.btnLuuPB.Margin = new System.Windows.Forms.Padding(4);
                this.btnLuuPB.Name = "btnLuuPB";
                this.btnLuuPB.Size = new System.Drawing.Size(100, 28);
@@ -361,7 +360,7 @@ namespace QLNS1
                // 
                // btnXoaPB
                // 
-               this.btnXoaPB.Location = new System.Drawing.Point(304, 270);
+               this.btnXoaPB.Location = new System.Drawing.Point(626, 341);
                this.btnXoaPB.Margin = new System.Windows.Forms.Padding(4);
                this.btnXoaPB.Name = "btnXoaPB";
                this.btnXoaPB.Size = new System.Drawing.Size(100, 28);
@@ -372,7 +371,7 @@ namespace QLNS1
                // 
                // btnSuaPB
                // 
-               this.btnSuaPB.Location = new System.Drawing.Point(177, 270);
+               this.btnSuaPB.Location = new System.Drawing.Point(481, 341);
                this.btnSuaPB.Margin = new System.Windows.Forms.Padding(4);
                this.btnSuaPB.Name = "btnSuaPB";
                this.btnSuaPB.Size = new System.Drawing.Size(100, 28);
@@ -383,7 +382,7 @@ namespace QLNS1
                // 
                // btnThemPB
                // 
-               this.btnThemPB.Location = new System.Drawing.Point(44, 270);
+               this.btnThemPB.Location = new System.Drawing.Point(331, 341);
                this.btnThemPB.Margin = new System.Windows.Forms.Padding(4);
                this.btnThemPB.Name = "btnThemPB";
                this.btnThemPB.Size = new System.Drawing.Size(100, 28);
@@ -394,7 +393,7 @@ namespace QLNS1
                // 
                // txtSDT
                // 
-               this.txtSDT.Location = new System.Drawing.Point(157, 207);
+               this.txtSDT.Location = new System.Drawing.Point(481, 257);
                this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
                this.txtSDT.Name = "txtSDT";
                this.txtSDT.Size = new System.Drawing.Size(245, 22);
@@ -402,7 +401,7 @@ namespace QLNS1
                // 
                // txtTenPB
                // 
-               this.txtTenPB.Location = new System.Drawing.Point(157, 139);
+               this.txtTenPB.Location = new System.Drawing.Point(481, 171);
                this.txtTenPB.Margin = new System.Windows.Forms.Padding(4);
                this.txtTenPB.Name = "txtTenPB";
                this.txtTenPB.Size = new System.Drawing.Size(245, 22);
@@ -410,7 +409,7 @@ namespace QLNS1
                // 
                // txtMaPB
                // 
-               this.txtMaPB.Location = new System.Drawing.Point(157, 82);
+               this.txtMaPB.Location = new System.Drawing.Point(481, 102);
                this.txtMaPB.Margin = new System.Windows.Forms.Padding(4);
                this.txtMaPB.Name = "txtMaPB";
                this.txtMaPB.Size = new System.Drawing.Size(245, 22);
@@ -419,7 +418,7 @@ namespace QLNS1
                // label6
                // 
                this.label6.AutoSize = true;
-               this.label6.Location = new System.Drawing.Point(55, 210);
+               this.label6.Location = new System.Drawing.Point(328, 262);
                this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label6.Name = "label6";
                this.label6.Size = new System.Drawing.Size(91, 17);
@@ -429,7 +428,7 @@ namespace QLNS1
                // label5
                // 
                this.label5.AutoSize = true;
-               this.label5.Location = new System.Drawing.Point(55, 143);
+               this.label5.Location = new System.Drawing.Point(328, 176);
                this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label5.Name = "label5";
                this.label5.Size = new System.Drawing.Size(37, 17);
@@ -439,7 +438,7 @@ namespace QLNS1
                // label4
                // 
                this.label4.AutoSize = true;
-               this.label4.Location = new System.Drawing.Point(55, 82);
+               this.label4.Location = new System.Drawing.Point(328, 107);
                this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label4.Name = "label4";
                this.label4.Size = new System.Drawing.Size(99, 17);
@@ -463,7 +462,7 @@ namespace QLNS1
                this.tabBaoHiem.Margin = new System.Windows.Forms.Padding(4);
                this.tabBaoHiem.Name = "tabBaoHiem";
                this.tabBaoHiem.Padding = new System.Windows.Forms.Padding(4);
-               this.tabBaoHiem.Size = new System.Drawing.Size(1105, 447);
+               this.tabBaoHiem.Size = new System.Drawing.Size(1541, 652);
                this.tabBaoHiem.TabIndex = 2;
                this.tabBaoHiem.Text = "Bảo hiểm";
                this.tabBaoHiem.UseVisualStyleBackColor = true;
@@ -475,11 +474,11 @@ namespace QLNS1
             this.MaBaoHiem,
             this.TenBH,
             this.TiLeBH});
-               this.dataGridViewBaoHiem.Location = new System.Drawing.Point(461, 36);
+               this.dataGridViewBaoHiem.Location = new System.Drawing.Point(885, 81);
                this.dataGridViewBaoHiem.Margin = new System.Windows.Forms.Padding(4);
                this.dataGridViewBaoHiem.Name = "dataGridViewBaoHiem";
                this.dataGridViewBaoHiem.RowHeadersWidth = 51;
-               this.dataGridViewBaoHiem.Size = new System.Drawing.Size(443, 185);
+               this.dataGridViewBaoHiem.Size = new System.Drawing.Size(576, 528);
                this.dataGridViewBaoHiem.TabIndex = 10;
                this.dataGridViewBaoHiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBaoHiem_CellClick);
                // 
@@ -509,7 +508,7 @@ namespace QLNS1
                // 
                // btnLuuBH
                // 
-               this.btnLuuBH.Location = new System.Drawing.Point(185, 278);
+               this.btnLuuBH.Location = new System.Drawing.Point(501, 400);
                this.btnLuuBH.Margin = new System.Windows.Forms.Padding(4);
                this.btnLuuBH.Name = "btnLuuBH";
                this.btnLuuBH.Size = new System.Drawing.Size(101, 28);
@@ -520,7 +519,7 @@ namespace QLNS1
                // 
                // btnXoaBH
                // 
-               this.btnXoaBH.Location = new System.Drawing.Point(337, 217);
+               this.btnXoaBH.Location = new System.Drawing.Point(627, 344);
                this.btnXoaBH.Margin = new System.Windows.Forms.Padding(4);
                this.btnXoaBH.Name = "btnXoaBH";
                this.btnXoaBH.Size = new System.Drawing.Size(101, 28);
@@ -531,7 +530,7 @@ namespace QLNS1
                // 
                // btnSuaBH
                // 
-               this.btnSuaBH.Location = new System.Drawing.Point(185, 217);
+               this.btnSuaBH.Location = new System.Drawing.Point(501, 344);
                this.btnSuaBH.Margin = new System.Windows.Forms.Padding(4);
                this.btnSuaBH.Name = "btnSuaBH";
                this.btnSuaBH.Size = new System.Drawing.Size(101, 28);
@@ -542,7 +541,7 @@ namespace QLNS1
                // 
                // btnThemBH
                // 
-               this.btnThemBH.Location = new System.Drawing.Point(28, 217);
+               this.btnThemBH.Location = new System.Drawing.Point(379, 344);
                this.btnThemBH.Margin = new System.Windows.Forms.Padding(4);
                this.btnThemBH.Name = "btnThemBH";
                this.btnThemBH.Size = new System.Drawing.Size(101, 28);
@@ -553,7 +552,7 @@ namespace QLNS1
                // 
                // txtTiLeBH
                // 
-               this.txtTiLeBH.Location = new System.Drawing.Point(151, 158);
+               this.txtTiLeBH.Location = new System.Drawing.Point(511, 259);
                this.txtTiLeBH.Margin = new System.Windows.Forms.Padding(4);
                this.txtTiLeBH.Name = "txtTiLeBH";
                this.txtTiLeBH.Size = new System.Drawing.Size(217, 22);
@@ -561,7 +560,7 @@ namespace QLNS1
                // 
                // txtTenBH
                // 
-               this.txtTenBH.Location = new System.Drawing.Point(151, 94);
+               this.txtTenBH.Location = new System.Drawing.Point(511, 171);
                this.txtTenBH.Margin = new System.Windows.Forms.Padding(4);
                this.txtTenBH.Name = "txtTenBH";
                this.txtTenBH.Size = new System.Drawing.Size(217, 22);
@@ -569,7 +568,7 @@ namespace QLNS1
                // 
                // txtMaBH
                // 
-               this.txtMaBH.Location = new System.Drawing.Point(151, 36);
+               this.txtMaBH.Location = new System.Drawing.Point(511, 94);
                this.txtMaBH.Margin = new System.Windows.Forms.Padding(4);
                this.txtMaBH.Name = "txtMaBH";
                this.txtMaBH.Size = new System.Drawing.Size(217, 22);
@@ -578,7 +577,7 @@ namespace QLNS1
                // label9
                // 
                this.label9.AutoSize = true;
-               this.label9.Location = new System.Drawing.Point(43, 161);
+               this.label9.Location = new System.Drawing.Point(376, 259);
                this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label9.Name = "label9";
                this.label9.Size = new System.Drawing.Size(97, 17);
@@ -588,7 +587,7 @@ namespace QLNS1
                // label8
                // 
                this.label8.AutoSize = true;
-               this.label8.Location = new System.Drawing.Point(43, 94);
+               this.label8.Location = new System.Drawing.Point(376, 174);
                this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label8.Name = "label8";
                this.label8.Size = new System.Drawing.Size(95, 17);
@@ -598,7 +597,7 @@ namespace QLNS1
                // label7
                // 
                this.label7.AutoSize = true;
-               this.label7.Location = new System.Drawing.Point(43, 46);
+               this.label7.Location = new System.Drawing.Point(376, 99);
                this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label7.Name = "label7";
                this.label7.Size = new System.Drawing.Size(89, 17);
@@ -623,10 +622,20 @@ namespace QLNS1
                this.tabKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.tabKTKL.Name = "tabKTKL";
                this.tabKTKL.Padding = new System.Windows.Forms.Padding(4);
-               this.tabKTKL.Size = new System.Drawing.Size(1105, 447);
+               this.tabKTKL.Size = new System.Drawing.Size(1541, 652);
                this.tabKTKL.TabIndex = 3;
                this.tabKTKL.Text = "Khen thưởng kỷ luật";
                this.tabKTKL.UseVisualStyleBackColor = true;
+               // 
+               // btnBCKTKL
+               // 
+               this.btnBCKTKL.Location = new System.Drawing.Point(397, 385);
+               this.btnBCKTKL.Name = "btnBCKTKL";
+               this.btnBCKTKL.Size = new System.Drawing.Size(100, 31);
+               this.btnBCKTKL.TabIndex = 11;
+               this.btnBCKTKL.Text = "Báo cáo";
+               this.btnBCKTKL.UseVisualStyleBackColor = true;
+               this.btnBCKTKL.Click += new System.EventHandler(this.btnBCKTKL_Click);
                // 
                // dataGridViewKTKL
                // 
@@ -635,11 +644,11 @@ namespace QLNS1
             this.MaKTKL,
             this.TenQD,
             this.SoTien});
-               this.dataGridViewKTKL.Location = new System.Drawing.Point(467, 57);
+               this.dataGridViewKTKL.Location = new System.Drawing.Point(691, 41);
                this.dataGridViewKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.dataGridViewKTKL.Name = "dataGridViewKTKL";
                this.dataGridViewKTKL.RowHeadersWidth = 51;
-               this.dataGridViewKTKL.Size = new System.Drawing.Size(628, 185);
+               this.dataGridViewKTKL.Size = new System.Drawing.Size(739, 591);
                this.dataGridViewKTKL.TabIndex = 10;
                this.dataGridViewKTKL.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTKL_CellClick);
                // 
@@ -669,10 +678,10 @@ namespace QLNS1
                // 
                // btnLuuKTKL
                // 
-               this.btnLuuKTKL.Location = new System.Drawing.Point(193, 300);
+               this.btnLuuKTKL.Location = new System.Drawing.Point(397, 321);
                this.btnLuuKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.btnLuuKTKL.Name = "btnLuuKTKL";
-               this.btnLuuKTKL.Size = new System.Drawing.Size(100, 37);
+               this.btnLuuKTKL.Size = new System.Drawing.Size(100, 30);
                this.btnLuuKTKL.TabIndex = 9;
                this.btnLuuKTKL.Text = "Lưu";
                this.btnLuuKTKL.UseVisualStyleBackColor = true;
@@ -680,7 +689,7 @@ namespace QLNS1
                // 
                // btnXoaKTKL
                // 
-               this.btnXoaKTKL.Location = new System.Drawing.Point(341, 225);
+               this.btnXoaKTKL.Location = new System.Drawing.Point(532, 262);
                this.btnXoaKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.btnXoaKTKL.Name = "btnXoaKTKL";
                this.btnXoaKTKL.Size = new System.Drawing.Size(100, 28);
@@ -691,7 +700,7 @@ namespace QLNS1
                // 
                // btnSuaKTKL
                // 
-               this.btnSuaKTKL.Location = new System.Drawing.Point(193, 225);
+               this.btnSuaKTKL.Location = new System.Drawing.Point(397, 262);
                this.btnSuaKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.btnSuaKTKL.Name = "btnSuaKTKL";
                this.btnSuaKTKL.Size = new System.Drawing.Size(100, 28);
@@ -702,7 +711,7 @@ namespace QLNS1
                // 
                // btnThemKTKL
                // 
-               this.btnThemKTKL.Location = new System.Drawing.Point(47, 225);
+               this.btnThemKTKL.Location = new System.Drawing.Point(252, 262);
                this.btnThemKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.btnThemKTKL.Name = "btnThemKTKL";
                this.btnThemKTKL.Size = new System.Drawing.Size(100, 28);
@@ -713,7 +722,7 @@ namespace QLNS1
                // 
                // txtSoTien
                // 
-               this.txtSoTien.Location = new System.Drawing.Point(171, 172);
+               this.txtSoTien.Location = new System.Drawing.Point(417, 181);
                this.txtSoTien.Margin = new System.Windows.Forms.Padding(4);
                this.txtSoTien.Name = "txtSoTien";
                this.txtSoTien.Size = new System.Drawing.Size(215, 22);
@@ -721,7 +730,7 @@ namespace QLNS1
                // 
                // txtTenKTKL
                // 
-               this.txtTenKTKL.Location = new System.Drawing.Point(171, 106);
+               this.txtTenKTKL.Location = new System.Drawing.Point(417, 110);
                this.txtTenKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.txtTenKTKL.Name = "txtTenKTKL";
                this.txtTenKTKL.Size = new System.Drawing.Size(215, 22);
@@ -729,7 +738,7 @@ namespace QLNS1
                // 
                // txtMaKTKL
                // 
-               this.txtMaKTKL.Location = new System.Drawing.Point(171, 57);
+               this.txtMaKTKL.Location = new System.Drawing.Point(417, 52);
                this.txtMaKTKL.Margin = new System.Windows.Forms.Padding(4);
                this.txtMaKTKL.Name = "txtMaKTKL";
                this.txtMaKTKL.Size = new System.Drawing.Size(215, 22);
@@ -738,7 +747,7 @@ namespace QLNS1
                // label12
                // 
                this.label12.AutoSize = true;
-               this.label12.Location = new System.Drawing.Point(43, 181);
+               this.label12.Location = new System.Drawing.Point(246, 184);
                this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label12.Name = "label12";
                this.label12.Size = new System.Drawing.Size(52, 17);
@@ -748,7 +757,7 @@ namespace QLNS1
                // label11
                // 
                this.label11.AutoSize = true;
-               this.label11.Location = new System.Drawing.Point(43, 110);
+               this.label11.Location = new System.Drawing.Point(246, 110);
                this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label11.Name = "label11";
                this.label11.Size = new System.Drawing.Size(106, 17);
@@ -758,22 +767,12 @@ namespace QLNS1
                // label10
                // 
                this.label10.AutoSize = true;
-               this.label10.Location = new System.Drawing.Point(43, 57);
+               this.label10.Location = new System.Drawing.Point(246, 55);
                this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label10.Name = "label10";
                this.label10.Size = new System.Drawing.Size(66, 17);
                this.label10.TabIndex = 0;
                this.label10.Text = "Mã KTKL";
-               // 
-               // btnBCKTKL
-               // 
-               this.btnBCKTKL.Location = new System.Drawing.Point(182, 367);
-               this.btnBCKTKL.Name = "btnBCKTKL";
-               this.btnBCKTKL.Size = new System.Drawing.Size(122, 41);
-               this.btnBCKTKL.TabIndex = 11;
-               this.btnBCKTKL.Text = "Báo cáo";
-               this.btnBCKTKL.UseVisualStyleBackColor = true;
-               this.btnBCKTKL.Click += new System.EventHandler(this.btnBCKTKL_Click);
                // 
                // DanhMuc_AD
                // 
@@ -782,7 +781,7 @@ namespace QLNS1
                this.Controls.Add(this.tabControl1);
                this.Margin = new System.Windows.Forms.Padding(4);
                this.Name = "DanhMuc_AD";
-               this.Size = new System.Drawing.Size(1123, 506);
+               this.Size = new System.Drawing.Size(1575, 709);
                this.Load += new System.EventHandler(this.DanhMuc_AD_Load);
                this.tabControl1.ResumeLayout(false);
                this.txtThem_CV.ResumeLayout(false);

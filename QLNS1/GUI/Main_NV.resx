@@ -192,9 +192,6 @@
   <data name="ribbonControl.ApplicationButtonText" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="barContainerStatusMessages.Caption" xml:space="preserve">
-    <value>StatusMessages</value>
-  </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>Danh Mục</value>
   </data>
@@ -293,24 +290,15 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="skinRibbon.Caption" xml:space="preserve">
+    <value>Giao diện</value>
+  </data>
   <data name="ribbonControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ribbonControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
-  </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>ribbonPageGroup1</value>
-  </data>
-  <data name="ribbonPageGroup2.Text" xml:space="preserve">
-    <value>ribbonPageGroup2</value>
-  </data>
-  <data name="ribbonPageGroup3.Text" xml:space="preserve">
-    <value>ribbonPageGroup3</value>
-  </data>
-  <data name="ribbonPageGroup4.Text" xml:space="preserve">
-    <value>ribbonPageGroup4</value>
   </data>
   <data name="defaultPage.Text" xml:space="preserve">
     <value>Home</value>
@@ -328,16 +316,16 @@
     <value>Tools</value>
   </data>
   <data name="ribbonControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>931, 193</value>
+    <value>1940, 193</value>
   </data>
   <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 712</value>
+    <value>0, 1071</value>
   </data>
   <data name="ribbonStatusBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>931, 30</value>
+    <value>1940, 30</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
     <value>ribbonStatusBar</value>
@@ -373,7 +361,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="viewSitePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>931, 519</value>
+    <value>1940, 878</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="viewSitePanel.TabIndex" type="System.Int32, mscorlib">
@@ -407,7 +395,7 @@
     <value>7, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>931, 742</value>
+    <value>1940, 1101</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -694,12 +682,6 @@
   <data name="&gt;&gt;applicationMenu.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.ApplicationMenu, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barContainerStatusMessages.Name" xml:space="preserve">
-    <value>barContainerStatusMessages</value>
-  </data>
-  <data name="&gt;&gt;barContainerStatusMessages.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarLinkContainerExItem, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
     <value>barButtonItem1</value>
   </data>
@@ -723,6 +705,12 @@
   </data>
   <data name="&gt;&gt;barButtonItem4.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;skinRibbon.Name" xml:space="preserve">
+    <value>skinRibbon</value>
+  </data>
+  <data name="&gt;&gt;skinRibbon.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.SkinRibbonGalleryBarItem, DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;defaultPage.Name" xml:space="preserve">
     <value>defaultPage</value>

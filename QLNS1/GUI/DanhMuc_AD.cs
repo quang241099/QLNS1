@@ -20,10 +20,6 @@ namespace QLNS1
         }
         string trangthai = "";
         DATA.linqDataContext linq = new DATA.linqDataContext();
-        private void txtThem_CV_Click(object sender, EventArgs e)
-        {
-
-        }
         private void DanhMuc_AD_Load(object sender, EventArgs e)
         {
                 dataGridViewPhongBan.DataSource = linq.XEMPB_ADMIN();

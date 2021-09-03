@@ -46,10 +46,12 @@ namespace QLNS1.GUI
         }
         public Main_NV()
         {
-            InitializeComponent();
-            ribbonControl.Manager.ForceLinkCreate();
-            statusMessagesHelper = new StatusMessagesHelper(barContainerStatusMessages);
-        }
+               InitializeComponent();
+               ribbonControl.Manager.ForceLinkCreate();
+               DevExpress.UserSkins.BonusSkins.Register();
+               DevExpress.Skins.SkinManager.EnableFormSkins();
+               DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(skinRibbon, true, true);
+          }
 
 
         #region IActionControlsSite Members
@@ -239,5 +241,6 @@ namespace QLNS1.GUI
             FormDangNhap frm = new FormDangNhap();
             frm.ShowDialog();
         }
-    }
+
+     }
 }

@@ -83,5 +83,6 @@ namespace QLNS1
                 txtSoTien.Text = dataGridViewKTKL.Rows[index].Cells["SoTien"].Value.ToString();
             }
         }
-    }
+
+     }
 }

@@ -42,26 +42,26 @@ namespace QLNS1.GUI
                // dgvTK
                // 
                this.dgvTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-               this.dgvTK.Location = new System.Drawing.Point(21, 93);
+               this.dgvTK.Location = new System.Drawing.Point(30, 64);
                this.dgvTK.Name = "dgvTK";
                this.dgvTK.RowHeadersWidth = 51;
                this.dgvTK.RowTemplate.Height = 24;
-               this.dgvTK.Size = new System.Drawing.Size(563, 494);
+               this.dgvTK.Size = new System.Drawing.Size(768, 586);
                this.dgvTK.TabIndex = 0;
                // 
                // chartTK
                // 
                this.chartTK.Legend.Name = "Default Legend";
-               this.chartTK.Location = new System.Drawing.Point(590, 93);
+               this.chartTK.Location = new System.Drawing.Point(804, 64);
                this.chartTK.Name = "chartTK";
                this.chartTK.PaletteName = "Apex";
                this.chartTK.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-               this.chartTK.Size = new System.Drawing.Size(590, 494);
+               this.chartTK.Size = new System.Drawing.Size(723, 586);
                this.chartTK.TabIndex = 1;
                // 
                // labelControl1
                // 
-               this.labelControl1.Location = new System.Drawing.Point(86, 36);
+               this.labelControl1.Location = new System.Drawing.Point(645, 26);
                this.labelControl1.Name = "labelControl1";
                this.labelControl1.Size = new System.Drawing.Size(90, 17);
                this.labelControl1.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace QLNS1.GUI
                // 
                // cbxTK
                // 
-               this.cbxTK.Location = new System.Drawing.Point(182, 33);
+               this.cbxTK.Location = new System.Drawing.Point(751, 23);
                this.cbxTK.Name = "cbxTK";
                this.cbxTK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -84,7 +84,7 @@ namespace QLNS1.GUI
                // 
                // btnTK
                // 
-               this.btnTK.Location = new System.Drawing.Point(313, 29);
+               this.btnTK.Location = new System.Drawing.Point(897, 19);
                this.btnTK.Name = "btnTK";
                this.btnTK.Size = new System.Drawing.Size(94, 29);
                this.btnTK.TabIndex = 4;
@@ -101,7 +101,7 @@ namespace QLNS1.GUI
                this.Controls.Add(this.chartTK);
                this.Controls.Add(this.dgvTK);
                this.Name = "Thong_Ke";
-               this.Size = new System.Drawing.Size(1183, 606);
+               this.Size = new System.Drawing.Size(1549, 681);
                ((System.ComponentModel.ISupportInitialize)(this.dgvTK)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.chartTK)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.cbxTK.Properties)).EndInit();

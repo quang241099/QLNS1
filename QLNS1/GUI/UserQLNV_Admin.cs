@@ -221,6 +221,7 @@ namespace QLNS1
                 dataGridViewNV.DataSource = db.TIMNHANVIEN_ADMIN(txtSearch.Text);
             }
         }
-    }
+
+     }
 
 }

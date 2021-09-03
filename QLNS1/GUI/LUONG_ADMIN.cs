@@ -176,5 +176,6 @@ namespace QLNS1.GUI
                reportLuong.DataSource = dt;
                reportLuong.ShowPreviewDialog();
           }
+
      }
 }
