@@ -91,24 +91,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoKTKL.cs">
+    <Compile Include="GUI\BaoCaoKTKL.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaoCaoKTKL.Designer.cs" />
-    <Compile Include="BaoCaoNhanSu2.cs">
+    <Compile Include="GUI\BaoCaoKTKL.Designer.cs" />
+    <Compile Include="GUI\BaoCaoNhanSu2.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaoCaoNhanSu2.Designer.cs" />
-    <Compile Include="DanhMuc_AD.cs">
+    <Compile Include="GUI\BaoCaoNhanSu2.Designer.cs" />
+    <Compile Include="GUI\DanhMuc_AD.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DanhMuc_AD.Designer.cs">
+    <Compile Include="GUI\DanhMuc_AD.Designer.cs">
       <DependentUpon>DanhMuc_AD.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc_NhanVien.cs">
+    <Compile Include="GUI\DanhMuc_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DanhMuc_NhanVien.Designer.cs">
+    <Compile Include="GUI\DanhMuc_NhanVien.Designer.cs">
       <DependentUpon>DanhMuc_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="DATA\linq.designer.cs">
@@ -116,10 +116,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>linq.dbml</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
+    <Compile Include="GUI\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
+    <Compile Include="GUI\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BaoCaoLuong.cs">
@@ -160,48 +160,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyNhanVien.cs">
+    <Compile Include="GUI\QuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyNhanVien.Designer.cs">
+    <Compile Include="GUI\QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserQLNV_Admin.cs">
+    <Compile Include="GUI\UserQLNV_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserQLNV_Admin.Designer.cs">
+    <Compile Include="GUI\UserQLNV_Admin.Designer.cs">
       <DependentUpon>UserQLNV_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserQLNV_NV.cs">
+    <Compile Include="GUI\UserQLNV_NV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserQLNV_NV.Designer.cs">
+    <Compile Include="GUI\UserQLNV_NV.Designer.cs">
       <DependentUpon>UserQLNV_NV.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCaoKTKL.resx" />
-    <EmbeddedResource Include="BaoCaoNhanSu2.resx" />
+    <EmbeddedResource Include="GUI\BaoCaoKTKL.resx" />
+    <EmbeddedResource Include="GUI\BaoCaoNhanSu2.resx" />
     <None Include="DATA\linq.dbml.layout">
       <DependentUpon>linq.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="GUI\Thong_Ke.resx">
       <DependentUpon>Thong_Ke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyNhanVien.resx">
+    <EmbeddedResource Include="GUI\QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserQLNV_Admin.resx">
+    <EmbeddedResource Include="GUI\UserQLNV_Admin.resx">
       <DependentUpon>UserQLNV_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserQLNV_NV.resx">
+    <EmbeddedResource Include="GUI\UserQLNV_NV.resx">
       <DependentUpon>UserQLNV_NV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc_AD.resx">
+    <EmbeddedResource Include="GUI\DanhMuc_AD.resx">
       <DependentUpon>DanhMuc_AD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc_NhanVien.resx">
+    <EmbeddedResource Include="GUI\DanhMuc_NhanVien.resx">
       <DependentUpon>DanhMuc_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
+    <EmbeddedResource Include="GUI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BaoCaoLuong.resx">
@@ -235,7 +235,7 @@
       <LastGenOutput>linq.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="GUI\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
