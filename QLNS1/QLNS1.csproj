@@ -71,7 +71,7 @@
     <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MoreLinq, Version=3.3.2.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
-      <HintPath>..\packages\morelinq.3.3.2\lib\net451\MoreLinq.dll</HintPath>
+      <HintPath>package\MoreLinq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -92,6 +92,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATA\linq.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>linq.dbml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BaoCaoKTKL.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -111,11 +116,6 @@
     </Compile>
     <Compile Include="GUI\DanhMuc_NhanVien.Designer.cs">
       <DependentUpon>DanhMuc_NhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DATA\linq.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>linq.dbml</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormDangNhap.cs">
       <SubType>Form</SubType>
@@ -173,11 +173,11 @@
     <Compile Include="GUI\UserQLNV_NV.Designer.cs">
       <DependentUpon>UserQLNV_NV.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\BaoCaoKTKL.resx" />
-    <EmbeddedResource Include="GUI\BaoCaoNhanSu2.resx" />
     <None Include="DATA\linq.dbml.layout">
       <DependentUpon>linq.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="GUI\BaoCaoKTKL.resx" />
+    <EmbeddedResource Include="GUI\BaoCaoNhanSu2.resx" />
     <EmbeddedResource Include="GUI\Thong_Ke.resx">
       <DependentUpon>Thong_Ke.cs</DependentUpon>
     </EmbeddedResource>
