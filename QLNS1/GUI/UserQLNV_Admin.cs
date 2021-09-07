@@ -18,6 +18,8 @@ namespace QLNS1
         {
             InitializeComponent();
             LoadData();
+            dataGridViewNV.AllowUserToAddRows = false;
+            dataGridViewHD.AllowUserToAddRows = false;
         }
 
         private static UserQLNV_Admin _instance;
@@ -40,10 +42,10 @@ namespace QLNS1
                                             MaChucVu = u.MaChucVu,
                                             Email = u.Email,
                                             HoTen = u.HoTen,
-                                            MaPB = u.MaPhongBan,
-                                            CMND = u.SoCMND,
+                                            MaPhongBan = u.MaPhongBan,
+                                            SoCMND = u.SoCMND,
                                             NgaySinh = u.NgaySinh,
-                                            MaTD = u.MaHinhThucTuyenDung,
+                                            MaHinhThucTuyenDung = u.MaHinhThucTuyenDung,
                                             SDT = u.SDT,
                                             QueQuan = u.QueQuan,
                                             NoiLamViec = u.NoiLamViec,
@@ -86,9 +88,9 @@ namespace QLNS1
                                             where u.MaNhanVien == textMaNV1.Text
                                             select new
                                             {
-                                                MaNV = u.MaNhanVien,
-                                                MaHopDong = u.MaHD,
-                                                Luong = u.LuongHD,
+                                                MaNhanVien = u.MaNhanVien,
+                                                MaHD = u.MaHD,
+                                                LuongHD = u.LuongHD,
                                                 NgayBatDau = u.NgayBatDau,
                                                 NgayKetThuc = u.NgayKetThuc
                                             };

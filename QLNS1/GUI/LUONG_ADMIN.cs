@@ -16,6 +16,7 @@ namespace QLNS1.GUI
         public LUONG_ADMIN()
         {
             InitializeComponent();
+            dataGridViewLuong.AllowUserToAddRows = false;
         }
         private static LUONG_ADMIN _instance;
         public static LUONG_ADMIN Instance
@@ -157,6 +158,7 @@ namespace QLNS1.GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            refresh();
             if (string.IsNullOrWhiteSpace(txtTimKiem.Text))
             {
                 MessageBox.Show("Bạn chưa nhập dữ kiện tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

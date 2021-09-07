@@ -16,6 +16,7 @@ namespace QLNS1.GUI
         public LUONG_NHANVIEN()
         {
             InitializeComponent();
+            dataGridViewLuongNV.AllowUserToAddRows = false;
         }
         private static LUONG_NHANVIEN _instance;
         public static LUONG_NHANVIEN Instance
