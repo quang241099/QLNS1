@@ -56,6 +56,7 @@ namespace QLNS1.GUI
                this.SoNgayCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.ThangNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.TienBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+               this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
                this.groupBox1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).BeginInit();
                this.SuspendLayout();
@@ -316,10 +317,19 @@ namespace QLNS1.GUI
                this.TienBH.Name = "TienBH";
                this.TienBH.Width = 125;
                // 
+               // labelControl1
+               // 
+               this.labelControl1.Location = new System.Drawing.Point(227, 28);
+               this.labelControl1.Name = "labelControl1";
+               this.labelControl1.Size = new System.Drawing.Size(142, 17);
+               this.labelControl1.TabIndex = 25;
+               this.labelControl1.Text = "Nhập tháng hoặc năm:";
+               // 
                // LUONG_ADMIN
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+               this.Controls.Add(this.labelControl1);
                this.Controls.Add(this.btnTimKiem);
                this.Controls.Add(this.txtTimKiem);
                this.Controls.Add(this.groupBox1);
@@ -364,5 +374,6 @@ namespace QLNS1.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn ThangNam;
         private System.Windows.Forms.DataGridViewTextBoxColumn TienBH;
           private System.Windows.Forms.Button btnBaoCao;
+          private DevExpress.XtraEditors.LabelControl labelControl1;
      }
 }

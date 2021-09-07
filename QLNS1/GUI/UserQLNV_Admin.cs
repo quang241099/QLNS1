@@ -62,14 +62,13 @@ namespace QLNS1
             int i = e.RowIndex;
             int a = dataGridViewNV.RowCount;
             DanhMucNhanVien nv = new DanhMucNhanVien();
-            
 
             if (i >= 0)
             {
                 DataGridViewRow row = dataGridViewNV.Rows[i];
                 textMaNV1.Text = row.Cells["MaNhanVien"].Value.ToString();
                 textMaCV1.Text = row.Cells["MaChucVu"].Value.ToString();
-                textMaPB1.Text = row.Cells["MaPB"].Value.ToString();
+                textMaPB1.Text = row.Cells["MaPhongBan"].Value.ToString();
                 textHoTen.Text = row.Cells["HoTen"].Value.ToString();
                 dtNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value.ToString());
                 textGioiTinh1.Text = row.Cells["GioiTinh"].Value.ToString();
@@ -78,12 +77,10 @@ namespace QLNS1
                 textTrinhDo1.Text = row.Cells["TrinhDo"].Value.ToString();
                 textSDT1.Text = row.Cells["SDT"].Value.ToString();
                 textEmail.Text = row.Cells["Email"].Value.ToString();
-                textCMND.Text = row.Cells["CMND"].Value.ToString();
+                textCMND.Text = row.Cells["SoCMND"].Value.ToString();
                 textNoiO.Text = row.Cells["NoiO"].Value.ToString();
                 textNoiSinh.Text = row.Cells["NoiSinh"].Value.ToString();
-                textMaTD1.Text = row.Cells["MaTD"].Value.ToString();
-
-
+                textMaTD1.Text = row.Cells["MaHinhThucTuyenDung"].Value.ToString();
 
                 dataGridViewHD.DataSource = from u in db.HopDongs
                                             where u.MaNhanVien == textMaNV1.Text
@@ -95,14 +92,6 @@ namespace QLNS1
                                                 NgayBatDau = u.NgayBatDau,
                                                 NgayKetThuc = u.NgayKetThuc
                                             };
-
-
-                //var mahd = from u in db.DanhMucNhanViens
-                //           from h in db.HopDongs
-                //           where u.MaNhanVien == h.MaNhanVien
-                //           select h.MaHD;
-                //textMaHD.Text = mahd.ToString();
-
             }
             
         }
@@ -127,17 +116,6 @@ namespace QLNS1
             tb.MaHinhThucTuyenDung = textMaTD1.Text;
             db.SubmitChanges();
             LoadData();
-
-            //tb = db.Danhmucnhanviens.where(s => s.manhanvien == txtmanv.text).single();
-            //tb.hoten = txthoten.text;
-            //tb.ngaysinh = dtngaysinh.value;
-            //tb.quequan = txtqq.text;
-            //tb.gioitinh = txtgt.text;
-            //tb.trinhdo = txttd.text;
-            //tb.sdt = txtsdt.text;
-            //db.submitchanges();
-            //loaddata();
-
 
             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -194,20 +172,6 @@ namespace QLNS1
             LoadData();
         }
 
-        private void dataGridViewHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
