@@ -18,8 +18,7 @@ namespace QLNS1
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDangNhap());
-            
+            Application.Run(new FormDangNhap());            
         }
     }
 }

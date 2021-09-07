@@ -238,6 +238,7 @@ namespace QLNS1
                 txtTenBH.Text = dataGridViewBaoHiem.Rows[index].Cells["TenBH"].Value.ToString();
                 txtTiLeBH.Text = dataGridViewBaoHiem.Rows[index].Cells["TiLeBH"].Value.ToString();
             }
+          
         }
 
         private void dataGridViewKTKL_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -330,11 +331,11 @@ namespace QLNS1
         {
             if (Checkcontrol_BH())
             {
-                if (trangthai == "thêm_BH")
+                if (trangthai == "thêm_bh")
                 {
                     try
                     {
-                        linq.THEMBH_ADMIN(txtMaBH.Text, txtTenBH.Text, Int32.Parse(txtTiLeBH.Text));
+                        linq.THEMBH_ADMIN(txtMaBH.Text, txtTenBH.Text, Math.Round(float.Parse(txtTiLeBH.Text),4));
                     }
                     catch (Exception ex)
                     {
@@ -345,15 +346,16 @@ namespace QLNS1
                 {
                     try
                     {
-                        linq.SUABH_ADMIN(txtMaBH.Text, txtTenBH.Text, Int32.Parse(txtTiLeBH.Text));
+                        linq.SUABH_ADMIN(txtMaBH.Text, txtTenBH.Text, Math.Round(float.Parse(txtTiLeBH.Text), 4));                     
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
                 }
-            }
+            }          
             DanhMuc_AD_Load(sender, e);
+            //MessageBox.Show(txtTenBH.Text);
             txtMaBH.Enabled = false;
         }
 
