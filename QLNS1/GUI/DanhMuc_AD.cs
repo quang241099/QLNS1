@@ -268,7 +268,7 @@ namespace QLNS1
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                linq.XOAPB_ADMIN(txtMaCV.Text);
+                linq.XOAPB_ADMIN(txtMaPB.Text);
                 ReLoad_PB();
                 DanhMuc_AD_Load(sender, e);
             }
@@ -375,7 +375,7 @@ namespace QLNS1
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                linq.XOAKTKL_ADMIN(txtMaBH.Text);
+                linq.XOAKTKL_ADMIN(txtMaKTKL.Text);
                 ReLoad_KTKL();
                 DanhMuc_AD_Load(sender, e);
             }

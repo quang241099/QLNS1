@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyNhanSu" Class="linqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-FI1VAB7\DT;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString5" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3PM2V18\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True" SettingsObjectName="QLNS1.Properties.Settings" SettingsPropertyName="QuanLyNhanSuConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BaoHiemNhanVien" Member="BaoHiemNhanViens">
     <Type Name="BaoHiemNhanVien">
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -7,8 +7,8 @@
       <Column Name="NgayBatDau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SoTienDongMotThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="DANHMUCBAOHIEM" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" />
-      <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DANHMUCBAOHIEM_BaoHiemNhanVien" Member="DANHMUCBAOHIEM" ThisKey="MaBaoHiem" OtherKey="MaBaoHiem" Type="DANHMUCBAOHIEM" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANHMUCBAOHIEM" Member="DANHMUCBAOHIEMs">
@@ -52,11 +52,22 @@
       <Column Name="NoiO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Association Name="DanhMucNhanVien_BaoHiemNhanVien" Member="BaoHiemNhanViens" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="BaoHiemNhanVien" />
+      <Association Name="DanhMucNhanVien_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhSachKTKL" />
       <Association Name="DanhMucNhanVien_HopDong" Member="HopDongs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="HopDong" />
       <Association Name="DanhMucNhanVien_LuongNhanVien" Member="LuongNhanViens" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="LuongNhanVien" />
-      <Association Name="DanhMucChucVu_DanhMucNhanVien" Member="DanhMucChucVu" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucChucVu" IsForeignKey="true" />
-      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien" Member="DANHMUCHINHTHUCTUYENDUNG" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DANHMUCHINHTHUCTUYENDUNG" IsForeignKey="true" />
-      <Association Name="PhongBan_DanhMucNhanVien" Member="PhongBan" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" />
+      <Association Name="DanhMucChucVu_DanhMucNhanVien" Member="DanhMucChucVu" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="DanhMucChucVu" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien" Member="DANHMUCHINHTHUCTUYENDUNG" ThisKey="MaHinhThucTuyenDung" OtherKey="MaHinhThucTuyenDung" Type="DANHMUCHINHTHUCTUYENDUNG" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PhongBan_DanhMucNhanVien" Member="PhongBan" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DanhSachKTKL" Member="DanhSachKTKLs">
+    <Type Name="DanhSachKTKL">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DanhMucNhanVien_DanhSachKTKL" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="QuyDinhKTKL" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="QuyDinhKTKL" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.HopDong" Member="HopDongs">
@@ -66,7 +77,7 @@
       <Column Name="LuongHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayBatDau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NgayKetThuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="DanhMucNhanVien_HopDong" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DanhMucNhanVien_HopDong" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.LuongNhanVien" Member="LuongNhanViens">
@@ -77,7 +88,7 @@
       <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DanhMucNhanVien_LuongNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" />
+      <Association Name="DanhMucNhanVien_LuongNhanVien" Member="DanhMucNhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="DanhMucNhanVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.PhongBan" Member="PhongBans">
@@ -93,6 +104,7 @@
       <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="QuyDinhKTKL_DanhSachKTKL" Member="DanhSachKTKLs" ThisKey="MaKTKL" OtherKey="MaKTKL" Type="DanhSachKTKL" />
     </Type>
   </Table>
   <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
@@ -333,6 +345,11 @@
       <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.NhanVienChuaCoHD" Method="NhanVienChuaCoHD">
+    <ElementType Name="NhanVienChuaCoHDResult">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.NhanVienDK" Method="NhanVienDK">
     <Parameter Name="MaNV" Parameter="maNV" Type="System.String" DbType="VarChar(20)" />
     <ElementType Name="NhanVienDKResult">
@@ -353,11 +370,6 @@
       <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.NhanVienChuaCoHD" Method="NhanVienChuaCoHD">
-    <ElementType Name="NhanVienChuaCoHDResult">
-      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.PhongBanDK" Method="PhongBanDK">
     <Parameter Name="MaPB" Parameter="maPB" Type="System.String" DbType="VarChar(20)" />
     <ElementType Name="PhongBanDKResult">
@@ -366,16 +378,16 @@
       <Column Name="DienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.QuyetDinhKTKL" Method="QuyetDinhKTKL">
-    <ElementType Name="QuyetDinhKTKLResult">
+  <Function Name="dbo.QuyDinhKTKLDK" Method="QuyDinhKTKLDK">
+    <Parameter Name="MaKTKL" Parameter="maKTKL" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="QuyDinhKTKLDKResult">
       <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.QuyDinhKTKLDK" Method="QuyDinhKTKLDK">
-    <Parameter Name="MaKTKL" Parameter="maKTKL" Type="System.String" DbType="VarChar(20)" />
-    <ElementType Name="QuyDinhKTKLDKResult">
+  <Function Name="dbo.QuyetDinhKTKL" Method="QuyetDinhKTKL">
+    <ElementType Name="QuyetDinhKTKLResult">
       <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -395,9 +407,21 @@
     <Parameter Name="TiLeBH" Parameter="tiLeBH" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.SUABH_ADMIN" Method="SUABH_ADMIN">
+    <Parameter Name="MaBaoHiem" Parameter="maBaoHiem" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="TiLeBH" Parameter="tiLeBH" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.SuaCV" Method="SuaCV">
     <Parameter Name="MaChucVu" Parameter="maChucVu" Type="System.String" DbType="VarChar(20)" />
     <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="PhuCap" Parameter="phuCap" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SUACV_ADMIN" Method="SUACV_ADMIN">
+    <Parameter Name="MaChucVu" Parameter="maChucVu" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(30)" />
     <Parameter Name="PhuCap" Parameter="phuCap" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
@@ -428,6 +452,14 @@
     <Parameter Name="SoTien" Parameter="soTien" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.SuaLuong" Method="SuaLuong">
+    <Parameter Name="MaLuong" Parameter="maLuong" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MaNV" Parameter="maNV" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Luong" Parameter="luong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SoNgayCong" Parameter="soNgayCong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ThangNam" Parameter="thangNam" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.SUALUONG_ADMIN" Method="SUALUONG_ADMIN">
     <Parameter Name="Maluong" Parameter="maluong" Type="System.String" DbType="VarChar(20)" />
     <Parameter Name="Manhanvien" Parameter="manhanvien" Type="System.String" DbType="VarChar(20)" />
@@ -435,14 +467,6 @@
     <Parameter Name="Songaycong" Parameter="songaycong" Type="System.Int32" DbType="Int" />
     <Parameter Name="Thangnam" Parameter="thangnam" Type="System.String" DbType="VarChar(10)" />
     <Parameter Name="TienBH" Parameter="tienBH" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SuaLuong" Method="SuaLuong">
-    <Parameter Name="MaLuong" Parameter="maLuong" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="MaNV" Parameter="maNV" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Luong" Parameter="luong" Type="System.Int32" DbType="Int" />
-    <Parameter Name="SoNgayCong" Parameter="soNgayCong" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ThangNam" Parameter="thangNam" Type="System.String" DbType="VarChar(10)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.SuaNV" Method="SuaNV">
@@ -585,15 +609,15 @@
     <Parameter Name="NoiSinh" Parameter="noiSinh" Type="System.String" DbType="NVarChar(40)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ThemTD" Method="ThemTD">
-    <Parameter Name="MaTD" Parameter="maTD" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(40)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.ThemPB" Method="ThemPB">
     <Parameter Name="MaPhongBan" Parameter="maPhongBan" Type="System.String" DbType="VarChar(20)" />
     <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="DienThoai" Parameter="dienThoai" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ThemTD" Method="ThemTD">
+    <Parameter Name="MaTD" Parameter="maTD" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(40)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.TiLeBaoHiem" Method="TiLeBaoHiem">
@@ -808,19 +832,19 @@
       <Column Name="PhuCap" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.XEM_DM_KTKL_ADMIN" Method="XEM_DM_KTKL_ADMIN">
+    <ElementType Name="XEM_DM_KTKL_ADMINResult">
+      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.XEMBH_NHANVIEN" Method="XEMBH_NHANVIEN">
     <Parameter Name="MaNhanVien" Parameter="maNhanVien" Type="System.String" DbType="VarChar(20)" />
     <ElementType Name="XEMBH_NHANVIENResult">
       <Column Name="MaBaoHiem" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="TiLeBH" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.XEM_DM_KTKL_ADMIN" Method="XEM_DM_KTKL_ADMIN">
-    <ElementType Name="XEM_DM_KTKL_ADMINResult">
-      <Column Name="MaKTKL" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.XEMCV_NHANVIEN" Method="XEMCV_NHANVIEN">
@@ -849,13 +873,6 @@
       <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.XEMPB_ADMIN" Method="XEMPB_ADMIN">
-    <ElementType Name="XEMPB_ADMINResult">
-      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.XEMLUONG_NV" Method="XEMLUONG_NV">
     <Parameter Name="Manhanvien" Parameter="manhanvien" Type="System.String" DbType="VarChar(20)" />
     <ElementType Name="XEMLUONG_NVResult">
@@ -866,6 +883,13 @@
       <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.XEMPB_ADMIN" Method="XEMPB_ADMIN">
+    <ElementType Name="XEMPB_ADMINResult">
+      <Column Name="MaPhongBan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.XEMPB_NHANVIEN" Method="XEMPB_NHANVIEN">
@@ -974,17 +998,5 @@
       <Column Name="[Nơi ở]" Member="Nơi_ở" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="[Nơi sinh]" Member="Nơi_sinh" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.SUACV_ADMIN" Method="SUACV_ADMIN">
-    <Parameter Name="MaChucVu" Parameter="maChucVu" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(30)" />
-    <Parameter Name="PhuCap" Parameter="phuCap" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SUABH_ADMIN" Method="SUABH_ADMIN">
-    <Parameter Name="MaBaoHiem" Parameter="maBaoHiem" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Ten" Parameter="ten" Type="System.String" DbType="NVarChar(40)" />
-    <Parameter Name="TiLeBH" Parameter="tiLeBH" Type="System.Double" DbType="Float" />
-    <Return Type="System.Int32" />
   </Function>
 </Database>
