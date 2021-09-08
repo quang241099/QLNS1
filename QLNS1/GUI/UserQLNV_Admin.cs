@@ -89,7 +89,7 @@ namespace QLNS1
                                             where u.MaNhanVien == textMaNV1.Text
                                             select new
                                             {
-                                                MaNhanVien = u.MaNhanVien,
+                                                //MaNhanVien = u.MaNhanVien,
                                                 MaHD = u.MaHD,
                                                 LuongHD = u.LuongHD,
                                                 NgayBatDau = u.NgayBatDau,
@@ -206,7 +206,6 @@ namespace QLNS1
                 dataGridViewNV.DataSource = db.TIMNHANVIEN_ADMIN(txtSearch.Text);
             }
         }
-
-     }
+    }
 
 }
