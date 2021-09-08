@@ -83,7 +83,7 @@ namespace QLNS1
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
             this.btnTim = new DevComponents.DotNetBar.ButtonX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.MaHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LuongHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -586,7 +586,7 @@ namespace QLNS1
             this.dataGridViewHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataGridViewHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHopDong,
+            this.MaHD,
             this.LuongHD,
             this.NgayBatDau,
             this.NgayKetThuc});
@@ -626,14 +626,14 @@ namespace QLNS1
             this.txtSearch.Size = new System.Drawing.Size(402, 22);
             this.txtSearch.TabIndex = 204;
             // 
-            // MaHopDong
+            // MaHD
             // 
-            this.MaHopDong.DataPropertyName = "MaHopDong";
-            this.MaHopDong.HeaderText = "Mã Hợp Đồng";
-            this.MaHopDong.MinimumWidth = 6;
-            this.MaHopDong.Name = "MaHopDong";
-            this.MaHopDong.ReadOnly = true;
-            this.MaHopDong.Width = 150;
+            this.MaHD.DataPropertyName = "MaHD";
+            this.MaHD.HeaderText = "Mã Hợp Đồng";
+            this.MaHD.MinimumWidth = 6;
+            this.MaHD.Name = "MaHD";
+            this.MaHD.ReadOnly = true;
+            this.MaHD.Width = 150;
             // 
             // LuongHD
             // 
@@ -770,7 +770,7 @@ namespace QLNS1
           private System.Windows.Forms.DataGridViewTextBoxColumn Email;
           private System.Windows.Forms.DataGridViewTextBoxColumn NoiO;
           private System.Windows.Forms.DataGridViewTextBoxColumn NoiSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHopDong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn LuongHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
