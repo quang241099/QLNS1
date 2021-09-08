@@ -13,7 +13,8 @@ namespace QLNS1
 {
     public partial class UserQLNV_Admin : UserControl
     {
-        linqDataContext db = new linqDataContext(); 
+        linqDataContext db = new linqDataContext();
+        int chon;
         public UserQLNV_Admin()
         {
             InitializeComponent();
@@ -100,39 +101,48 @@ namespace QLNS1
 
         private void btnSua_Click_1(object sender, EventArgs e)
         {
-            DanhMucNhanVien tb = new DanhMucNhanVien();
-            tb = db.DanhMucNhanViens.Where(s => s.MaNhanVien == textMaNV1.Text).Single();
-            tb.MaChucVu = textMaCV1.Text;
-            tb.MaPhongBan = textMaPB1.Text;
-            tb.HoTen = textHoTen.Text;
-            tb.NgaySinh = dtNgaySinh.Value;
-            tb.GioiTinh = textGioiTinh1.Text;
-            tb.QueQuan = textQueQuan1.Text;
-            tb.NoiLamViec = textNoiLamViec.Text;
-            tb.TrinhDo = textTrinhDo1.Text;
-            tb.SDT = textSDT1.Text;
-            tb.Email = textEmail.Text;
-            tb.SoCMND = textCMND.Text;
-            tb.NoiO = textNoiO.Text;
-            tb.NoiSinh = textNoiSinh.Text;
-            tb.MaHinhThucTuyenDung = textMaTD1.Text;
-            db.SubmitChanges();
-            LoadData();
+            chon = 1;
+            
+            
+            //DanhMucNhanVien tb = new DanhMucNhanVien();
+            //tb = db.DanhMucNhanViens.Where(s => s.MaNhanVien == textMaNV1.Text).Single();
+            //tb.MaChucVu = textMaCV1.Text;
+            //tb.MaPhongBan = textMaPB1.Text;
+            //tb.HoTen = textHoTen.Text;
+            //tb.NgaySinh = dtNgaySinh.Value;
+            //tb.GioiTinh = textGioiTinh1.Text;
+            //tb.QueQuan = textQueQuan1.Text;
+            //tb.NoiLamViec = textNoiLamViec.Text;
+            //tb.TrinhDo = textTrinhDo1.Text;
+            //tb.SDT = textSDT1.Text;
+            //tb.Email = textEmail.Text;
+            //tb.SoCMND = textCMND.Text;
+            //tb.NoiO = textNoiO.Text;
+            //tb.NoiSinh = textNoiSinh.Text;
+            //tb.MaHinhThucTuyenDung = textMaTD1.Text;
+            //db.SubmitChanges();
+            //LoadData();
 
-            MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnXoa_Click_1(object sender, EventArgs e)
         {
             DanhMucNhanVien tb = new DanhMucNhanVien();
             tb = db.DanhMucNhanViens.Where(s => s.MaNhanVien == textMaNV1.Text).Single();
-            db.DanhMucNhanViens.DeleteOnSubmit(tb);
-            db.SubmitChanges();
-            LoadData();
+           
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                db.DanhMucNhanViens.DeleteOnSubmit(tb);
+
+                db.SubmitChanges();
+                LoadData();
+            }
         }
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
+            chon = 2;
             textCMND.Text = "";
             textEmail.Text = "";
             textGioiTinh1.Text = "";
@@ -148,30 +158,60 @@ namespace QLNS1
             textSDT1.Text = "";
             textTrinhDo1.Text = "";
             dtNgaySinh.Value = Convert.ToDateTime("1111/1/11");
-            MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
+            
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            DanhMucNhanVien tb = new DanhMucNhanVien();
-            tb.MaNhanVien = textMaNV1.Text;
-            tb.MaPhongBan = textMaPB1.Text;
-            tb.MaChucVu = textMaCV1.Text;
-            tb.MaHinhThucTuyenDung = textMaTD1.Text;
-            tb.HoTen = textHoTen.Text;
-            tb.GioiTinh = textGioiTinh1.Text;
-            tb.NgaySinh = dtNgaySinh.Value;
-            tb.QueQuan = textQueQuan1.Text;
-            tb.SoCMND = textCMND.Text;
-            tb.SDT = textSDT1.Text;
-            tb.TrinhDo = textTrinhDo1.Text;
-            tb.NoiLamViec = textNoiLamViec.Text;
-            tb.NoiO = textNoiO.Text;
-            tb.NoiSinh = textNoiSinh.Text;
-            tb.Email = textEmail.Text;
-            db.DanhMucNhanViens.InsertOnSubmit(tb);
-            db.SubmitChanges();
-            LoadData();
+
+                DanhMucNhanVien tb = new DanhMucNhanVien();
+            if(chon==2)
+            {
+                tb.MaNhanVien = textMaNV1.Text;
+                tb.MaPhongBan = textMaPB1.Text;
+                tb.MaChucVu = textMaCV1.Text;
+                tb.MaHinhThucTuyenDung = textMaTD1.Text;
+                tb.HoTen = textHoTen.Text;
+                tb.GioiTinh = textGioiTinh1.Text;
+                tb.NgaySinh = dtNgaySinh.Value;
+                tb.QueQuan = textQueQuan1.Text;
+                tb.SoCMND = textCMND.Text;
+                tb.SDT = textSDT1.Text;
+                tb.TrinhDo = textTrinhDo1.Text;
+                tb.NoiLamViec = textNoiLamViec.Text;
+                tb.NoiO = textNoiO.Text;
+                tb.NoiSinh = textNoiSinh.Text;
+                tb.Email = textEmail.Text;
+                db.DanhMucNhanViens.InsertOnSubmit(tb);
+                db.SubmitChanges();
+                LoadData();
+                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if(chon==1)
+            {
+               // DanhMucNhanVien tb = new DanhMucNhanVien();
+                tb = db.DanhMucNhanViens.Where(s => s.MaNhanVien == textMaNV1.Text).Single();
+                tb.MaChucVu = textMaCV1.Text;
+                tb.MaPhongBan = textMaPB1.Text;
+                tb.HoTen = textHoTen.Text;
+                tb.NgaySinh = dtNgaySinh.Value;
+                tb.GioiTinh = textGioiTinh1.Text;
+                tb.QueQuan = textQueQuan1.Text;
+                tb.NoiLamViec = textNoiLamViec.Text;
+                tb.TrinhDo = textTrinhDo1.Text;
+                tb.SDT = textSDT1.Text;
+                tb.Email = textEmail.Text;
+                tb.SoCMND = textCMND.Text;
+                tb.NoiO = textNoiO.Text;
+                tb.NoiSinh = textNoiSinh.Text;
+                tb.MaHinhThucTuyenDung = textMaTD1.Text;
+                db.SubmitChanges();
+                LoadData();
+
+                MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
 

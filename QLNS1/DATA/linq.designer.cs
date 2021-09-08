@@ -60,7 +60,7 @@ namespace QLNS1.DATA
     #endregion
 		
 		public linqDataContext() : 
-				base(global::QLNS1.Properties.Settings.Default.QuanLyNhanSuConnectionString2, mappingSource)
+				base(global::QLNS1.Properties.Settings.Default.QuanLyNhanSuConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -129,19 +129,19 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		public System.Data.Linq.Table<DanhSachKTKL> DanhSachKTKLs
-		{
-			get
-			{
-				return this.GetTable<DanhSachKTKL>();
-			}
-		}
-		
 		public System.Data.Linq.Table<HopDong> HopDongs
 		{
 			get
 			{
 				return this.GetTable<HopDong>();
+			}
+		}
+		
+		public System.Data.Linq.Table<DanhSachKTKL> DanhSachKTKLs
+		{
+			get
+			{
+				return this.GetTable<DanhSachKTKL>();
 			}
 		}
 		
@@ -184,6 +184,13 @@ namespace QLNS1.DATA
 			return ((ISingleResult<BaoCaoKTKLResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BaoCaoKTKL")]
+		public ISingleResult<BaoCaoKTKLResult1> BaoCaoKTKL1()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<BaoCaoKTKLResult1>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BaoCaoLuong")]
 		public ISingleResult<BaoCaoLuongResult> BaoCaoLuong()
 		{
@@ -212,13 +219,6 @@ namespace QLNS1.DATA
 			return ((ISingleResult<BHNhanVienResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChucVuDK")]
-		public ISingleResult<ChucVuDKResult> ChucVuDK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaCV", DbType="VarChar(20)")] string maCV)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maCV);
-			return ((ISingleResult<ChucVuDKResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dangnhap1")]
 		public ISingleResult<dangnhap1Result> dangnhap1()
 		{
@@ -231,6 +231,13 @@ namespace QLNS1.DATA
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ten, mK);
 			return ((ISingleResult<DangNhapDKResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChucVuDK")]
+		public ISingleResult<ChucVuDKResult> ChucVuDK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaCV", DbType="VarChar(20)")] string maCV)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maCV);
+			return ((ISingleResult<ChucVuDKResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachBH")]
@@ -275,18 +282,18 @@ namespace QLNS1.DATA
 			return ((ISingleResult<DanhSachLuongResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachMaBH")]
-		public ISingleResult<DanhSachMaBHResult> DanhSachMaBH()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<DanhSachMaBHResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachMaCV")]
 		public ISingleResult<DanhSachMaCVResult> DanhSachMaCV()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<DanhSachMaCVResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachMaBH")]
+		public ISingleResult<DanhSachMaBHResult> DanhSachMaBH()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<DanhSachMaBHResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachMaPB")]
@@ -359,18 +366,18 @@ namespace QLNS1.DATA
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LuongDK")]
-		public ISingleResult<LuongDKResult> LuongDK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLuong", DbType="VarChar(20)")] string maLuong)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLuong);
-			return ((ISingleResult<LuongDKResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NhanVienChuaCoHD")]
 		public ISingleResult<NhanVienChuaCoHDResult> NhanVienChuaCoHD()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<NhanVienChuaCoHDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LuongDK")]
+		public ISingleResult<LuongDKResult> LuongDK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLuong", DbType="VarChar(20)")] string maLuong)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLuong);
+			return ((ISingleResult<LuongDKResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NhanVienDK")]
@@ -401,13 +408,6 @@ namespace QLNS1.DATA
 			return ((ISingleResult<QuyetDinhKTKLResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaBaoHiemNV")]
-		public int SuaBaoHiemNV([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaBH", DbType="VarChar(20)")] string maBH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaNV", DbType="VarChar(20)")] string maNV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayBatDau", DbType="Date")] System.Nullable<System.DateTime> ngayBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayKetThuc", DbType="Date")] System.Nullable<System.DateTime> ngayKetThuc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoTien", DbType="Int")] System.Nullable<int> soTien)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maBH, maNV, ngayBatDau, ngayKetThuc, soTien);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaBH")]
 		public int SuaBH([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaBH", DbType="VarChar(20)")] string maBH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="NVarChar(40)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TiLeBH", DbType="Float")] System.Nullable<double> tiLeBH)
 		{
@@ -415,8 +415,15 @@ namespace QLNS1.DATA
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaBaoHiemNV")]
+		public int SuaBaoHiemNV([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaBH", DbType="VarChar(20)")] string maBH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaNV", DbType="VarChar(20)")] string maNV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayBatDau", DbType="Date")] System.Nullable<System.DateTime> ngayBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayKetThuc", DbType="Date")] System.Nullable<System.DateTime> ngayKetThuc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoTien", DbType="Int")] System.Nullable<int> soTien)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maBH, maNV, ngayBatDau, ngayKetThuc, soTien);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SUABH_ADMIN")]
-		public int SUABH_ADMIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaBaoHiem", DbType="VarChar(20)")] string maBaoHiem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="NVarChar(40)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TiLeBH", DbType="Float")] System.Nullable<double> tiLeBH)
+		public int SUABH_ADMIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaBaoHiem", DbType="VarChar(20)")] string maBaoHiem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="NVarChar(50)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TiLeBH", DbType="Float")] System.Nullable<double> tiLeBH)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maBaoHiem, ten, tiLeBH);
 			return ((int)(result.ReturnValue));
@@ -430,7 +437,7 @@ namespace QLNS1.DATA
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SUACV_ADMIN")]
-		public int SUACV_ADMIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaChucVu", DbType="VarChar(20)")] string maChucVu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="NVarChar(30)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PhuCap", DbType="Int")] System.Nullable<int> phuCap)
+		public int SUACV_ADMIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaChucVu", DbType="VarChar(20)")] string maChucVu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="VarChar(30)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PhuCap", DbType="Int")] System.Nullable<int> phuCap)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maChucVu, ten, phuCap);
 			return ((int)(result.ReturnValue));
@@ -548,17 +555,17 @@ namespace QLNS1.DATA
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.THEMCV_ADMIN")]
-		public int THEMCV_ADMIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaChucVu", DbType="VarChar(20)")] string maChucVu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="NVarChar(40)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PhuCap", DbType="Int")] System.Nullable<int> phuCap)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maChucVu, ten, phuCap);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemDanhSachKTKL")]
 		public int ThemDanhSachKTKL([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKTKL", DbType="VarChar(20)")] string maKTKL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaNV", DbType="VarChar(20)")] string maNV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ngay", DbType="Date")] System.Nullable<System.DateTime> ngay, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GhiChu", DbType="NVarChar(50)")] string ghiChu)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKTKL, maNV, ngay, ghiChu);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.THEMCV_ADMIN")]
+		public int THEMCV_ADMIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaChucVu", DbType="VarChar(20)")] string maChucVu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ten", DbType="NVarChar(40)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PhuCap", DbType="Int")] System.Nullable<int> phuCap)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maChucVu, ten, phuCap);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -779,18 +786,18 @@ namespace QLNS1.DATA
 			return ((ISingleResult<XEMKTKL_NHANVIENResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XEMLUONG_ADMIN")]
-		public ISingleResult<XEMLUONG_ADMINResult> XEMLUONG_ADMIN()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<XEMLUONG_ADMINResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XEMLUONG_NV")]
 		public ISingleResult<XEMLUONG_NVResult> XEMLUONG_NV([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Manhanvien", DbType="VarChar(20)")] string manhanvien)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), manhanvien);
 			return ((ISingleResult<XEMLUONG_NVResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XEMLUONG_ADMIN")]
+		public ISingleResult<XEMLUONG_ADMINResult> XEMLUONG_ADMIN()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<XEMLUONG_ADMINResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XEMPB_ADMIN")]
@@ -1085,7 +1092,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCBAOHIEM_BaoHiemNhanVien", Storage="_DANHMUCBAOHIEM", ThisKey="MaBaoHiem", OtherKey="MaBaoHiem", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCBAOHIEM_BaoHiemNhanVien", Storage="_DANHMUCBAOHIEM", ThisKey="MaBaoHiem", OtherKey="MaBaoHiem", IsForeignKey=true)]
 		public DANHMUCBAOHIEM DANHMUCBAOHIEM
 		{
 			get
@@ -1119,7 +1126,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucNhanVien_BaoHiemNhanVien", Storage="_DanhMucNhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucNhanVien_BaoHiemNhanVien", Storage="_DanhMucNhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true)]
 		public DanhMucNhanVien DanhMucNhanVien
 		{
 			get
@@ -2010,7 +2017,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucChucVu_DanhMucNhanVien", Storage="_DanhMucChucVu", ThisKey="MaChucVu", OtherKey="MaChucVu", IsForeignKey=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucChucVu_DanhMucNhanVien", Storage="_DanhMucChucVu", ThisKey="MaChucVu", OtherKey="MaChucVu", IsForeignKey=true)]
 		public DanhMucChucVu DanhMucChucVu
 		{
 			get
@@ -2044,7 +2051,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien", Storage="_DANHMUCHINHTHUCTUYENDUNG", ThisKey="MaHinhThucTuyenDung", OtherKey="MaHinhThucTuyenDung", IsForeignKey=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DANHMUCHINHTHUCTUYENDUNG_DanhMucNhanVien", Storage="_DANHMUCHINHTHUCTUYENDUNG", ThisKey="MaHinhThucTuyenDung", OtherKey="MaHinhThucTuyenDung", IsForeignKey=true)]
 		public DANHMUCHINHTHUCTUYENDUNG DANHMUCHINHTHUCTUYENDUNG
 		{
 			get
@@ -2078,7 +2085,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhongBan_DanhMucNhanVien", Storage="_PhongBan", ThisKey="MaPhongBan", OtherKey="MaPhongBan", IsForeignKey=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhongBan_DanhMucNhanVien", Storage="_PhongBan", ThisKey="MaPhongBan", OtherKey="MaPhongBan", IsForeignKey=true)]
 		public PhongBan PhongBan
 		{
 			get
@@ -2166,87 +2173,6 @@ namespace QLNS1.DATA
 		{
 			this.SendPropertyChanging();
 			entity.DanhMucNhanVien = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DanhSachKTKL")]
-	public partial class DanhSachKTKL
-	{
-		
-		private string _MaNhanVien;
-		
-		private string _MaKTKL;
-		
-		private System.DateTime _Ngay;
-		
-		private string _GhiChu;
-		
-		public DanhSachKTKL()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string MaNhanVien
-		{
-			get
-			{
-				return this._MaNhanVien;
-			}
-			set
-			{
-				if ((this._MaNhanVien != value))
-				{
-					this._MaNhanVien = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKTKL", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string MaKTKL
-		{
-			get
-			{
-				return this._MaKTKL;
-			}
-			set
-			{
-				if ((this._MaKTKL != value))
-				{
-					this._MaKTKL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngay", DbType="Date NOT NULL")]
-		public System.DateTime Ngay
-		{
-			get
-			{
-				return this._Ngay;
-			}
-			set
-			{
-				if ((this._Ngay != value))
-				{
-					this._Ngay = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(50)")]
-		public string GhiChu
-		{
-			get
-			{
-				return this._GhiChu;
-			}
-			set
-			{
-				if ((this._GhiChu != value))
-				{
-					this._GhiChu = value;
-				}
-			}
 		}
 	}
 	
@@ -2394,7 +2320,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucNhanVien_HopDong", Storage="_DanhMucNhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucNhanVien_HopDong", Storage="_DanhMucNhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true)]
 		public DanhMucNhanVien DanhMucNhanVien
 		{
 			get
@@ -2445,6 +2371,87 @@ namespace QLNS1.DATA
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DanhSachKTKL")]
+	public partial class DanhSachKTKL
+	{
+		
+		private string _MaNhanVien;
+		
+		private string _MaKTKL;
+		
+		private System.DateTime _Ngay;
+		
+		private string _GhiChu;
+		
+		public DanhSachKTKL()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKTKL", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaKTKL
+		{
+			get
+			{
+				return this._MaKTKL;
+			}
+			set
+			{
+				if ((this._MaKTKL != value))
+				{
+					this._MaKTKL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngay", DbType="Date NOT NULL")]
+		public System.DateTime Ngay
+		{
+			get
+			{
+				return this._Ngay;
+			}
+			set
+			{
+				if ((this._Ngay != value))
+				{
+					this._Ngay = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(50)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this._GhiChu = value;
+				}
 			}
 		}
 	}
@@ -2617,7 +2624,7 @@ namespace QLNS1.DATA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucNhanVien_LuongNhanVien", Storage="_DanhMucNhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucNhanVien_LuongNhanVien", Storage="_DanhMucNhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true)]
 		public DanhMucNhanVien DanhMucNhanVien
 		{
 			get
@@ -2985,6 +2992,158 @@ namespace QLNS1.DATA
 		private System.Nullable<int> _SoHinhThucKTKL;
 		
 		public BaoCaoKTKLResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(40)")]
+		public string HoTen
+		{
+			get
+			{
+				return this._HoTen;
+			}
+			set
+			{
+				if ((this._HoTen != value))
+				{
+					this._HoTen = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="Date")]
+		public System.Nullable<System.DateTime> NgaySinh
+		{
+			get
+			{
+				return this._NgaySinh;
+			}
+			set
+			{
+				if ((this._NgaySinh != value))
+				{
+					this._NgaySinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhongBan", DbType="VarChar(20)")]
+		public string MaPhongBan
+		{
+			get
+			{
+				return this._MaPhongBan;
+			}
+			set
+			{
+				if ((this._MaPhongBan != value))
+				{
+					this._MaPhongBan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenPhongBan", DbType="NVarChar(50)")]
+		public string TenPhongBan
+		{
+			get
+			{
+				return this._TenPhongBan;
+			}
+			set
+			{
+				if ((this._TenPhongBan != value))
+				{
+					this._TenPhongBan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaChucVu", DbType="VarChar(20)")]
+		public string MaChucVu
+		{
+			get
+			{
+				return this._MaChucVu;
+			}
+			set
+			{
+				if ((this._MaChucVu != value))
+				{
+					this._MaChucVu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChucVu", DbType="NVarChar(40)")]
+		public string ChucVu
+		{
+			get
+			{
+				return this._ChucVu;
+			}
+			set
+			{
+				if ((this._ChucVu != value))
+				{
+					this._ChucVu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoHinhThucKTKL", DbType="Int")]
+		public System.Nullable<int> SoHinhThucKTKL
+		{
+			get
+			{
+				return this._SoHinhThucKTKL;
+			}
+			set
+			{
+				if ((this._SoHinhThucKTKL != value))
+				{
+					this._SoHinhThucKTKL = value;
+				}
+			}
+		}
+	}
+	
+	public partial class BaoCaoKTKLResult1
+	{
+		
+		private string _MaNhanVien;
+		
+		private string _HoTen;
+		
+		private System.Nullable<System.DateTime> _NgaySinh;
+		
+		private string _MaPhongBan;
+		
+		private string _TenPhongBan;
+		
+		private string _MaChucVu;
+		
+		private string _ChucVu;
+		
+		private System.Nullable<int> _SoHinhThucKTKL;
+		
+		public BaoCaoKTKLResult1()
 		{
 		}
 		
@@ -3545,68 +3704,6 @@ namespace QLNS1.DATA
 		}
 	}
 	
-	public partial class ChucVuDKResult
-	{
-		
-		private string _MaChucVu;
-		
-		private string _Ten;
-		
-		private System.Nullable<int> _PhuCap;
-		
-		public ChucVuDKResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaChucVu", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string MaChucVu
-		{
-			get
-			{
-				return this._MaChucVu;
-			}
-			set
-			{
-				if ((this._MaChucVu != value))
-				{
-					this._MaChucVu = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(40)")]
-		public string Ten
-		{
-			get
-			{
-				return this._Ten;
-			}
-			set
-			{
-				if ((this._Ten != value))
-				{
-					this._Ten = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhuCap", DbType="Int")]
-		public System.Nullable<int> PhuCap
-		{
-			get
-			{
-				return this._PhuCap;
-			}
-			set
-			{
-				if ((this._PhuCap != value))
-				{
-					this._PhuCap = value;
-				}
-			}
-		}
-	}
-	
 	public partial class dangnhap1Result
 	{
 		
@@ -3690,6 +3787,68 @@ namespace QLNS1.DATA
 				if ((this._MK != value))
 				{
 					this._MK = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChucVuDKResult
+	{
+		
+		private string _MaChucVu;
+		
+		private string _Ten;
+		
+		private System.Nullable<int> _PhuCap;
+		
+		public ChucVuDKResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaChucVu", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaChucVu
+		{
+			get
+			{
+				return this._MaChucVu;
+			}
+			set
+			{
+				if ((this._MaChucVu != value))
+				{
+					this._MaChucVu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(40)")]
+		public string Ten
+		{
+			get
+			{
+				return this._Ten;
+			}
+			set
+			{
+				if ((this._Ten != value))
+				{
+					this._Ten = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhuCap", DbType="Int")]
+		public System.Nullable<int> PhuCap
+		{
+			get
+			{
+				return this._PhuCap;
+			}
+			set
+			{
+				if ((this._PhuCap != value))
+				{
+					this._PhuCap = value;
 				}
 			}
 		}
@@ -4211,32 +4370,6 @@ namespace QLNS1.DATA
 		}
 	}
 	
-	public partial class DanhSachMaBHResult
-	{
-		
-		private string _MaBaoHiem;
-		
-		public DanhSachMaBHResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaBaoHiem", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string MaBaoHiem
-		{
-			get
-			{
-				return this._MaBaoHiem;
-			}
-			set
-			{
-				if ((this._MaBaoHiem != value))
-				{
-					this._MaBaoHiem = value;
-				}
-			}
-		}
-	}
-	
 	public partial class DanhSachMaCVResult
 	{
 		
@@ -4258,6 +4391,32 @@ namespace QLNS1.DATA
 				if ((this._MaChucVu != value))
 				{
 					this._MaChucVu = value;
+				}
+			}
+		}
+	}
+	
+	public partial class DanhSachMaBHResult
+	{
+		
+		private string _MaBaoHiem;
+		
+		public DanhSachMaBHResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaBaoHiem", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaBaoHiem
+		{
+			get
+			{
+				return this._MaBaoHiem;
+			}
+			set
+			{
+				if ((this._MaBaoHiem != value))
+				{
+					this._MaBaoHiem = value;
 				}
 			}
 		}
@@ -5109,6 +5268,32 @@ namespace QLNS1.DATA
 		}
 	}
 	
+	public partial class NhanVienChuaCoHDResult
+	{
+		
+		private string _MaNhanVien;
+		
+		public NhanVienChuaCoHDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+	}
+	
 	public partial class LuongDKResult
 	{
 		
@@ -5220,32 +5405,6 @@ namespace QLNS1.DATA
 				if ((this._TienBH != value))
 				{
 					this._TienBH = value;
-				}
-			}
-		}
-	}
-	
-	public partial class NhanVienChuaCoHDResult
-	{
-		
-		private string _MaNhanVien;
-		
-		public NhanVienChuaCoHDResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string MaNhanVien
-		{
-			get
-			{
-				return this._MaNhanVien;
-			}
-			set
-			{
-				if ((this._MaNhanVien != value))
-				{
-					this._MaNhanVien = value;
 				}
 			}
 		}
@@ -8481,12 +8640,14 @@ namespace QLNS1.DATA
 		}
 	}
 	
-	public partial class XEMLUONG_ADMINResult
+	public partial class XEMLUONG_NVResult
 	{
 		
 		private string _MaLuong;
 		
 		private string _MaNhanVien;
+		
+		private string _HoTen;
 		
 		private System.Nullable<int> _LuongHD;
 		
@@ -8496,7 +8657,7 @@ namespace QLNS1.DATA
 		
 		private System.Nullable<int> _TienBH;
 		
-		public XEMLUONG_ADMINResult()
+		public XEMLUONG_NVResult()
 		{
 		}
 		
@@ -8528,6 +8689,22 @@ namespace QLNS1.DATA
 				if ((this._MaNhanVien != value))
 				{
 					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(40)")]
+		public string HoTen
+		{
+			get
+			{
+				return this._HoTen;
+			}
+			set
+			{
+				if ((this._HoTen != value))
+				{
+					this._HoTen = value;
 				}
 			}
 		}
@@ -8597,14 +8774,12 @@ namespace QLNS1.DATA
 		}
 	}
 	
-	public partial class XEMLUONG_NVResult
+	public partial class XEMLUONG_ADMINResult
 	{
 		
 		private string _MaLuong;
 		
 		private string _MaNhanVien;
-		
-		private string _HoTen;
 		
 		private System.Nullable<int> _LuongHD;
 		
@@ -8614,7 +8789,7 @@ namespace QLNS1.DATA
 		
 		private System.Nullable<int> _TienBH;
 		
-		public XEMLUONG_NVResult()
+		public XEMLUONG_ADMINResult()
 		{
 		}
 		
@@ -8646,22 +8821,6 @@ namespace QLNS1.DATA
 				if ((this._MaNhanVien != value))
 				{
 					this._MaNhanVien = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(40)")]
-		public string HoTen
-		{
-			get
-			{
-				return this._HoTen;
-			}
-			set
-			{
-				if ((this._HoTen != value))
-				{
-					this._HoTen = value;
 				}
 			}
 		}
