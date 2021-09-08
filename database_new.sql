@@ -297,12 +297,11 @@ INSERT [dbo].[QuyDinhKTKL] ([MaKTKL], [Ten], [SoTien]) VALUES (N'KTKL05', N'Ph�
 GO
 INSERT [dbo].[QuyDinhKTKL] ([MaKTKL], [Ten], [SoTien]) VALUES (N'KTKL06', N'Phạt vi phạm quy định', 500000)
 GO
-INSERT [dbo].[TaiKhoan] ([Ten], [MK]) VALUES (N'admin', N'12345')
+INSERT [dbo].[TaiKhoan] ([Ten], [MK]) VALUES (N'admin', N'admin')
 GO
-INSERT [dbo].[TaiKhoan] ([Ten], [MK]) VALUES (N'nv1', N'1234')
+INSERT [dbo].[TaiKhoan] ([Ten], [MK]) VALUES (N'[MaNV]', N'[SDT]')
 GO
-INSERT [dbo].[TaiKhoan] ([Ten], [MK]) VALUES (N'nv2', N'1234')
-GO
+
 ALTER TABLE [dbo].[BaoHiemNhanVien]  WITH CHECK ADD  CONSTRAINT [FK__BaoHiemNh__MaBao__35BCFE0A] FOREIGN KEY([MaBaoHiem])
 REFERENCES [dbo].[DANHMUCBAOHIEM] ([MaBaoHiem])
 ON UPDATE CASCADE
