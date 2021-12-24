@@ -162,6 +162,8 @@ namespace QLNS1
                 tb.NoiO = textNoiO.Text;
                 tb.NoiSinh = textNoiSinh.Text;
                 tb.Email = textEmail.Text;
+                tb.MATKHAU = textSDT1.Text;
+                tb.QUYEN = "NhanVien";
                 db.DanhMucNhanViens.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 LoadData();
