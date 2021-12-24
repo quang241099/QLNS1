@@ -240,6 +240,7 @@ namespace QLNS1.GUI
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
+            this.Hide();
             this.Close();
             FormDangNhap frm = new FormDangNhap();
             frm.ShowDialog();

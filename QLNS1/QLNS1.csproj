@@ -174,9 +174,6 @@
     <Compile Include="GUI\UserQLNV_NV.Designer.cs">
       <DependentUpon>UserQLNV_NV.cs</DependentUpon>
     </Compile>
-    <None Include="DATA\linq.dbml.layout">
-      <DependentUpon>linq.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="GUI\BaoCaoKTKL.resx" />
     <EmbeddedResource Include="GUI\BaoCaoNhanSu2.resx" />
     <EmbeddedResource Include="GUI\Thong_Ke.resx">
@@ -227,6 +224,9 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>linq.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="DATA\linq.dbml.layout">
+      <DependentUpon>linq.dbml</DependentUpon>
     </None>
     <None Include="GUI\packages.config" />
     <None Include="Properties\Settings.settings">
