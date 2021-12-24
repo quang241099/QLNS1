@@ -69,6 +69,7 @@ namespace QLNS1
             }
             if (quyen == "admin")
             {
+                this.Hide();
                 GUI.Main_Admin admin = new GUI.Main_Admin();
                 MessageBox.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 admin.ShowDialog();
@@ -77,6 +78,7 @@ namespace QLNS1
             }
             if (quyen == "NhanVien")
             {
+                this.Hide();
                 GUI.Main_NV NV = new GUI.Main_NV();
                 GUI.Main_NV.manv = txtTK.Text;
                 MessageBox.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
