@@ -978,4 +978,17 @@
       <Column Name="SoHinhThucKTKL" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.TIMLUONG_NV" Method="TIMLUONG_NV1">
+    <Parameter Name="Manhanvien" Parameter="manhanvien" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="thang" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="TIMLUONG_NVResult1">
+      <Column Name="MaLuong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LuongHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNgayCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThangNam" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TienBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
